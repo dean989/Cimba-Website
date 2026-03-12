@@ -114,7 +114,7 @@ export default function ProductPage() {
       <section className="bg-grey-50 pt-32 pb-20 lg:pt-44 lg:pb-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-grey-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-normal text-grey-900 leading-tight mb-6">
               The platform for{" "}
               <span className="text-primary">operational intelligence</span>
             </h1>

@@ -135,14 +135,7 @@ export default function UseCasesCarousel() {
                   </ul>
                 </div>
               </div>
-              <div className="lg:w-[340px] flex-shrink-0 min-h-[280px]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={active.imageSrc}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="lg:w-[340px] flex-shrink-0 min-h-[280px] bg-grey-100" />
             </div>
           </div>
         </div>

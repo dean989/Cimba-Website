@@ -59,7 +59,7 @@ export default function UseCasesPage() {
           <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
             Use Cases
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-grey-900 leading-tight mb-6 max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-normal text-grey-900 leading-tight mb-6 max-w-3xl">
             Trusted AI for the workflows that matter most
           </h1>
           <p className="text-lg md:text-xl text-grey-500 leading-relaxed max-w-2xl">

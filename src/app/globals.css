@@ -37,13 +37,13 @@
   --color-grey-100: var(--grey-100);
   --color-grey-50: var(--grey-50);
   --color-bento-dark: var(--bento-dark);
-  --font-sans: "Archivo", sans-serif;
+  --font-sans: "Instrument Sans", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Archivo", sans-serif;
+  font-family: "Instrument Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

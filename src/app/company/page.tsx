@@ -72,7 +72,7 @@ export default function CompanyPage() {
       <section className="bg-grey-50 pt-32 pb-20 lg:pt-44 lg:pb-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-grey-900 tracking-tight leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-normal text-grey-900 tracking-tight leading-tight mb-6">
               Building the future of{" "}
               <span className="text-primary">operational intelligence</span>
             </h1>
