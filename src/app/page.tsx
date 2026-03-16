@@ -184,12 +184,22 @@ export default function Home() {
       <CursorGradientSection className="py-20 lg:py-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 relative">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-            <div className="lg:w-1/2">
-              <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4">
-                Most tools help you analyze data.
-                <br />
-                Cimba helps you operationalize it.
-              </h2>
+            <div className="lg:w-1/2 group cursor-default">
+              <div className="relative">
+                <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4 transition-opacity duration-1000 group-hover:opacity-0">
+                  Most tools help you analyze data.
+                  <br />
+                  Cimba helps you operationalize it.
+                </h2>
+                <h2
+                  className="absolute inset-0 text-5xl md:text-6xl lg:text-[60px] font-normal leading-tight bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 bg-clip-text text-transparent opacity-0 transition-opacity duration-1000 group-hover:opacity-100"
+                  aria-hidden
+                >
+                  Most tools help you analyze data.
+                  <br />
+                  Cimba helps you operationalize it.
+                </h2>
+              </div>
             </div>
             <div className="lg:w-1/2 space-y-4">
               <p className="text-[24px] font-light text-grey-900 leading-relaxed">
