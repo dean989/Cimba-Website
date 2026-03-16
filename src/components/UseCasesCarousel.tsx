@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export type UseCaseSlide = {
   id: string;
@@ -23,7 +24,7 @@ const useCases: UseCaseSlide[] = [
       "",
     ],
     bullets: [],
-    imageSrc: "/hero-flux.png",
+    imageSrc: "/use-cases-am.png",
   },
   {
     id: "accounting-automation",
@@ -35,7 +36,7 @@ const useCases: UseCaseSlide[] = [
       "",
     ],
     bullets: [],
-    imageSrc: "/hero-reconciliation.png",
+    imageSrc: "/use-cases-accounting-v2.png",
   },
   {
     id: "risk-monitoring",
@@ -47,7 +48,7 @@ const useCases: UseCaseSlide[] = [
       "",
     ],
     bullets: [],
-    imageSrc: "/hero-flux.png",
+    imageSrc: "/use-cases-risk-v2.png",
   },
 ];
 
@@ -58,41 +59,51 @@ export default function UseCasesCarousel() {
   return (
     <section className="bg-grey-50 py-20 lg:py-28">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
-          {/* Left: Use Cases nav */}
-          <div className="flex-shrink-0 lg:w-[260px]">
-            <h2 className="text-2xl sm:text-3xl font-normal text-primary leading-tight mb-6">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
+          {/* Left: stepper (Core Primitives style) */}
+          <div className="flex-shrink-0 lg:w-[380px]">
+            <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-2">
               Use Cases
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-8 max-w-xl">
+              See how teams use Cimba
             </h2>
-            <nav
-              className="rounded-2xl border border-grey-200 bg-white p-1 shadow-sm"
-              aria-label="Use cases"
-            >
-              <div className="flex flex-col">
-                {useCases.map((u, index) => {
-                  const isActive = activeId === u.id;
-                  const isFirst = index === 0;
-                  const isLast = index === useCases.length - 1;
-
-                  return (
-                    <button
-                      key={u.id}
-                      type="button"
-                      onClick={() => setActiveId(u.id)}
-                      className={`text-left px-4 py-3 text-[15px] font-medium transition-colors border-transparent ${
+            <div className="flex flex-col gap-3" role="group" aria-label="Use cases">
+              {useCases.map((u) => {
+                const isActive = activeId === u.id;
+                return (
+                  <button
+                    key={u.id}
+                    type="button"
+                    onClick={() => setActiveId(u.id)}
+                    className={`text-left rounded-2xl border-2 p-5 transition-all duration-300 ease-out overflow-hidden ${
+                      isActive
+                        ? "border-transparent shadow-md"
+                        : "border-grey-200 bg-white hover:border-grey-300 hover:bg-grey-50"
+                    }`}
+                    style={
+                      isActive
+                        ? {
+                            background:
+                              "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.4), rgba(116, 20, 218, 0.4) 47%, rgba(7, 112, 227, 0.4)) border-box",
+                            backgroundClip: "padding-box, border-box",
+                          }
+                        : undefined
+                    }
+                  >
+                    <span
+                      className={`block font-bold transition-all duration-300 ease-out ${
                         isActive
-                          ? "bg-primary text-white rounded-xl shadow-sm"
-                          : "text-grey-700 hover:bg-grey-50"
-                      } ${!isFirst ? "mt-1" : ""} ${
-                        !isLast && !isActive ? "border-b border-grey-100" : ""
+                          ? "text-primary text-2xl"
+                          : "text-grey-900 text-[17px]"
                       }`}
                     >
                       {u.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </nav>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Right: Content + image */}
@@ -118,7 +129,15 @@ export default function UseCasesCarousel() {
                 ))}
               </ul>
             </div>
-            <div className="lg:w-[360px] flex-shrink-0 min-h-[280px] bg-grey-100" />
+            <div className="relative w-full lg:w-[360px] flex-shrink-0 min-h-[280px] lg:min-h-0 lg:self-stretch bg-grey-100">
+              <Image
+                src={active.imageSrc}
+                alt=""
+                fill
+                className="object-cover object-top object-right"
+                sizes="(max-width: 1024px) 100vw, 360px"
+              />
+            </div>
           </div>
         </div>
       </div>

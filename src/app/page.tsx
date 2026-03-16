@@ -17,6 +17,7 @@ import RotatingText from "@/components/RotatingText";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
 import CimbaDifferenceCarousel from "@/components/CimbaDifferenceCarousel";
 import ValuePropsSection from "@/components/ValuePropsSection";
+import CursorGradientSection from "@/components/CursorGradientSection";
 
 const customerLogos = [
   { name: "Airbnb", src: "/logos/airbnb.png" },
@@ -32,16 +33,19 @@ const valueProps = [
     icon: CheckCircle,
     title: "Trusted answers grounded in your data",
     image: "/Frame_4-78aae2e1-e10d-4115-9ecf-31a029ee6ebd.png",
+    background: "/value-bg-1.png",
   },
   {
     icon: GitBranch,
     title: "Repeatable decision workflows",
     image: "/Frame_3-2eb57c44-fa43-4d4f-945c-22f234285a1f.png",
+    background: "/value-bg-2.png",
   },
   {
     icon: Users,
     title: "Governed agents that scale across teams",
     image: "/Frame_5-dcfcf873-2b0f-4746-acc3-dea40f2ca5a2.png",
+    background: "/value-bg-3.png",
   },
 ];
 
@@ -120,15 +124,22 @@ export default function Home() {
             {valueProps.map((prop) => (
               <div
                 key={prop.title}
-                className="value-card-rise group relative rounded-2xl overflow-hidden bg-grey-50 min-h-[400px] flex flex-col border border-grey-100"
+                className="value-card-rise group relative rounded-2xl overflow-hidden min-h-[400px] flex flex-col border border-grey-100 bg-cover bg-center"
+                style={{
+                  backgroundImage: prop.background
+                    ? `url(${prop.background})`
+                    : undefined,
+                }}
               >
-                <div className="relative p-8 flex flex-col gap-3 h-full">
-                  <h2 className="text-[40px] font-normal text-grey-900 leading-tight">
+                <div className="relative p-8 flex flex-col gap-3 h-full text-white">
+                  <h2 className="text-[40px] font-normal leading-tight">
                     {prop.title}
                   </h2>
-                  <p className="mt-auto text-[15px] text-grey-600 leading-relaxed">
-                    {prop.description}
-                  </p>
+                  {prop.description ? (
+                    <p className="mt-auto text-[15px] leading-relaxed opacity-90">
+                      {prop.description}
+                    </p>
+                  ) : null}
                 </div>
               </div>
             ))}
@@ -164,30 +175,30 @@ export default function Home() {
       </section>
 
       {/* ── The Problem ── */}
-      <section className="bg-white py-20 lg:py-28">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
+      <CursorGradientSection className="py-20 lg:py-28">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-8 relative">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-4">
+              <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4">
                 Most tools help you analyze data.
                 <br />
                 Cimba helps you operationalize it.
               </h2>
             </div>
             <div className="lg:w-1/2 space-y-4">
-              <p className="text-[15px] text-grey-600 leading-relaxed">
+              <p className="text-[24px] font-light text-grey-600 leading-relaxed">
                 Modern organizations have more data and AI tools than ever. Yet most
                 teams still struggle to turn questions into{" "}
-                <span className="font-semibold">reliable</span> answers and decisions.
+                <span className="font-light">reliable</span> answers and decisions.
               </p>
-              <p className="text-[15px] text-grey-600 leading-relaxed">
+              <p className="text-[24px] font-light text-grey-600 leading-relaxed">
                 Cimba was built to bridge that gap by combining trusted data, business
                 context, and structured workflows into a single operational system.
               </p>
             </div>
           </div>
         </div>
-      </section>
+      </CursorGradientSection>
 
       {/* ── The Cimba Difference ── */}
       <section className="bg-grey-50 py-20 lg:py-28">

@@ -40,45 +40,51 @@ export default function CimbaDifferenceCarousel() {
   const Icon = active.icon;
 
   return (
-    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
-      {/* Left: nav stack (mirrors UseCasesCarousel style) */}
-      <div className="flex-shrink-0 lg:w-[260px]">
-        <h2 className="text-2xl sm:text-3xl font-normal text-primary leading-tight mb-2">
+    <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
+      {/* Left: stepper (Core Primitives style) */}
+      <div className="flex-shrink-0 lg:w-[380px]">
+        <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-2">
           The Cimba Solution
-        </h2>
-        <p className="text-[14px] text-grey-600 mb-6">
-          Four core capabilities that help teams turn data and AI into
-          operational intelligence.
         </p>
-        <nav
-          className="rounded-2xl border border-grey-200 bg-white p-1 shadow-sm"
-          aria-label="Cimba difference"
-        >
-          <div className="flex flex-col">
-            {items.map((item, index) => {
-              const isActive = activeId === item.id;
-              const isFirst = index === 0;
-              const isLast = index === items.length - 1;
-
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setActiveId(item.id)}
-                  className={`text-left px-4 py-3 text-[15px] font-medium transition-colors border-transparent ${
+        <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-8 max-w-xl">
+          Four core capabilities that help teams turn data and AI into operational intelligence.
+        </h2>
+        <div className="flex flex-col gap-3" role="group" aria-label="Cimba Solution">
+          {items.map((item) => {
+            const isActive = activeId === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => setActiveId(item.id)}
+                className={`text-left rounded-2xl border-2 p-5 transition-all duration-300 ease-out overflow-hidden ${
+                  isActive
+                    ? "border-transparent shadow-md"
+                    : "border-grey-200 bg-white hover:border-grey-300 hover:bg-grey-50"
+                }`}
+                style={
+                  isActive
+                    ? {
+                        background:
+                          "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.4), rgba(116, 20, 218, 0.4) 47%, rgba(7, 112, 227, 0.4)) border-box",
+                        backgroundClip: "padding-box, border-box",
+                      }
+                    : undefined
+                }
+              >
+                <span
+                  className={`block font-bold transition-all duration-300 ease-out ${
                     isActive
-                      ? "bg-primary text-white rounded-xl shadow-sm"
-                      : "text-grey-700 hover:bg-grey-50"
-                  } ${!isFirst ? "mt-1" : ""} ${
-                    !isLast && !isActive ? "border-b border-grey-100" : ""
+                      ? "text-primary text-2xl"
+                      : "text-grey-900 text-[17px]"
                   }`}
                 >
                   {item.title}
-                </button>
-              );
-            })}
-          </div>
-        </nav>
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Right: content card (mirrors UseCasesCarousel layout) */}
