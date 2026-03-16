@@ -48,3 +48,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 4. Deploy. Each push to `main` will trigger a new production deployment.
 
 The repo includes `vercel.json` so the framework and build are explicit. Non-app folders (`cursor-talk-to-figma-mcp`, `documents`) are excluded from the TypeScript build so they do not affect the Vercel build.
+
