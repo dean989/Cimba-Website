@@ -115,7 +115,7 @@ export default function UseCasesCarousel() {
               backgroundClip: "padding-box, border-box",
             }}
           >
-            <div className="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+            <div className="flex-1 w-full min-w-0 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
               <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
                 {active.title}
               </h2>

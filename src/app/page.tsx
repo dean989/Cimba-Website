@@ -186,7 +186,7 @@ export default function Home() {
               </h2>
             </div>
             <div className="lg:w-1/2 space-y-4">
-              <p className="text-[24px] font-light text-grey-600 leading-relaxed">
+              <p className="text-[24px] font-light text-grey-900 leading-relaxed">
                 Modern organizations have more data and AI tools than ever. Yet most
                 teams still struggle to turn questions into{" "}
                 <span className="font-light">reliable</span> answers and decisions.
