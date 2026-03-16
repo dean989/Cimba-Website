@@ -107,7 +107,14 @@ export default function UseCasesCarousel() {
           </div>
 
           {/* Right: Content + image */}
-          <div className="flex-1 min-w-0 bg-white rounded-2xl border border-grey-200 shadow-sm overflow-hidden flex flex-col lg:flex-row">
+          <div
+            className="flex-1 min-w-0 rounded-2xl border-2 border-transparent shadow-sm overflow-hidden flex flex-col lg:flex-row"
+            style={{
+              background:
+                "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.4), rgba(116, 20, 218, 0.4) 47%, rgba(7, 112, 227, 0.4)) border-box",
+              backgroundClip: "padding-box, border-box",
+            }}
+          >
             <div className="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
               <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
                 {active.title}
@@ -129,13 +136,13 @@ export default function UseCasesCarousel() {
                 ))}
               </ul>
             </div>
-            <div className="relative w-full lg:w-[360px] flex-shrink-0 min-h-[280px] lg:min-h-0 lg:self-stretch bg-grey-100">
+            <div className="relative w-full lg:w-[468px] flex-shrink-0 min-h-[280px] lg:min-h-0 lg:self-stretch bg-grey-100">
               <Image
                 src={active.imageSrc}
                 alt=""
                 fill
                 className="object-cover object-top object-right"
-                sizes="(max-width: 1024px) 100vw, 360px"
+                sizes="(max-width: 1024px) 100vw, 468px"
               />
             </div>
           </div>
