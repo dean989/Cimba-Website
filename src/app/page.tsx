@@ -228,11 +228,8 @@ export default function Home() {
       <WhoUsesRiseSection className="bg-white py-20 lg:py-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="who-uses-rise-header">
-            <p className="who-uses-rise-item text-[13px] font-semibold text-grey-600 uppercase tracking-[0.15em] mb-4">
-              Built for your team
-            </p>
             <h2 className="who-uses-rise-item text-3xl sm:text-4xl font-normal text-grey-900 leading-tight max-w-2xl mb-6">
-              Who uses Cimba
+              Built for your team
             </h2>
           </div>
 

@@ -43,11 +43,8 @@ export default function CimbaDifferenceCarousel() {
     <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
       {/* Left: stepper (Core Primitives style) */}
       <div className="flex-shrink-0 lg:w-[380px]">
-        <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-2">
-          The Cimba Solution
-        </p>
         <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-8 max-w-xl">
-          Four core capabilities that help teams turn data and AI into operational intelligence.
+          The Cimba Solution
         </h2>
         <div className="flex flex-col gap-3" role="group" aria-label="Cimba Solution">
           {items.map((item) => {
@@ -57,7 +54,7 @@ export default function CimbaDifferenceCarousel() {
                 key={item.id}
                 type="button"
                 onClick={() => setActiveId(item.id)}
-                className={`text-left rounded-2xl border-2 p-5 transition-all duration-300 ease-out overflow-hidden ${
+                className={`text-left rounded-2xl border-2 p-5 transition-all duration-1000 ease-in-out overflow-hidden hover:scale-[1.02] ${
                   isActive
                     ? "border-transparent shadow-md"
                     : "border-grey-200 bg-white hover:border-grey-300 hover:bg-grey-50"
@@ -73,7 +70,7 @@ export default function CimbaDifferenceCarousel() {
                 }
               >
                 <span
-                  className={`block font-bold transition-all duration-300 ease-out ${
+                  className={`block font-bold transition-all duration-1000 ease-in-out ${
                     isActive
                       ? "text-primary text-2xl"
                       : "text-grey-900 text-[17px]"
