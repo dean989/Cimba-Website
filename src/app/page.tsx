@@ -229,7 +229,7 @@ export default function Home() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="who-uses-rise-header">
             <h2 className="who-uses-rise-item text-3xl sm:text-4xl font-normal text-grey-900 leading-tight max-w-2xl mb-6">
-              Built for your team
+              Built for Your Team
             </h2>
           </div>
 
