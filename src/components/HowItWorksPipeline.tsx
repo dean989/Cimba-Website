@@ -22,7 +22,7 @@ const pipelineSteps = [
     id: "agents",
     title: "Agents",
     description:
-      "AI agents that execute analytical workflows using your data, business context, and playbooks. Cimba agents combine domain knowledge, such as metric definitions, operational rules, and terminology, with structured, multi-step workflows to answer questions and perform analysis. They can investigate issues, generate insights, and run on-the-fly or pre-defined analyses while remaining governed and context-aware. Because agents are grounded in how your business actually operates, teams can rely on them to produce consistent and repeatable results.",
+      "Cimba agents combine data sources, business context, and analytical logic to answer questions and perform structured analysis. They can investigate issues, generate insights, and run on-the-fly or pre-defined workflows while remaining context-aware and governed. Because agents operate within workflows and controls, teams can rely on them to produce consistent and repeatable results.",
     icon: Bot,
   },
   {
