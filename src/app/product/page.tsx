@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import HowItWorksPipeline from "@/components/HowItWorksPipeline";
-import CorePrimitivesCarousel from "@/components/CorePrimitivesCarousel";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import NetBackground from "@/components/NetBackground";
 
@@ -117,17 +116,16 @@ export default function ProductPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative bg-white pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden">
-        {/* Hero background vector */}
+      <section className="relative overflow-hidden bg-white">
         <Image
-          src="/hero-product-bg.svg"
+          src="/product-hero.svg"
           alt=""
           aria-hidden
           fill
           priority
-          className="object-cover object-right opacity-90 pointer-events-none"
+          className="object-cover object-center pointer-events-none"
         />
-        <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-44 lg:pb-28">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-[56px] font-normal text-grey-900 leading-tight mb-6">
               The platform for{" "}
@@ -179,9 +177,6 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
-
-      {/* ── Building Blocks (Core Primitives carousel) ── */}
-      <CorePrimitivesCarousel />
 
       {/* ── How It Works ── */}
       <HowItWorksPipeline />

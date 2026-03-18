@@ -15,7 +15,6 @@ import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
 import RotatingText from "@/components/RotatingText";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
-import CimbaDifferenceCarousel from "@/components/CimbaDifferenceCarousel";
 import ValuePropsSection from "@/components/ValuePropsSection";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
@@ -81,7 +80,15 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-grey-50">
+      <section
+        className="relative overflow-hidden bg-grey-50"
+        style={{
+          backgroundImage: "url('/home-background.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-44 lg:pb-28">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-grey-900 leading-[1.05] mb-8">
@@ -110,7 +117,7 @@ export default function Home() {
       {/* ── Video ── */}
       <section className="bg-grey-50 pb-16 lg:pb-24">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-primary shadow-xl">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-primary shadow-xl mt-[20px]">
             <div className="absolute inset-0 flex items-center justify-center">
               <button
                 type="button"
@@ -127,23 +134,23 @@ export default function Home() {
       {/* ── Value Props ── */}
       <ValuePropsSection>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {valueProps.map((prop) => (
               <div
                 key={prop.title}
-                className="value-card-rise group relative rounded-2xl overflow-hidden min-h-[400px] flex flex-col border border-grey-100 bg-cover bg-center"
+                className="value-card-rise group relative rounded-2xl overflow-hidden min-h-[200px] lg:min-h-[240px] flex flex-col border border-grey-100 bg-cover bg-center"
                 style={{
                   backgroundImage: prop.background
                     ? `url(${prop.background})`
                     : undefined,
                 }}
               >
-                <div className="relative p-8 flex flex-col gap-3 h-full text-white">
-                  <h2 className="text-[40px] font-normal leading-tight">
+                <div className="relative p-6 lg:p-8 flex flex-col gap-3 h-full text-white">
+                  <h2 className="text-2xl sm:text-[30px] lg:text-[36px] font-normal leading-tight">
                     {prop.title}
                   </h2>
                   {prop.description ? (
-                    <p className="mt-auto text-[15px] leading-relaxed opacity-90">
+                    <p className="mt-auto text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed opacity-90">
                       {prop.description}
                     </p>
                   ) : null}
@@ -182,7 +189,10 @@ export default function Home() {
       </section>
 
       {/* ── The Problem ── */}
-      <CursorGradientSection className="py-20 lg:py-28" riseOnScroll>
+      <CursorGradientSection
+        className="py-20 lg:py-28 border-b border-grey-200"
+        riseOnScroll
+      >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 relative">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             <div className="problem-rise-item lg:w-1/2 group cursor-default">
@@ -217,10 +227,115 @@ export default function Home() {
         </div>
       </CursorGradientSection>
 
-      {/* ── The Cimba Difference ── */}
+      {/* ── The Cimba Solution ── */}
       <section className="bg-grey-50 py-20 lg:py-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <CimbaDifferenceCarousel />
+          <h2 className="text-4xl sm:text-5xl font-normal text-primary leading-tight mb-12">
+            The Cimba Solution
+          </h2>
+
+          <div className="space-y-16">
+            {/* Row 1: AI Enablement, Not Dashboards */}
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
+              <div className="flex-1 min-w-[260px]">
+                <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
+                  AI Enablement, Not Dashboards
+                </h3>
+                <p className="text-[15px] text-grey-600 leading-relaxed">
+                  Cimba is designed to help teams operationalize intelligence. Instead of
+                  building static reports, teams create agents and workflows that
+                  actively analyze data and answer questions.
+                </p>
+              </div>
+              <div className="flex-1 min-w-[260px]">
+                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-3.png"
+                    alt="AI Enablement, Not Dashboards"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2: Repeatable Workflows */}
+            <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 items-center">
+              <div className="flex-1 min-w-[260px]">
+                <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
+                  Repeatable Workflows
+                </h3>
+                <p className="text-[15px] text-grey-600 leading-relaxed">
+                  Complex analyses can be turned into structured workflows that run the
+                  same way every time. This ensures teams receive consistent answers
+                  without rebuilding analysis from scratch.
+                </p>
+              </div>
+              <div className="flex-1 min-w-[260px]">
+                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-1.png"
+                    alt="Repeatable Workflows"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Business Context Built In */}
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
+              <div className="flex-1 min-w-[260px]">
+                <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
+                  Business Context Built In
+                </h3>
+                <p className="text-[15px] text-grey-600 leading-relaxed">
+                  Cimba allows organizations to define the metrics, logic, and context
+                  that shape how questions should be answered. This ensures insights
+                  reflect how the business actually operates.
+                </p>
+              </div>
+              <div className="flex-1 min-w-[260px]">
+                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-2.png"
+                    alt="Business Context Built In"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Row 4: Operational Delivery */}
+            <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 items-center">
+              <div className="flex-1 min-w-[260px]">
+                <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
+                  Operational Delivery
+                </h3>
+                <p className="text-[15px] text-grey-600 leading-relaxed">
+                  Insights are delivered through workflows that teams can run when
+                  needed. This moves analytics from passive reporting toward active
+                  decision support.
+                </p>
+              </div>
+              <div className="flex-1 min-w-[260px]">
+                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-4.png"
+                    alt="Operational Delivery"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
