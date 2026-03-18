@@ -65,27 +65,21 @@ export default function HowItWorksPipeline() {
           then run workflows that deliver governed, repeatable intelligence.
         </p>
 
-        {/* Pipeline tabs — arrow-shaped, left to right */}
-        <div className="flex flex-wrap items-stretch gap-0 mb-10 overflow-x-auto pb-2">
+        {/* Pipeline tabs */}
+        <div className="flex flex-wrap justify-center items-stretch gap-0 mb-10 overflow-x-auto pb-2">
           {pipelineSteps.map((s, i) => (
             <button
               key={s.id}
               type="button"
               onClick={() => goTo(i)}
-              className={`flex items-center gap-2 pl-4 pr-6 py-3 text-left transition-colors min-w-0 max-w-[180px] sm:max-w-none ${
+              className={`flex-none w-[250px] flex items-center gap-2 pl-4 pr-6 py-3 text-left transition-colors rounded-xl min-w-0 ${
                 i === selectedIndex
-                  ? "bg-black text-white font-bold"
+                  ? "bg-black text-white font-bold border border-black"
                   : "bg-white text-primary border border-grey-200 hover:bg-grey-50"
               }`}
-              style={{
-                clipPath:
-                  "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%)",
-                marginLeft: i > 0 ? -10 : 0,
-                zIndex: i === selectedIndex ? 10 : 1,
-              }}
             >
               <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
-                {s.title}
+                {s.id === "connect" ? "CONNECT" : s.title}
               </span>
             </button>
           ))}
