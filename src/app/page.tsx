@@ -15,7 +15,6 @@ import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
 import RotatingText from "@/components/RotatingText";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
-import ValuePropsSection from "@/components/ValuePropsSection";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
 import StrokeSectionTitle from "@/components/StrokeSectionTitle";
@@ -27,33 +26,6 @@ const customerLogos = [
   { name: "Swiggy", src: "/logos/swiggy.png" },
   { name: "iCreditWorks", src: "/logos/icreditworks.png" },
   { name: "Skan AI", src: "/logos/skanai.png" },
-];
-
-const valueProps: {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  image: string;
-  background: string;
-  description?: string;
-}[] = [
-  {
-    icon: CheckCircle,
-    title: "Trusted answers grounded in your data",
-    image: "/Frame_4-78aae2e1-e10d-4115-9ecf-31a029ee6ebd.png",
-    background: "/value-bg-1.png",
-  },
-  {
-    icon: GitBranch,
-    title: "Repeatable decision workflows",
-    image: "/Frame_3-2eb57c44-fa43-4d4f-945c-22f234285a1f.png",
-    background: "/value-bg-2.png",
-  },
-  {
-    icon: Users,
-    title: "Governed agents that scale across teams",
-    image: "/Frame_5-dcfcf873-2b0f-4746-acc3-dea40f2ca5a2.png",
-    background: "/value-bg-3.png",
-  },
 ];
 
 const testimonials = [
@@ -135,36 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Value Props ── */}
-      <ValuePropsSection>
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {valueProps.map((prop) => (
-              <div
-                key={prop.title}
-                className="value-card-rise group relative rounded-2xl overflow-hidden min-h-[200px] lg:min-h-[240px] flex flex-col border border-grey-100 bg-cover bg-center"
-                style={{
-                  backgroundImage: prop.background
-                    ? `url(${prop.background})`
-                    : undefined,
-                }}
-              >
-                <div className="relative p-6 lg:p-8 flex flex-col gap-3 h-full text-white">
-                  <h2 className="text-2xl sm:text-[30px] lg:text-[36px] font-normal leading-tight">
-                    {prop.title}
-                  </h2>
-                  {prop.description ? (
-                    <p className="mt-auto text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed opacity-90">
-                      {prop.description}
-                    </p>
-                  ) : null}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </ValuePropsSection>
-
       {/* ── Trusted By ── */}
       <section className="bg-grey-50 py-14">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
@@ -202,17 +144,17 @@ export default function Home() {
             <div className="problem-rise-item lg:w-1/2 group cursor-default">
               <div className="relative">
                 <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4 transition-opacity duration-1000 group-hover:opacity-0">
-                  Most tools help you analyze data.
+                  Cimba helps you operationalize data,
                   <br />
-                  Cimba helps you operationalize it.
+                  instead of only analyze it.
                 </h2>
                 <h2
                   className="absolute inset-0 text-5xl md:text-6xl lg:text-[60px] font-normal leading-tight bg-gradient-to-r from-blue-500 via-purple-700 to-teal-500 bg-clip-text text-transparent opacity-0 transition-opacity duration-1000 group-hover:opacity-100"
                   aria-hidden
                 >
-                  Most tools help you analyze data.
+                  Cimba helps you operationalize data,
                   <br />
-                  Cimba helps you operationalize it.
+                  instead of only analyze it.
                 </h2>
               </div>
             </div>
@@ -374,7 +316,7 @@ export default function Home() {
                 <p className="text-[15px] text-grey-600 leading-relaxed mb-3">
                   Scale insight delivery without building endless dashboards.
                 </p>
-                <p className="text-[14px] text-grey-500 leading-relaxed">
+                <p className="text-[16px] text-grey-500 leading-relaxed">
                   Cimba allows data teams to encode business logic and analytical
                   workflows once so the rest of the organization can run them
                   safely.
@@ -403,7 +345,7 @@ export default function Home() {
                   Analyze revenue drivers, investigate variance, and answer
                   executive questions faster.
                 </p>
-                <p className="text-[14px] text-grey-500 leading-relaxed">
+                <p className="text-[16px] text-grey-500 leading-relaxed">
                   Cimba helps finance teams run repeatable analyses, generate
                   scenario models, and deliver consistent answers grounded in
                   trusted data.
@@ -432,7 +374,7 @@ export default function Home() {
                   Understand customer health, identify risks, and prioritize
                   actions.
                 </p>
-                <p className="text-[14px] text-grey-500 leading-relaxed">
+                <p className="text-[16px] text-grey-500 leading-relaxed">
                   Cimba can analyze product usage, support data, and account
                   signals to surface insights that help CS teams stay ahead of
                   issues.
@@ -461,7 +403,7 @@ export default function Home() {
                   Monitor business performance and quickly investigate operational
                   issues.
                 </p>
-                <p className="text-[14px] text-grey-500 leading-relaxed">
+                <p className="text-[16px] text-grey-500 leading-relaxed">
                   Teams use Cimba to analyze operational data, identify anomalies,
                   and support decision-making across departments.
                 </p>

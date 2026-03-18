@@ -124,7 +124,7 @@ export default function UseCasesCarousel() {
                   {active.paragraphs[1]}
                 </p>
               )}
-              <ul className="space-y-2.5 text-[14px] text-grey-700">
+              <ul className="space-y-2.5 text-[16px] text-grey-700">
                 {active.bullets.map((b, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />

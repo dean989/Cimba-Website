@@ -45,7 +45,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-[14px] font-medium text-grey-600 hover:text-grey-900 rounded-lg hover:bg-grey-100 transition-all"
+                className="px-4 py-2 text-[16px] font-medium text-grey-600 hover:text-grey-900 rounded-lg hover:bg-grey-100 transition-all"
               >
                 {link.label}
               </Link>
@@ -55,7 +55,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/demo"
-              className="btn-primary px-6 py-0 text-[14px] font-semibold rounded-full transition-all"
+              className="btn-primary px-6 py-0 text-[16px] font-semibold rounded-full transition-all"
             >
               Book a Demo
             </Link>
@@ -87,7 +87,7 @@ export default function Navigation() {
             <div className="pt-4">
               <Link
                 href="/demo"
-                className="block w-full text-center btn-primary px-6 py-0 text-[14px] font-semibold rounded-full transition-all"
+                className="block w-full text-center btn-primary px-6 py-0 text-[16px] font-semibold rounded-full transition-all"
                 onClick={() => setMobileOpen(false)}
               >
                 Book a Demo

@@ -98,7 +98,7 @@ export default function CimbaDifferenceCarousel() {
           <p className="text-[15px] text-grey-700 leading-relaxed mb-3">
             {active.lead}
           </p>
-          <p className="text-[14px] text-grey-600 leading-relaxed">{active.body}</p>
+          <p className="text-[16px] text-grey-600 leading-relaxed">{active.body}</p>
         </div>
       </div>
     </div>

@@ -105,7 +105,7 @@ export default function UseCasesPage() {
                     logic&mdash;turning variance analysis into a fast, reliable
                     workflow.
                   </p>
-                  <ul className="space-y-2.5 text-[14px] text-grey-700">
+                  <ul className="space-y-2.5 text-[16px] text-grey-700">
                     <li className="flex items-start gap-2.5">
                       <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                       Instantly surfaces the true drivers of variances, reducing manual investigation and close-cycle effort
@@ -152,7 +152,7 @@ export default function UseCasesPage() {
                   workflow&mdash;empowering leadership to explore scenarios and
                   evaluate tradeoffs.
                 </p>
-                <ul className="space-y-2.5 text-[14px] text-grey-700">
+                <ul className="space-y-2.5 text-[16px] text-grey-700">
                   <li className="flex items-start gap-2.5">
                     <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                     Instantly models P&L impact of pricing changes, headcount shifts, and large deals without rebuilding underlying models
@@ -251,7 +251,7 @@ export default function UseCasesPage() {
                   that delivers timely insight without sacrificing accuracy or
                   explainability.
                 </p>
-                <ul className="space-y-2.5 text-[14px] text-grey-700">
+                <ul className="space-y-2.5 text-[16px] text-grey-700">
                   <li className="flex items-start gap-2.5">
                     <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                     Continuously monitors risk signals and portfolio performance,
@@ -285,7 +285,7 @@ export default function UseCasesPage() {
                   systems with no central monitoring make most actions
                   reactive&mdash;issues surface only after the damage is done.
                 </p>
-                <ul className="space-y-2.5 text-[14px] text-grey-700">
+                <ul className="space-y-2.5 text-[16px] text-grey-700">
                   <li className="flex items-start gap-2.5">
                     <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                     Proactive monitoring and alerting rather than reactive follow-up
@@ -346,7 +346,7 @@ export default function UseCasesPage() {
                     opportunities, and act in the moment without analyst
                     bottlenecks.
                   </p>
-                  <p className="text-[14px] text-grey-500 leading-relaxed mb-8">
+                  <p className="text-[16px] text-grey-500 leading-relaxed mb-8">
                     This deployment replaced internal tools and competitors
                     with a single governed AI platform, validating
                     Cimba&apos;s ability to scale AI-driven workflows across
@@ -446,7 +446,7 @@ export default function UseCasesPage() {
                 ].map((item) => (
                   <div key={item.title}>
                     <p className="font-semibold text-grey-900">{item.title}</p>
-                    <p className="text-grey-700 text-[14px] mt-0.5">
+                    <p className="text-grey-700 text-[16px] mt-0.5">
                       {item.desc}
                     </p>
                   </div>

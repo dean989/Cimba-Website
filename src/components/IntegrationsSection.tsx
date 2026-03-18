@@ -145,7 +145,7 @@ export default function IntegrationsSection({ dataCategories }: Props) {
                 className="object-contain flex-shrink-0"
                 unoptimized
               />
-              <span className="text-[14px] font-medium text-grey-700 whitespace-nowrap">
+              <span className="text-[16px] font-medium text-grey-700 whitespace-nowrap">
                 {item.name}
               </span>
             </div>

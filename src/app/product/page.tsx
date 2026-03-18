@@ -191,9 +191,9 @@ export default function ProductPage() {
       <section className="bg-grey-50 py-20 lg:py-28 border-t border-grey-200">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
-              Where Cimba Fits
-            </p>
+              <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+                Where It Fits
+              </p>
             <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight max-w-2xl mx-auto">
               How Cimba Fits Into Your Stack
             </h2>
@@ -291,9 +291,6 @@ export default function ProductPage() {
       {/* ── Security ── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <p className="text-[13px] font-semibold text-primary uppercase tracking-[0.15em] mb-5">
-            Trust &amp; Compliance
-          </p>
           <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-12 max-w-2xl">
             Security and compliance
           </h2>
