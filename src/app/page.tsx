@@ -144,13 +144,13 @@ export default function Home() {
             <div className="problem-rise-item lg:w-1/2 group cursor-default">
               <div className="relative">
                 <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4 transition-opacity duration-1000 group-hover:opacity-0">
-                  Cimba helps you operationalize data, instead of only analyze it.
+                  Cimba helps you operationalize data instead of only analyzing it.
                 </h2>
                 <h2
                   className="absolute inset-0 text-5xl md:text-6xl lg:text-[60px] font-normal leading-tight bg-gradient-to-r from-blue-500 via-purple-700 to-teal-500 bg-clip-text text-transparent opacity-0 transition-opacity duration-1000 group-hover:opacity-100"
                   aria-hidden
                 >
-                  Cimba helps you operationalize data, instead of only analyze it.
+                  Cimba helps you operationalize data instead of only analyzing it.
                 </h2>
               </div>
             </div>
@@ -191,13 +191,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                <div className="group relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/cimba-solution-3.png"
                     alt="AI Enablement, Not Dashboards"
                     width={912}
                     height={768}
-                    className="w-full h-auto"
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
                     priority
                   />
                 </div>
@@ -217,13 +217,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                <div className="group relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/cimba-solution-1.png"
                     alt="Repeatable Workflows"
                     width={912}
                     height={768}
-                    className="w-full h-auto"
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
                   />
                 </div>
               </div>
@@ -242,13 +242,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                <div className="group relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/cimba-solution-2.png"
                     alt="Business Context Built In"
                     width={912}
                     height={768}
-                    className="w-full h-auto"
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
                   />
                 </div>
               </div>
@@ -267,13 +267,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
+                <div className="group relative w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/cimba-solution-4.png"
                     alt="Operational Delivery"
                     width={912}
                     height={768}
-                    className="w-full h-auto"
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
                   />
                 </div>
               </div>
@@ -293,20 +293,21 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Data & Analytics */}
-            <div className="who-uses-rise-item rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
-              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] p-4 flex items-center justify-center">
-                <div className="relative w-full aspect-square rounded-xl overflow-hidden">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
+              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] h-full">
+                <div className="relative w-full h-full">
                   <Image
                     src="/who-uses-data.png"
                     alt=""
                     fill
-                    className="object-cover"
+                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
+                    unoptimized
                     sizes="220px"
                   />
                 </div>
               </div>
               <div className="flex-1 min-w-0 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-normal text-grey-900 mb-3">
+                <h3 className="text-xl font-semibold text-grey-900 mb-3">
                   Data &amp; Analytics Teams
                 </h3>
                 <p className="text-[15px] text-grey-600 leading-relaxed mb-3">
@@ -321,20 +322,21 @@ export default function Home() {
             </div>
 
             {/* Finance & FP&A */}
-            <div className="who-uses-rise-item rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
-              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] p-4 flex items-center justify-center">
-                <div className="relative w-full aspect-square rounded-xl overflow-hidden">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
+              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] h-full">
+                <div className="relative w-full h-full">
                   <Image
                     src="/who-uses-finance.png"
                     alt=""
                     fill
-                    className="object-cover"
+                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
+                    unoptimized
                     sizes="220px"
                   />
                 </div>
               </div>
               <div className="flex-1 min-w-0 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-normal text-grey-900 mb-3">
+                <h3 className="text-xl font-semibold text-grey-900 mb-3">
                   Finance &amp; FP&amp;A
                 </h3>
                 <p className="text-[15px] text-grey-600 leading-relaxed mb-3">
@@ -350,20 +352,21 @@ export default function Home() {
             </div>
 
             {/* Customer Success */}
-            <div className="who-uses-rise-item rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
-              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] p-4 flex items-center justify-center">
-                <div className="relative w-full aspect-square rounded-xl overflow-hidden">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
+              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] h-full">
+                <div className="relative w-full h-full">
                   <Image
                     src="/who-uses-customer-success.png"
                     alt=""
                     fill
-                    className="object-cover"
+                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
+                    unoptimized
                     sizes="220px"
                   />
                 </div>
               </div>
               <div className="flex-1 min-w-0 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-normal text-grey-900 mb-3">
+                <h3 className="text-xl font-semibold text-grey-900 mb-3">
                   Customer Success
                 </h3>
                 <p className="text-[15px] text-grey-600 leading-relaxed mb-3">
@@ -379,20 +382,21 @@ export default function Home() {
             </div>
 
             {/* Operations */}
-            <div className="who-uses-rise-item rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
-              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] p-4 flex items-center justify-center">
-                <div className="relative w-full aspect-square rounded-xl overflow-hidden">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex">
+              <div className="flex-shrink-0 w-[45%] min-w-[140px] max-w-[220px] h-full">
+                <div className="relative w-full h-full">
                   <Image
                     src="/who-uses-operations.png"
                     alt=""
                     fill
-                    className="object-cover"
+                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
+                    unoptimized
                     sizes="220px"
                   />
                 </div>
               </div>
               <div className="flex-1 min-w-0 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-normal text-grey-900 mb-3">
+                <h3 className="text-xl font-semibold text-grey-900 mb-3">
                   Operations
                 </h3>
                 <p className="text-[15px] text-grey-600 leading-relaxed mb-3">
