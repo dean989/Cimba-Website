@@ -18,6 +18,7 @@ import UseCasesCarousel from "@/components/UseCasesCarousel";
 import ValuePropsSection from "@/components/ValuePropsSection";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
+import StrokeSectionTitle from "@/components/StrokeSectionTitle";
 
 const customerLogos = [
   { name: "Airbnb", src: "/logos/airbnb.png" },
@@ -230,9 +231,10 @@ export default function Home() {
       {/* ── The Cimba Solution ── */}
       <section className="bg-grey-50 py-20 lg:py-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl sm:text-5xl font-normal text-primary leading-tight mb-12">
-            The Cimba Solution
-          </h2>
+          <StrokeSectionTitle
+            title="The Cimba Solution"
+            titleClassName="text-4xl sm:text-5xl font-normal text-primary leading-tight"
+          />
 
           <div className="space-y-16">
             {/* Row 1: AI Enablement, Not Dashboards */}
