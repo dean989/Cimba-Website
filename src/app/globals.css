@@ -78,6 +78,12 @@ nextjs-portal {
   animation-play-state: paused;
 }
 
+@media (max-width: 640px) {
+  .logo-ticker {
+    animation-duration: 18s;
+  }
+}
+
 /* Button styles */
 .btn-primary {
   height: 42px;

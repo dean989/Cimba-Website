@@ -97,7 +97,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-grey-900 leading-[1.05] mb-8">
               Turn data and AI into
-              <span className="block min-h-[1.2em]">
+              <span className="block min-h-[2.4em] sm:min-h-[1.2em]">
                 <RotatingText />
               </span>
             </h1>
