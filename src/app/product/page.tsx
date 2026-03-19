@@ -6,10 +6,6 @@ import {
   UserCheck,
   Eye,
   Building2,
-  Database,
-  Users,
-  BarChart3,
-  Sparkles,
 } from "lucide-react";
 import type { Metadata } from "next";
 import HowItWorksPipeline from "@/components/HowItWorksPipeline";
@@ -191,98 +187,43 @@ export default function ProductPage() {
       {/* ── How Cimba Fits Into Your Stack ── */}
       <section className="bg-grey-50 py-16 lg:py-20 border-t border-grey-200">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-              <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
-                Where It Fits
-              </p>
+          <div className="text-center mb-8 md:mb-10">
+            <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+              Where It Fits
+            </p>
             <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight max-w-2xl mx-auto">
               How Cimba Fits Into Your Stack
             </h2>
           </div>
 
-          {/* Flow diagram */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-0 mb-16">
-            {/* Data Sources */}
-            <div className="flex-1 rounded-2xl border border-grey-200 bg-white p-6 text-center shadow-sm">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-grey-100">
-                <Database size={22} className="text-grey-600" />
-              </div>
-              <h3 className="text-[16px] font-semibold text-grey-900 mb-1">Data Sources</h3>
-              <p className="text-[16px] text-grey-500 leading-relaxed">
-                Databases, warehouses, spreadsheets, and APIs
-              </p>
-            </div>
-
-            {/* Arrow */}
-            <div className="flex items-center justify-center px-3 py-4 lg:py-0">
-              <ArrowRight size={20} className="text-grey-300 rotate-90 lg:rotate-0" />
-            </div>
-
-            {/* Cimba (center, highlighted) */}
-            <div
-              className="flex-[1.4] rounded-2xl border-2 border-transparent p-6 text-center shadow-md"
-              style={{
-                background:
-                  "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.5), rgba(116, 20, 218, 0.5) 47%, rgba(7, 112, 227, 0.5)) border-box",
-                backgroundClip: "padding-box, border-box",
-              }}
-            >
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                <Image src="/cimba-logo.svg" alt="Cimba" width={24} height={24} />
-              </div>
-              <h3 className="text-[16px] font-bold text-primary mb-1">Cimba</h3>
-              <p className="text-[16px] text-grey-600 leading-relaxed">
-                Operational intelligence through governed agents and structured workflows
-              </p>
-            </div>
-
-            {/* Arrow */}
-            <div className="flex items-center justify-center px-3 py-4 lg:py-0">
-              <ArrowRight size={20} className="text-grey-300 rotate-90 lg:rotate-0" />
-            </div>
-
-            {/* Teams */}
-            <div className="flex-1 rounded-2xl border border-grey-200 bg-white p-6 text-center shadow-sm">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-grey-100">
-                <Users size={22} className="text-grey-600" />
-              </div>
-              <h3 className="text-[16px] font-semibold text-grey-900 mb-1">Teams</h3>
-              <p className="text-[16px] text-grey-500 leading-relaxed">
-                Finance, Data, Ops, and Customer Success
-              </p>
-            </div>
+          {/* Mobile diagram */}
+          <div className="mb-8 md:hidden w-full max-w-[341px] mx-auto">
+            <Image
+              src="/where-it-fits-mobile.svg"
+              alt="How Cimba fits between data sources, Cimba, BI and AI tools, and teams"
+              width={341}
+              height={284}
+              className="w-full h-auto"
+              unoptimized
+            />
+          </div>
+          {/* Tablet + desktop diagram */}
+          <div className="hidden md:block mb-8 md:mb-10 w-full max-w-[1264px] mx-auto">
+            <Image
+              src="/where-it-fits-desktop.svg"
+              alt="How Cimba fits between data sources, Cimba, BI and AI tools, and teams"
+              width={1264}
+              height={427}
+              className="w-full h-auto"
+              unoptimized
+            />
           </div>
 
-          {/* Supporting tools + text */}
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-            <div className="flex-1 flex flex-col sm:flex-row gap-4">
-              <div className="flex-1 rounded-xl border border-grey-200 bg-white p-5">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <BarChart3 size={18} className="text-grey-400" />
-                  <span className="text-[16px] font-semibold text-grey-700">BI Tools</span>
-                </div>
-                <p className="text-[16px] text-grey-500 leading-relaxed">
-                  Remain valuable for dashboards and reporting
-                </p>
-              </div>
-              <div className="flex-1 rounded-xl border border-grey-200 bg-white p-5">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <Sparkles size={18} className="text-grey-400" />
-                  <span className="text-[16px] font-semibold text-grey-700">AI Tools</span>
-                </div>
-                <p className="text-[16px] text-grey-500 leading-relaxed">
-                  Often used for exploration and experimentation
-                </p>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col justify-center">
-              <p className="text-[16px] text-grey-600 leading-relaxed">
-                Cimba is designed to work alongside the tools organizations already use.
-                It sits between data systems and operational teams, enabling structured
-                workflows that turn questions into consistent insights and actions.
-              </p>
-            </div>
-          </div>
+          <p className="text-center text-[16px] text-grey-600 leading-relaxed max-w-3xl mx-auto">
+            Cimba is designed to work alongside the tools organizations already use.
+            It sits between data systems and operational teams, enabling structured
+            workflows that turn questions into consistent insights and actions.
+          </p>
         </div>
       </section>
 
