@@ -65,24 +65,26 @@ export default function HowItWorksPipeline() {
           then run workflows that deliver governed, repeatable intelligence.
         </p>
 
-        {/* Pipeline tabs */}
-        <div className="flex flex-wrap justify-center items-stretch gap-0 mb-10 overflow-x-auto pb-2">
-          {pipelineSteps.map((s, i) => (
-            <button
-              key={s.id}
-              type="button"
-              onClick={() => goTo(i)}
-              className={`flex-none w-[150px] flex items-center justify-center py-3 text-center transition-colors min-w-0 ${
-                i === selectedIndex
-                  ? "bg-black text-white font-bold border border-black"
-                  : "bg-white text-primary border border-grey-200 hover:bg-grey-50"
-              }`}
-            >
-              <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
-                {s.id === "connect" ? "CONNECT" : s.title}
-              </span>
-            </button>
-          ))}
+        {/* Pipeline tabs — rounded only on outer ends (CONNECT / WORKFLOWS) */}
+        <div className="flex flex-wrap justify-center items-stretch mb-10 overflow-x-auto pb-2">
+          <div className="inline-flex flex-shrink-0 rounded-lg overflow-hidden border border-grey-200 divide-x divide-grey-200">
+            {pipelineSteps.map((s, i) => (
+              <button
+                key={s.id}
+                type="button"
+                onClick={() => goTo(i)}
+                className={`flex-none w-[150px] flex items-center justify-center py-3 text-center transition-colors min-w-0 border-0 ${
+                  i === selectedIndex
+                    ? "bg-black text-white font-bold"
+                    : "bg-white text-primary hover:bg-grey-50"
+                }`}
+              >
+                <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
+                  {s.id === "connect" ? "CONNECT" : s.title}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Card — title, hero image, description */}
