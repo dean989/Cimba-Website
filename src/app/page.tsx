@@ -19,9 +19,7 @@ import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
 import StrokeSectionTitle from "@/components/StrokeSectionTitle";
 
 const customerLogos = [
-  { name: "Airbnb", src: "/logos/airbnb.png" },
   { name: "SoundHound AI", src: "/logos/soundhound.png" },
-  { name: "KPMG", src: "/logos/kpmg.png" },
   { name: "Swiggy", src: "/logos/swiggy.png" },
   { name: "iCreditWorks", src: "/logos/icreditworks.png" },
   { name: "Skan AI", src: "/logos/skanai.png" },
@@ -114,13 +112,10 @@ export default function Home() {
           <p className="text-center text-[16px] font-medium text-grey-400 uppercase tracking-[0.15em] mb-8">
             Trusted by industry leaders
           </p>
-          <div className="overflow-hidden">
-            <div className="flex logo-ticker items-center">
-              {[...customerLogos, ...customerLogos].map((logo, i) => (
-                <div
-                  key={`${logo.name}-${i}`}
-                  className="flex-shrink-0 mx-12"
-                >
+          <div className="overflow-hidden w-full">
+            <div className="flex logo-ticker items-center md:justify-center">
+              {customerLogos.map((logo, i) => (
+                <div key={`${logo.name}-${i}`} className="flex-shrink-0 mx-12">
                   <Image
                     src={logo.src}
                     alt={logo.name}
@@ -130,6 +125,24 @@ export default function Home() {
                   />
                 </div>
               ))}
+
+              {/* Duplicate set only on mobile so the translate loop has continuity */}
+              <div className="flex md:hidden">
+                {customerLogos.map((logo, i) => (
+                  <div
+                    key={`${logo.name}-${i}-dup`}
+                    className="flex-shrink-0 mx-12"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      width={280}
+                      height={120}
+                      className="h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

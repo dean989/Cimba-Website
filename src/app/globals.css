@@ -71,7 +71,7 @@ nextjs-portal {
 }
 
 .logo-ticker {
-  animation: scroll 35s linear infinite;
+  animation: none;
 }
 
 .logo-ticker:hover {
@@ -80,7 +80,7 @@ nextjs-portal {
 
 @media (max-width: 640px) {
   .logo-ticker {
-    animation-duration: 18s;
+    animation: scroll 18s linear infinite;
   }
 }
 
