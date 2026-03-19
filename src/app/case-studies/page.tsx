@@ -245,30 +245,6 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
         <div ref={contentRef}>
           <div className="px-8 sm:px-10 lg:px-12 pb-10 lg:pb-12">
             <div className="border-t border-grey-200 pt-10">
-              {study.stats && (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
-                  {study.stats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-xl border border-grey-200 bg-grey-50 px-5 py-4"
-                    >
-                      <p
-                        className={`font-normal leading-none ${
-                          study.id === "ai-for-ams" ||
-                          study.id === "risk-monitoring"
-                            ? "text-[50px] text-blue-500"
-                            : "text-2xl text-grey-900"
-                        }`}
-                      >
-                        {stat.value}
-                      </p>
-                      <p className="text-[16px] text-grey-500 mt-2 leading-relaxed">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
                 {/* Left column */}
                 <div>
@@ -289,7 +265,7 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
                   )}
 
                   <h3 className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
-                    The Challenge
+                    The Challenge (continued)
                   </h3>
                   {study.challenge.slice(1).map((p, i) => (
                     <p
@@ -382,6 +358,37 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
                       )}
                     </div>
                   </div>
+
+                  {study.stats && (
+                    <div
+                      className={
+                        study.id === "risk-monitoring"
+                          ? "mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3"
+                          : "mt-8 flex flex-col gap-3"
+                      }
+                    >
+                      {study.stats.map((stat) => (
+                        <div
+                          key={stat.label}
+                          className="min-w-0 rounded-xl border border-grey-200 bg-grey-50 px-4 py-4 sm:px-5"
+                        >
+                          <p
+                            className={`font-normal leading-none ${
+                              study.id === "ai-for-ams" ||
+                              study.id === "risk-monitoring"
+                                ? "text-[50px] text-blue-500"
+                                : "text-2xl text-grey-900"
+                            }`}
+                          >
+                            {stat.value}
+                          </p>
+                          <p className="text-[16px] text-grey-500 mt-2 leading-relaxed">
+                            {stat.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
