@@ -24,12 +24,11 @@ const dataCategories = [
     items: [
       { name: "Databricks", icon: "/integrations/databricks.png" },
       { name: "Snowflake", icon: "/integrations/snowflake.png" },
-      { name: "Postgress Sql", icon: "/integrations/postgresql.png" },
+      { name: "PostgreSQL", icon: "/integrations/postgresql.png" },
       { name: "Trino", icon: "/integrations/trino.png" },
       { name: "Minerva", icon: "/integrations/minerva.png" },
-      { name: "MySql", icon: "/integrations/mysql.png" },
+      { name: "MySQL", icon: "/integrations/mysql.png" },
       { name: "Tableau", icon: "/integrations/tableau.png" },
-      { name: "Snowflake RSA", icon: "/integrations/snowflake-rsa.png" },
       {
         name: "Azure Data Lake Storage",
         icon: "/integrations/azure-datalake-storage.png",
