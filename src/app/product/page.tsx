@@ -189,10 +189,10 @@ export default function ProductPage() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-10">
             <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
-              Operational intelligence for real business decisions
+              Where It Fits
             </p>
             <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight max-w-2xl mx-auto">
-              Governed workflows that define how your business answers questions and deliver repeatable, trusted decisions.
+              How Cimba Fits Into Your Stack
             </h2>
           </div>
 

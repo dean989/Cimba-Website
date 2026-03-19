@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
-import RotatingText from "@/components/RotatingText";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
@@ -68,14 +67,16 @@ export default function Home() {
         <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-44 lg:pb-28">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-grey-900 leading-[1.05] mb-8">
-              Turn data and AI into
               <span className="block min-h-[2.4em] sm:min-h-[1.2em]">
-                <RotatingText />
+                <span className="text-primary inline-block">
+                  Operational intelligence
+                </span>{" "}
+                for real business decisions
               </span>
             </h1>
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
-              Cimba builds governed AI workflows that turn complex questions
-              into repeatable, trusted decision making.
+              Governed workflows that define how your business handles
+              complexity and delivers repeatable, trusted decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -180,7 +181,7 @@ export default function Home() {
           <div className="space-y-16">
             {/* Row 1: AI Enablement, Not Dashboards */}
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-center">
-              <div className="flex-1 min-w-[260px]">
+              <div className="flex-1 min-w-[260px] lg:max-w-[440px] lg:ml-auto lg:text-right">
                 <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
                   AI Enablement, Not Dashboards
                 </h3>
@@ -206,7 +207,7 @@ export default function Home() {
 
             {/* Row 2: Repeatable Workflows */}
             <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-10 items-center">
-              <div className="flex-1 min-w-[260px]">
+              <div className="flex-1 min-w-[260px] lg:max-w-[440px] lg:ml-auto lg:text-left">
                 <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
                   Repeatable Workflows
                 </h3>
@@ -231,7 +232,7 @@ export default function Home() {
 
             {/* Row 3: Business Context Built In */}
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-center">
-              <div className="flex-1 min-w-[260px]">
+              <div className="flex-1 min-w-[260px] lg:max-w-[440px] lg:ml-auto lg:text-right">
                 <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
                   Business Context Built In
                 </h3>
@@ -256,7 +257,7 @@ export default function Home() {
 
             {/* Row 4: Operational Delivery */}
             <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-10 items-center">
-              <div className="flex-1 min-w-[260px]">
+              <div className="flex-1 min-w-[260px] lg:max-w-[440px] lg:ml-auto lg:text-left">
                 <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
                   Operational Delivery
                 </h3>
