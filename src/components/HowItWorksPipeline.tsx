@@ -128,7 +128,7 @@ export default function HowItWorksPipeline() {
                       href="#integrations-section"
                       className="underline underline-offset-2 hover:text-primary transition-colors"
                     >
-                      view all integrations
+                      view all
                     </a>
                   </>
                 )}

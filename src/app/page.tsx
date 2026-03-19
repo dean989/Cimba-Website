@@ -154,7 +154,7 @@ export default function Home() {
         riseOnScroll
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 relative">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
             <div className="problem-rise-item lg:w-1/2 group cursor-default">
               <div className="relative">
                 <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4 transition-opacity duration-1000 group-hover:opacity-0">
@@ -247,12 +247,10 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-center">
               <div className="flex-1 min-w-[260px] lg:max-w-[440px] lg:ml-auto lg:text-right">
                 <h3 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-4">
-                  Business Context Built In
+                  Governance Built In
                 </h3>
                 <p className="text-[16px] text-grey-600 leading-relaxed">
-                  Cimba allows organizations to define the metrics, logic, and context
-                  that shape how questions should be answered. This ensures insights
-                  reflect how the business actually operates.
+                  Cimba allows organizations to define the business context, metrics, logic, and rules that shape how questions should be answered. This ensures insights reflect how the business actually operates.
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
@@ -275,9 +273,7 @@ export default function Home() {
                   Operational Delivery
                 </h3>
                 <p className="text-[16px] text-grey-600 leading-relaxed">
-                  Insights are delivered through workflows that teams can run when
-                  needed. This moves analytics from passive reporting toward active
-                  decision support.
+                  Trusted insights are delivered through workflows that teams can run when needed. This moves analytics from passive reporting toward active decision support.
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
