@@ -37,7 +37,7 @@ const pipelineSteps = [
 function ImagePlaceholderSmall({ label, src }: { label: string; src: string }) {
   return (
     <div
-      className="w-full aspect-video max-h-[200px] rounded-xl border-2 border-transparent flex-shrink-0"
+      className="group w-full aspect-video max-h-[200px] rounded-xl border-2 border-transparent flex-shrink-0"
       style={{
         background:
           "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.4), rgba(116, 20, 218, 0.4) 47%, rgba(7, 112, 227, 0.4)) border-box",
@@ -49,7 +49,7 @@ function ImagePlaceholderSmall({ label, src }: { label: string; src: string }) {
           src={src}
           alt={label}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
           unoptimized
         />
       </div>
