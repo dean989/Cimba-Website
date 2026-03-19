@@ -176,8 +176,14 @@ export default function ProductPage() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <div className="w-full min-h-[320px] rounded-2xl bg-gradient-to-br from-grey-100 to-grey-50 border border-grey-200 flex items-center justify-center">
-                <span className="text-[16px] text-grey-400 font-medium">Product diagram</span>
+              <div className="relative w-full min-h-[320px] rounded-2xl border border-grey-200 overflow-hidden">
+                <Image
+                  src="/product-diagram.png"
+                  alt="Product diagram"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
               </div>
             </div>
           </div>
