@@ -103,12 +103,15 @@ const securityPillars = [
     title: "Auditability",
     description:
       "Every workflow is transparent and traceable. Teams can see how analyses were performed.",
+    image: "/trust/auditability.png",
   },
   {
     icon: Building2,
     title: "Enterprise Infrastructure",
+    titleAlign: "left",
     description:
       "Cimba supports enterprise deployments with secure integrations, scalable infrastructure, and strong operational reliability.",
+    image: "/trust/enterprise.png",
   },
 ];
 
@@ -261,7 +264,16 @@ export default function ProductPage() {
                       </div>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-2xl font-bold text-grey-900 mb-2">
+                      <h3
+                        className={`text-2xl font-bold text-grey-900 mb-2 ${
+                          "titleAlign" in pillar && pillar.titleAlign === "right"
+                            ? "text-right"
+                            : "titleAlign" in pillar &&
+                                pillar.titleAlign === "left"
+                              ? "text-left"
+                              : ""
+                        }`}
+                      >
                         {pillar.title}
                       </h3>
                       <p className="text-[16px] text-grey-600 leading-relaxed">
