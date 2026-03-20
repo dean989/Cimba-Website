@@ -17,6 +17,7 @@ import UseCasesCarousel from "@/components/UseCasesCarousel";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
 import StrokeSectionTitle from "@/components/StrokeSectionTitle";
+import LakeOfDataBackground from "@/components/LakeOfDataBackground";
 
 const customerLogos = [
   { name: "SoundHound AI", src: "/logos/soundhound.png" },
@@ -50,19 +51,12 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section
-        className="relative overflow-hidden bg-grey-50"
-        style={{
-          backgroundImage: "url('/home-background.svg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="relative overflow-hidden bg-grey-50">
+        <LakeOfDataBackground />
         {/* Bottom fade-out for background image */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-grey-50" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-grey-50 z-10" />
 
-        <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-grey-900 leading-[1.05] mb-8">
               <span className="block min-h-[2.4em] sm:min-h-[1.2em]">
