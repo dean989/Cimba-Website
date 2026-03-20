@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -20,7 +21,7 @@ const useCases: UseCaseSlide[] = [
     eyebrow: "Business Operations",
     title: "AI for Account Managers",
     paragraphs: [
-      "Give account managers instant access to performance insights for their customers or partners. Diagnose growth trends, answer ad-hoc questions, and identify upsell opportunities in real time.",
+      "Marketplace platforms rely on account managers to help merchants grow — but critical insights typically require analyst support. Cimba changed that.",
       "",
     ],
     bullets: [],
@@ -30,9 +31,9 @@ const useCases: UseCaseSlide[] = [
     id: "finops",
     label: "Accounting Automation",
     eyebrow: "Financial Operations",
-    title: "Accounting Automation",
+    title: "Financial Operations",
     paragraphs: [
-      "Automate reconciliations, anomaly detection, and close workflows across spreadsheets and financial systems. Cimba validates numbers, flags irregularities, and explains changes automatically.",
+      "Finance teams operate across fragmented systems while managing highly repetitive, time-sensitive workflows. Cimba automates these with full transparency.",
       "",
     ],
     bullets: [],
@@ -44,7 +45,7 @@ const useCases: UseCaseSlide[] = [
     eyebrow: "Risk & Underwriting",
     title: "Risk Monitoring",
     paragraphs: [
-      "Continuously analyze operational and financial data to detect anomalies and emerging risks. Cimba identifies patterns, explains root causes, and helps teams act before issues escalate.",
+      "Risk teams operate in data-rich environments yet remain constrained by slow analysis cycles and inconsistent outputs. Cimba makes risk analysis governed and repeatable.",
       "",
     ],
     bullets: [],
@@ -112,7 +113,7 @@ export default function UseCasesCarousel() {
               backgroundClip: "padding-box, border-box",
             }}
           >
-            <div className="flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+            <div className="flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col">
               <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
                 {active.title}
               </h2>
@@ -133,6 +134,12 @@ export default function UseCasesCarousel() {
                   </li>
                 ))}
               </ul>
+              <Link
+                href={`/use-cases#${active.id}`}
+                className="mt-auto inline-flex w-fit text-[16px] font-medium text-primary transition-colors hover:text-primary-dark"
+              >
+                See more
+              </Link>
             </div>
             <div className="relative w-full bg-grey-100 lg:aspect-square lg:flex-[0_0_285px]">
               <Image

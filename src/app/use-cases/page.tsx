@@ -6,6 +6,7 @@ import {
   useCallback,
   useRef,
   useLayoutEffect,
+  useEffect,
 } from "react";
 import CTASection from "@/components/CTASection";
 import AnimatedGradientStroke from "@/components/AnimatedGradientStroke";
@@ -229,6 +230,21 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
   const toggle = useCallback(() => setOpen((v) => !v), []);
   const expand = useCallback(() => setOpen(true), []);
 
+  useEffect(() => {
+    const syncOpenFromHash = () => {
+      if (window.location.hash === `#${study.id}`) {
+        setOpen(true);
+      }
+    };
+
+    syncOpenFromHash();
+    window.addEventListener("hashchange", syncOpenFromHash);
+
+    return () => {
+      window.removeEventListener("hashchange", syncOpenFromHash);
+    };
+  }, [study.id]);
+
   return (
     <div
       id={study.id}
@@ -375,13 +391,14 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
                   ))}
                   {study.solutionBullets && (
                     <ul
-                      className={`space-y-2.5 text-[16px] text-grey-700 ${
+                      className={`relative space-y-2.5 pl-6 text-[16px] text-grey-700 before:content-[''] before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-px before:bg-grey-300 ${
                         study.solutionAfterBullets ? "mb-3" : "mb-4"
                       }`}
                     >
                       {study.solutionBullets.map((b, i) => (
-                        <li key={i} className="flex items-start gap-2.5">
-                          <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                        <li key={i} className="relative leading-relaxed">
+                          <span className="absolute -left-6 top-[7px] inline-block h-3.5 w-3.5 rounded-full border border-primary/40 bg-white" />
+                          <span className="absolute -left-[21px] top-[10px] inline-block h-2 w-2 rounded-full bg-primary" />
                           {b}
                         </li>
                       ))}
@@ -406,13 +423,14 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
                   ))}
                   {study.howBullets && (
                     <ul
-                      className={`space-y-2.5 text-[16px] text-grey-700 ${
+                      className={`relative space-y-2.5 pl-6 text-[16px] text-grey-700 before:content-[''] before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-px before:bg-grey-300 ${
                         study.howAfterBullets ? "mb-3" : "mb-4"
                       }`}
                     >
                       {study.howBullets.map((b, i) => (
-                        <li key={i} className="flex items-start gap-2.5">
-                          <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                        <li key={i} className="relative leading-relaxed">
+                          <span className="absolute -left-6 top-[7px] inline-block h-3.5 w-3.5 rounded-full border border-primary/40 bg-white" />
+                          <span className="absolute -left-[21px] top-[10px] inline-block h-2 w-2 rounded-full bg-primary" />
                           {b}
                         </li>
                       ))}
@@ -477,8 +495,24 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
                         }`}
                       >
                         {study.outcomes.map((b, i) => (
-                          <li key={i} className="flex items-start gap-2.5">
-                            <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-green-500 flex-shrink-0" />
+                          <li key={i} className="flex items-start gap-2.5 leading-relaxed">
+                            <span className="mt-[2px] inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                              <svg
+                                aria-hidden
+                                viewBox="0 0 16 16"
+                                className="h-3.5 w-3.5"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M3.5 8.25L6.5 11.25L12.5 5.25"
+                                  stroke="currentColor"
+                                  strokeWidth="1.8"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </span>
                             {b}
                           </li>
                         ))}
