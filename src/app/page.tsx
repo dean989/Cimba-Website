@@ -304,7 +304,7 @@ export default function Home() {
                     src="/who-uses-data.png"
                     alt=""
                     fill
-                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                    className="object-cover object-right origin-left transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
                     unoptimized
                     sizes="220px"
                   />
@@ -333,7 +333,7 @@ export default function Home() {
                     src="/who-uses-finance.png"
                     alt=""
                     fill
-                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                    className="object-cover object-right origin-left transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
                     unoptimized
                     sizes="220px"
                   />
@@ -363,7 +363,7 @@ export default function Home() {
                     src="/who-uses-customer-success.png"
                     alt=""
                     fill
-                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                    className="object-cover object-right origin-left transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
                     unoptimized
                     sizes="220px"
                   />
@@ -393,7 +393,7 @@ export default function Home() {
                     src="/who-uses-operations.png"
                     alt=""
                     fill
-                    className="object-cover transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                    className="object-cover object-right origin-left transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
                     unoptimized
                     sizes="220px"
                   />

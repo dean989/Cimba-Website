@@ -15,7 +15,6 @@ export default function IntegrationsSection({ dataCategories }: Props) {
     { name: "Glean", icon: "/integrations/glean.png" },
     { name: "Notion", icon: "/integrations/notion-mcp.png" },
     { name: "Cloudflare", icon: "/integrations/cloudflare.png" },
-    { name: "GitHub", icon: "/integrations/github.png" },
   ];
 
   const sectionRef = useRef<HTMLElement>(null);

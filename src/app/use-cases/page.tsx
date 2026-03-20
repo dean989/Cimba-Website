@@ -285,7 +285,7 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
         </div>
 
         {/* Above-the-fold — gradient stroke on AI for AMs only; full challenge copy below the fold */}
-        <div className="mt-8 pt-2">
+        <div className="mt-3 pt-2">
           {study.id === "ai-for-ams" && (
             <AnimatedGradientStroke className="mb-8" />
           )}
