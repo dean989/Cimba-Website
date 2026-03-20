@@ -92,8 +92,8 @@ export default function UseCasesCarousel() {
                     <span
                       className={`block transition-all duration-300 ease-out ${
                         isActive
-                          ? "font-bold text-primary text-2xl"
-                          : "font-normal text-grey-900 text-[17px]"
+                          ? "font-medium text-primary text-[19px]"
+                          : "font-normal text-grey-600 text-[17px]"
                       }`}
                     >
                       {u.eyebrow}
@@ -141,12 +141,12 @@ export default function UseCasesCarousel() {
                 See more
               </Link>
             </div>
-            <div className="order-1 lg:order-2 relative w-full aspect-square bg-grey-100 lg:flex-[0_0_285px]">
+            <div className="order-1 lg:order-2 relative w-full aspect-square bg-grey-100 lg:flex-[0_0_285px] overflow-hidden group">
               <Image
                 src={active.imageSrc}
                 alt=""
                 fill
-                className="object-cover object-top object-right"
+                className="object-cover object-top object-right origin-left transition-transform duration-500 ease-out group-hover:scale-[1.12]"
                 sizes="(max-width: 1024px) 100vw, 468px"
               />
             </div>
