@@ -162,7 +162,7 @@ export default function IntegrationsSection({ dataCategories }: Props) {
 
         <div className="mb-10">
           <h3 className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-3">
-            MPC SERVER
+            MCP SERVER
           </h3>
           <p className="text-[16px] text-grey-600 leading-relaxed max-w-4xl mb-4">
             Cimba provides an MCP server that exposes agents, workflows, and

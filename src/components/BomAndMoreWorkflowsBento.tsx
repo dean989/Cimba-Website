@@ -34,12 +34,12 @@ export default function BomAndMoreWorkflowsBento() {
     <>
       <div className="lg:col-span-5 flex h-full min-h-[420px] flex-col rounded-2xl border border-primary/30 bg-primary p-8">
         <div className="flex-1 mb-8">
-          <div className="relative w-full aspect-[488/266] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02]">
+          <div className="group relative w-full aspect-[488/266] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02]">
             <Image
               src="/bom-misalignment-v2.png"
               alt="BOM comparison view"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               sizes="(min-width: 1024px) 40vw, 100vw"
             />
           </div>

@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* ── Video ── */}
-      <section className="bg-grey-50 pb-16 lg:pb-24">
+      <section className="bg-grey-50 pb-10 lg:pb-16">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-primary shadow-xl mt-[20px]">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* ── Trusted By ── */}
-      <section className="bg-grey-50 py-14">
+      <section className="bg-grey-50 py-10">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <p className="text-center text-[16px] font-medium text-grey-400 uppercase tracking-[0.15em] mb-8">
             Trusted by industry leaders

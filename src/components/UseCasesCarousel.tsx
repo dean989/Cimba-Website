@@ -15,40 +15,40 @@ export type UseCaseSlide = {
 
 const useCases: UseCaseSlide[] = [
   {
-    id: "ai-account-managers",
+    id: "ai-for-ams",
     label: "AI for Account Managers",
-    eyebrow: "Sales · Customer Success",
+    eyebrow: "Business Operations",
     title: "AI for Account Managers",
     paragraphs: [
       "Give account managers instant access to performance insights for their customers or partners. Diagnose growth trends, answer ad-hoc questions, and identify upsell opportunities in real time.",
       "",
     ],
     bullets: [],
-    imageSrc: "/use-cases-am.png",
+    imageSrc: "/case-studies/ai-for-ams.png",
   },
   {
-    id: "accounting-automation",
+    id: "finops",
     label: "Accounting Automation",
-    eyebrow: "Finance · Close",
+    eyebrow: "Financial Operations",
     title: "Accounting Automation",
     paragraphs: [
       "Automate reconciliations, anomaly detection, and close workflows across spreadsheets and financial systems. Cimba validates numbers, flags irregularities, and explains changes automatically.",
       "",
     ],
     bullets: [],
-    imageSrc: "/use-cases-accounting-v2.png",
+    imageSrc: "/case-studies/finops.png",
   },
   {
     id: "risk-monitoring",
     label: "Risk Monitoring",
-    eyebrow: "Finance · Risk",
+    eyebrow: "Risk & Underwriting",
     title: "Risk Monitoring",
     paragraphs: [
       "Continuously analyze operational and financial data to detect anomalies and emerging risks. Cimba identifies patterns, explains root causes, and helps teams act before issues escalate.",
       "",
     ],
     bullets: [],
-    imageSrc: "/use-cases-risk-v2.png",
+    imageSrc: "/case-studies/risk-monitoring.png",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function UseCasesCarousel() {
                           : "font-normal text-grey-900 text-[17px]"
                       }`}
                     >
-                      {u.label}
+                      {u.eyebrow}
                     </span>
                   </button>
                 );
@@ -112,18 +112,19 @@ export default function UseCasesCarousel() {
               backgroundClip: "padding-box, border-box",
             }}
           >
-            <div className="flex-1 w-full min-w-[302px] h-[320px] sm:h-[360px] lg:h-[385px] p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+            <div className="flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
               <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
                 {active.title}
               </h2>
               <p className="text-[16px] text-grey-600 leading-relaxed mb-4">
                 {active.paragraphs[0]}
               </p>
-              {active.paragraphs[1] && active.paragraphs[1].trim().length > 0 && (
-                <p className="text-[16px] text-grey-600 leading-relaxed mb-8">
-                  {active.paragraphs[1]}
-                </p>
-              )}
+              {active.paragraphs[1] &&
+                active.paragraphs[1].trim().length > 0 && (
+                  <p className="text-[16px] text-grey-600 leading-relaxed mb-8">
+                    {active.paragraphs[1]}
+                  </p>
+                )}
               <ul className="space-y-2.5 text-[16px] text-grey-700">
                 {active.bullets.map((b, i) => (
                   <li key={i} className="flex items-start gap-2.5">
@@ -133,7 +134,7 @@ export default function UseCasesCarousel() {
                 ))}
               </ul>
             </div>
-            <div className="relative w-full min-h-[280px] lg:min-h-0 lg:min-w-0 lg:flex-[1_1_468px] lg:self-stretch bg-grey-100">
+            <div className="relative w-full bg-grey-100 lg:aspect-square lg:flex-[0_0_285px]">
               <Image
                 src={active.imageSrc}
                 alt=""

@@ -67,12 +67,12 @@ export default function PlScenarioCloseBento() {
       </div>
 
       <div className="lg:col-span-7 flex h-full min-h-[520px] flex-col rounded-2xl border border-primary/30 bg-primary p-8">
-        <div className="relative mb-8 w-full shrink-0 aspect-[728/371] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02]">
+        <div className="group relative mb-8 w-full shrink-0 aspect-[728/371] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02]">
           <Image
             src="/close-reconciliation-v2.png"
             alt="Close & Reconciliation dashboard"
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             sizes="(min-width: 1024px) 55vw, 100vw"
           />
         </div>
