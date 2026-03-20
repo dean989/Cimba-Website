@@ -299,13 +299,13 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
             }
           >
             {study.id === "ai-for-ams" && study.stats && (
-              <div className="grid min-w-0 flex-1 grid-cols-3 gap-2 sm:gap-3">
+              <div className="grid min-w-0 flex-1 grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                 {study.stats.map((stat) => (
                   <div
                     key={stat.label}
                     className="min-w-0 rounded-xl border border-grey-200 bg-grey-50 px-2 py-3 sm:px-3 sm:py-4"
                   >
-                    <p className="font-normal leading-none text-2xl text-blue-500 sm:text-3xl lg:text-[42px] xl:text-[50px]">
+                    <p className="font-normal leading-none text-[44px] text-blue-500 sm:text-3xl lg:text-[42px] xl:text-[50px]">
                       {stat.value}
                     </p>
                     <p className="text-[18px] text-grey-500 mt-1.5 leading-relaxed">
@@ -360,14 +360,14 @@ function ExpandableCard({ study }: { study: CaseStudy }) {
           <div className="px-8 sm:px-10 lg:px-12 pb-10 lg:pb-12">
             <div className="border-t border-grey-200 pt-10">
               <div className="mb-10 lg:mb-12 -mx-8 px-8 sm:-mx-10 sm:px-10 lg:-mx-12 lg:px-12 max-w-none min-w-0">
-                <div className="max-w-[80%] min-w-0">
+                <div className="w-full min-w-0">
                   <h3 className="text-[22px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
                     The Challenge
                   </h3>
                   {study.challenge.map((p, i) => (
                     <p
                       key={i}
-                      className="text-[20px] text-grey-600 leading-relaxed mb-4 last:mb-0 w-full"
+                      className="text-[16px] sm:text-[20px] text-grey-600 leading-relaxed mb-4 last:mb-0 w-full"
                     >
                       {p}
                     </p>

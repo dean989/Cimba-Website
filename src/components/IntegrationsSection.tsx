@@ -143,17 +143,17 @@ export default function IntegrationsSection({ dataCategories }: Props) {
           {dataCategories.flatMap((cat) => cat.items).map((item) => (
             <div
               key={item.name}
-              className="flex items-center gap-2.5 px-5 py-1.5 bg-white border border-grey-200 rounded-xl transition-transform transition-shadow duration-200 ease-out hover:scale-[1.02] hover:shadow-md"
+              className="flex items-center gap-2 px-3 py-1 bg-white border border-grey-200 rounded-full sm:gap-2.5 sm:px-5 sm:py-1.5 sm:rounded-xl transition-transform transition-shadow duration-200 ease-out hover:scale-[1.02] hover:shadow-md"
             >
               <Image
                 src={item.icon}
                 alt={item.name}
                 width={40}
                 height={40}
-                className="object-contain flex-shrink-0"
+                className="object-contain flex-shrink-0 w-6 h-6 sm:w-10 sm:h-10"
                 unoptimized
               />
-              <span className="text-[16px] font-medium text-grey-700 whitespace-nowrap">
+              <span className="text-[13px] sm:text-[16px] font-medium text-grey-700 whitespace-nowrap">
                 {item.name}
               </span>
             </div>
@@ -175,17 +175,17 @@ export default function IntegrationsSection({ dataCategories }: Props) {
             {mcpServerIntegrations.map((item) => (
               <div
                 key={item.name}
-                className="flex items-center gap-2.5 px-5 py-1.5 bg-white border border-grey-200 rounded-xl transition-transform transition-shadow duration-200 ease-out hover:scale-[1.02] hover:shadow-md"
+                className="flex items-center gap-2 px-3 py-1 bg-white border border-grey-200 rounded-full sm:gap-2.5 sm:px-5 sm:py-1.5 sm:rounded-xl transition-transform transition-shadow duration-200 ease-out hover:scale-[1.02] hover:shadow-md"
               >
                 <Image
                   src={item.icon}
                   alt={item.name}
                   width={40}
                   height={40}
-                  className="object-contain flex-shrink-0"
+                  className="object-contain flex-shrink-0 w-6 h-6 sm:w-10 sm:h-10"
                   unoptimized
                 />
-                <span className="text-[16px] font-medium text-grey-700 whitespace-nowrap">
+                <span className="text-[13px] sm:text-[16px] font-medium text-grey-700 whitespace-nowrap">
                   {item.name}
                 </span>
               </div>

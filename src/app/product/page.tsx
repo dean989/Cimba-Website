@@ -143,7 +143,7 @@ export default function ProductPage() {
                 and operationalize intelligence across teams.
               </p>
             </div>
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
               <div className="relative w-full min-h-[320px] rounded-2xl border border-grey-200 overflow-hidden">
                 <Image
                   src="/product-diagram.png"
@@ -221,12 +221,12 @@ export default function ProductPage() {
               <div
                 key={pillar.title}
                 className={`bg-grey-50 rounded-2xl border border-grey-200 p-8 ${
-                  "image" in pillar && pillar.image ? "flex gap-6" : ""
+                  "image" in pillar && pillar.image ? "flex flex-col sm:flex-row gap-6" : ""
                 }`}
               >
                 {"image" in pillar && pillar.image ? (
                   <>
-                    <div className="relative flex-shrink-0 w-[45%] min-w-[140px] max-w-[200px] aspect-square rounded-xl overflow-hidden bg-white border border-grey-200">
+                    <div className="relative flex-shrink-0 w-24 h-24 sm:w-[45%] sm:h-auto min-w-0 sm:min-w-[140px] max-w-full sm:max-w-[200px] sm:aspect-square rounded-xl overflow-hidden bg-white border border-grey-200">
                       <div className="absolute inset-[10px]">
                         <Image
                           src={pillar.image}

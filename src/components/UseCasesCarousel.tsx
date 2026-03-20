@@ -113,7 +113,7 @@ export default function UseCasesCarousel() {
               backgroundClip: "padding-box, border-box",
             }}
           >
-            <div className="flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col">
+            <div className="order-2 lg:order-1 flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col">
               <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
                 {active.title}
               </h2>
@@ -141,7 +141,7 @@ export default function UseCasesCarousel() {
                 See more
               </Link>
             </div>
-            <div className="relative w-full bg-grey-100 lg:aspect-square lg:flex-[0_0_285px]">
+            <div className="order-1 lg:order-2 relative w-full aspect-square bg-grey-100 lg:flex-[0_0_285px]">
               <Image
                 src={active.imageSrc}
                 alt=""

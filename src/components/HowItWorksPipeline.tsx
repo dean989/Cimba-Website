@@ -41,6 +41,18 @@ export default function HowItWorksPipeline() {
     setSelectedIndex(index);
   }, []);
 
+  const goPrev = useCallback(() => {
+    setSelectedIndex((prev) =>
+      prev === 0 ? pipelineSteps.length - 1 : prev - 1
+    );
+  }, []);
+
+  const goNext = useCallback(() => {
+    setSelectedIndex((prev) =>
+      prev === pipelineSteps.length - 1 ? 0 : prev + 1
+    );
+  }, []);
+
   const step = pipelineSteps[selectedIndex];
 
   return (
@@ -57,18 +69,18 @@ export default function HowItWorksPipeline() {
           then run workflows that deliver governed, repeatable intelligence.
         </p>
 
-        {/* Pipeline tabs — rounded only on outer ends (CONNECT / WORKFLOWS) */}
-        <div className="flex flex-wrap justify-center items-stretch mb-10 overflow-x-auto pb-2">
-          <div className="inline-flex flex-shrink-0 rounded-full overflow-hidden border border-grey-200 divide-x divide-grey-200">
+        {/* Pipeline tabs */}
+        <div className="mb-10">
+          <div className="flex flex-col gap-3 sm:inline-flex sm:flex-row sm:flex-wrap sm:justify-center sm:items-stretch">
             {pipelineSteps.map((s, i) => (
               <button
                 key={s.id}
                 type="button"
                 onClick={() => goTo(i)}
-                className={`flex-none w-[150px] flex items-center justify-center py-3 text-center transition-colors min-w-0 border-0 ${
+                className={`w-full sm:w-[150px] flex items-center justify-center py-3 text-center transition-colors min-w-0 border rounded-xl ${
                   i === selectedIndex
-                    ? "bg-primary text-white font-bold"
-                    : "bg-white text-primary hover:bg-grey-50"
+                    ? "bg-primary text-white font-bold border-primary"
+                    : "bg-white text-primary hover:bg-grey-50 border-grey-200"
                 }`}
               >
                 <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
@@ -84,12 +96,13 @@ export default function HowItWorksPipeline() {
           className="bg-white border border-grey-200 rounded-2xl overflow-hidden shadow-sm"
         >
           <div className="flex flex-col lg:flex-row h-auto lg:h-[270px]">
-            <div className="relative w-full lg:w-[600px] h-[270px] flex-shrink-0 border-r border-grey-200 overflow-hidden">
+            <div className="w-full lg:w-[600px] lg:h-[270px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-grey-200 overflow-hidden bg-white">
               <Image
                 src={step.imageSrc}
                 alt={step.title}
-                fill
-                className="object-cover"
+                width={600}
+                height={270}
+                className="block w-full h-auto lg:h-full object-cover"
                 unoptimized
               />
             </div>
@@ -113,6 +126,40 @@ export default function HowItWorksPipeline() {
                   </>
                 )}
               </p>
+              <div className="mt-6 flex items-center justify-between sm:hidden">
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  aria-label="Previous step"
+                  className="inline-flex items-center justify-center rounded-lg border border-grey-200 bg-white px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-primary transition-colors hover:bg-grey-50"
+                >
+                  Prev
+                </button>
+                <div className="flex items-center gap-2">
+                  {pipelineSteps.map((s, i) => (
+                    <button
+                      key={s.id}
+                      type="button"
+                      onClick={() => goTo(i)}
+                      aria-label={`Go to ${s.title}`}
+                      aria-current={i === selectedIndex ? "step" : undefined}
+                      className={`h-2.5 rounded-full transition-all ${
+                        i === selectedIndex
+                          ? "w-6 bg-primary"
+                          : "w-2.5 bg-grey-300 hover:bg-grey-400"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  aria-label="Next step"
+                  className="inline-flex items-center justify-center rounded-lg border border-grey-200 bg-white px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-primary transition-colors hover:bg-grey-50"
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </div>
         </div>
