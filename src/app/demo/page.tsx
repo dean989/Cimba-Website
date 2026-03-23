@@ -1,7 +1,8 @@
-import { Play, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import DemoRequestForm from "@/components/DemoRequestForm";
+import HomeHeroVideo from "@/components/HomeHeroVideo";
 
 export const metadata: Metadata = {
   title: "See Demo — Cimba",
@@ -59,22 +60,7 @@ export default function DemoPage() {
             </div>
 
             {/* Video */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-grey-900/10 border border-grey-200 bg-white">
-              <div className="aspect-video bg-gradient-to-br from-grey-100 to-grey-200 flex items-center justify-center">
-                <button className="group flex items-center justify-center w-20 h-20 rounded-full bg-primary shadow-lg shadow-primary/30 hover:scale-105 transition-transform">
-                  <Play
-                    size={32}
-                    className="text-white ml-1 group-hover:scale-110 transition-transform"
-                    fill="white"
-                  />
-                </button>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-grey-900/60 to-transparent p-6">
-                <p className="text-white text-sm font-medium">
-                  Cimba Product Demo — 60 seconds
-                </p>
-              </div>
-            </div>
+            <HomeHeroVideo />
           </div>
         </div>
       </section>
