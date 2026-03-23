@@ -32,9 +32,18 @@ const footerColumns: {
   {
     category: "Use Cases",
     links: [
-      { label: "AI for AMs", href: "/use-cases#ai-for-ams" },
-      { label: "FinOps", href: "/use-cases#finops" },
-      { label: "Risk Monitoring", href: "/use-cases#risk-monitoring" },
+      {
+        label: "Business Operations",
+        href: "/use-cases#ai-for-ams",
+      },
+      {
+        label: "Financial Operations",
+        href: "/use-cases#finops",
+      },
+      {
+        label: "Risk & Underwriting",
+        href: "/use-cases#risk-monitoring",
+      },
     ],
   },
 ];
@@ -66,16 +75,34 @@ export default function Footer() {
   return (
     <footer className="bg-[#0d1b2a]">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 pt-10 pb-12">
-        {/* Logo - white for contrast */}
-        <Link href="/" className="inline-block mb-8">
-          <Image
-            src="/cimba-logo-white.svg"
-            alt="Cimba"
-            width={960}
-            height={360}
-            className="w-full max-w-[320px] h-auto"
-          />
-        </Link>
+        {/* Top row: brand + prominent LinkedIn */}
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <Link href="/" className="inline-block">
+            <Image
+              src="/cimba-logo-white.svg"
+              alt="Cimba"
+              width={960}
+              height={360}
+              className="w-full max-w-[320px] h-auto"
+            />
+          </Link>
+          <a
+            href="https://www.linkedin.com/company/cimba-ai/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-fit items-center opacity-80 hover:opacity-100 transition-opacity"
+            aria-label="Cimba on LinkedIn"
+          >
+            <Image
+              src="/linkedin-icon.png"
+              alt="LinkedIn"
+              width={512}
+              height={512}
+              className="h-9 w-9 rounded-[10px]"
+              unoptimized
+            />
+          </a>
+        </div>
 
         {/* Links grid — Home | Product | Use Cases */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-16">
@@ -103,7 +130,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[16px] text-white/80">
-            &copy; {new Date().getFullYear()} Cimba. All rights reserved.
+            &copy; {new Date().getFullYear()} Cimba.ai All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
             <Link
@@ -112,28 +139,6 @@ export default function Footer() {
             >
               Privacy
             </Link>
-            <Link
-              href="/terms"
-              className="text-[16px] text-white/80 hover:text-white transition-colors"
-            >
-              Terms
-            </Link>
-            <a
-              href="https://www.linkedin.com/company/cimba-ai/posts/?feedView=all"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity"
-              aria-label="Cimba on LinkedIn"
-            >
-              <Image
-                src="/linkedin-logo.svg"
-                alt=""
-                width={1012}
-                height={324}
-                className="h-6 w-auto"
-                unoptimized
-              />
-            </a>
           </div>
         </div>
       </div>
