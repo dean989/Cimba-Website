@@ -1,6 +1,7 @@
-import { Play, ArrowRight, CheckCircle } from "lucide-react";
+import { Play, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 import CursorGradientSection from "@/components/CursorGradientSection";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 export const metadata: Metadata = {
   title: "See Demo — Cimba",
@@ -102,113 +103,7 @@ export default function DemoPage() {
               </p>
             </div>
 
-            <form className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium text-grey-700 mb-2"
-                  >
-                    First name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors"
-                    placeholder="Jane"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium text-grey-700 mb-2"
-                  >
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors"
-                    placeholder="Smith"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-grey-700 mb-2"
-                >
-                  Work email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors"
-                  placeholder="jane@company.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="company"
-                  className="block text-sm font-medium text-grey-700 mb-2"
-                >
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors"
-                  placeholder="Acme Inc."
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="role"
-                  className="block text-sm font-medium text-grey-700 mb-2"
-                >
-                  Your role
-                </label>
-                <select
-                  id="role"
-                  className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)]"
-                >
-                  <option value="">Select your role</option>
-                  <option value="finance">Finance / FP&A</option>
-                  <option value="accounting">Accounting</option>
-                  <option value="data">Data / Analytics / BI</option>
-                  <option value="ai">AI Strategy</option>
-                  <option value="cs">Customer Success</option>
-                  <option value="ops">Business Operations</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-grey-700 mb-2"
-                >
-                  What are you looking to solve?
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors resize-none"
-                  placeholder="Tell us about your use case..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-10 py-0 text-base font-semibold btn-primary rounded-full transition-all shadow-lg"
-              >
-                Request Demo
-                <ArrowRight size={18} />
-              </button>
-            </form>
+            <DemoRequestForm />
           </div>
         </div>
       </CursorGradientSection>

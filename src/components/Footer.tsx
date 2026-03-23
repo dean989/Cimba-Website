@@ -130,7 +130,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[16px] text-white/80">
-            &copy; {new Date().getFullYear()} Cimba.ai All rights reserved.
+            &copy; {new Date().getFullYear()} Cimba.AI All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
             <Link
