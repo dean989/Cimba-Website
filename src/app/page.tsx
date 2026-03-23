@@ -70,7 +70,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
-              Governed workflows that define how your business handles
+              Governed AI workflows that define how your business handles
               complexity and delivers repeatable, trusted decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
