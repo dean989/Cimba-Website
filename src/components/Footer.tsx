@@ -25,8 +25,8 @@ const footerColumns: {
     links: [
       { label: "What is Cimba", href: "/product#what-is-cimba" },
       { label: "How It Works", href: "/product#how-it-works" },
-      { label: "Security", href: "/product#security" },
       { label: "Integrations", href: "/product#integrations" },
+      { label: "Security", href: "/product#security" },
     ],
   },
   {
