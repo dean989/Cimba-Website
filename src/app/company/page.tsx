@@ -30,7 +30,7 @@ export default function CompanyPage() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section className="py-20 lg:py-28 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-6">
@@ -50,7 +50,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section className="py-20 lg:py-28 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
             Our Leadership Team
@@ -98,7 +98,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Careers Section */}
-      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section className="py-20 lg:py-28 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="bg-gradient-to-br from-grey-50 to-grey-100 rounded-2xl h-80 flex items-center justify-center border border-grey-200 order-2 lg:order-1">
             <p className="text-grey-400 font-medium">Careers Visual</p>
@@ -126,7 +126,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Newsroom Section */}
-      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section className="py-20 lg:py-28 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
             Newsroom
