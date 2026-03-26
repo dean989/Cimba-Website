@@ -6,10 +6,10 @@ import CTASection from "@/components/CTASection";
 
 export default function CompanyPage() {
   const team = [
-    { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.webp" },
-    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpeg" },
-    { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.png" },
-    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean-yao.jpg" },
+    { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/", bgColor: "" },
+    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/", bgColor: "bg-[#e8d5b7]" },
+    { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/", bgColor: "" },
+    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean-yao.jpg", linkedin: "https://www.linkedin.com/in/deanyao/", bgColor: "" },
   ];
 
   return (
@@ -66,7 +66,7 @@ export default function CompanyPage() {
               key={member.name}
               className="flex flex-col items-center text-center p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white"
             >
-              <div className="w-24 h-24 rounded-full overflow-hidden mb-6 flex-shrink-0">
+              <div className={`w-24 h-24 rounded-full overflow-hidden mb-6 flex-shrink-0 ${member.bgColor}`}>
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -76,7 +76,22 @@ export default function CompanyPage() {
                 />
               </div>
               <h3 className="text-xl font-semibold text-grey-900 mb-2">{member.name}</h3>
-              <p className="text-[16px] text-primary font-medium">{member.role}</p>
+              <p className="text-[16px] text-primary font-medium mb-4">{member.role}</p>
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-70 hover:opacity-100 transition-opacity"
+                aria-label={`${member.name} on LinkedIn`}
+              >
+                <Image
+                  src="/linkedin-icon.png"
+                  alt="LinkedIn"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 rounded"
+                />
+              </a>
             </div>
           ))}
         </div>
