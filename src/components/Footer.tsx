@@ -94,7 +94,7 @@ export default function Footer() {
             aria-label="Cimba on LinkedIn"
           >
             <Image
-              src="/linkedin-icon.png"
+              src="/linkedin-inbug-white.png"
               alt="LinkedIn"
               width={512}
               height={512}
