@@ -96,9 +96,9 @@ export default function Footer() {
             <Image
               src="/linkedin-inbug-white.png"
               alt="LinkedIn"
-              width={512}
-              height={512}
-              className="h-9 w-9 rounded-[10px]"
+              width={36}
+              height={36}
+              className="w-9 h-auto"
               unoptimized
             />
           </a>

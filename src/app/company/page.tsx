@@ -6,10 +6,10 @@ import CTASection from "@/components/CTASection";
 
 export default function CompanyPage() {
   const team = [
-    { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/", bgColor: "" },
-    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/", bgColor: "bg-[#e8d5b7]" },
-    { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/", bgColor: "" },
-    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/", bgColor: "" },
+    { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/" },
+    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/" },
+    { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/" },
+    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/" },
   ];
 
   return (
@@ -66,13 +66,13 @@ export default function CompanyPage() {
               key={member.name}
               className="flex flex-col items-center text-center p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white"
             >
-              <div className={`w-32 h-32 rounded-full overflow-hidden mb-6 flex-shrink-0 ${member.bgColor || 'bg-grey-100'}`}>
+              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 flex-shrink-0 bg-grey-100">
                 <Image
                   src={member.image}
                   alt={member.name}
                   width={128}
                   height={128}
-                  className={`w-full h-full ${member.bgColor ? 'object-contain p-1' : 'object-cover'}`}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold text-grey-900 mb-2">{member.name}</h3>
@@ -87,9 +87,9 @@ export default function CompanyPage() {
                 <Image
                   src="/linkedin-inbug.png"
                   alt="LinkedIn"
-                  width={24}
-                  height={24}
-                  className="h-6 w-6"
+                  width={32}
+                  height={32}
+                  className="w-8 h-auto"
                 />
               </a>
             </div>
