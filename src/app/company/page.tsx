@@ -132,40 +132,71 @@ export default function CompanyPage() {
             Newsroom
           </h2>
           <p className="text-lg text-grey-600 leading-relaxed max-w-2xl">
-            Latest updates and announcements from Cimba.
+            Latest news and press coverage about Cimba AI.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              date: "March 2026",
-              title: "Cimba Secures Series B Funding",
-              excerpt: "We&apos;re thrilled to announce $X million in Series B funding to accelerate our mission.",
+              date: "Feb 6, 2024",
+              title: "Cimba.AI Emerges from Stealth with Pre-Seed Funding to Optimize Data-Driven Business Operations",
+              publication: "PR Newswire",
+              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/PR_Newswire_logo.svg/320px-PR_Newswire_logo.svg.png",
+              url: "https://www.prnewswire.com/news-releases/adaptive-gen-ai-startup-cimbaai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations-302054648.html",
             },
             {
-              date: "February 2026",
-              title: "New Integrations Available",
-              excerpt: "We&apos;ve launched integrations with additional enterprise data platforms.",
+              date: "Feb 6, 2024",
+              title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents",
+              publication: "VentureBeat",
+              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/VentureBeat_logo.svg/320px-VentureBeat_logo.svg.png",
+              url: "https://venturebeat.com/ai/cimba-ai-emerges-from-stealth-with-1-25m-pre-seed-to-help-enterprises-build-ai-agents",
             },
             {
-              date: "January 2026",
-              title: "Enterprise Customers Scale to 10x Usage",
-              excerpt: "Our customers are seeing remarkable growth in workflow adoption and business impact.",
+              date: "Feb 6, 2024",
+              title: "AI customization startup Cimba launches with $1.25M in funding",
+              publication: "SiliconANGLE",
+              logo: "https://siliconangle.com/wp-content/uploads/2022/10/siliconangle-logo.png",
+              url: "https://siliconangle.com/2024/02/06/ai-customization-startup-cimba-launches-1-25m-funding",
+            },
+            {
+              date: "Feb 6, 2024",
+              title: "Cimba.AI Launches From Stealth With $1.25M in Seed Funding",
+              publication: "Built In",
+              logo: "https://builtin.com/sites/www.builtin.com/files/2021-07/builtin-logo_0.png",
+              url: "https://builtin.com/articles/cimba-launches-1m-seed-funding-20240206",
+            },
+            {
+              date: "Feb 6, 2024",
+              title: "Cimba.AI Emerges from Stealth with $1.25M Pre-Seed Funding to Empower Enterprises with Custom AI Agents",
+              publication: "VentureCapital.com",
+              logo: "",
+              url: "https://venturecapital.com/news/startupsfounders/cimbaai-emerges-from-stealth-with-125m-preseed-funding-to-empower-enterprises-with-custom-ai-agents-v1",
             },
           ].map((article, idx) => (
-            <div
+            <a
               key={idx}
-              className="p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white group cursor-pointer"
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col p-6 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white group"
             >
-              <p className="text-[14px] font-semibold text-primary uppercase tracking-[0.15em] mb-3">
-                {article.date}
-              </p>
-              <h3 className="text-xl font-semibold text-grey-900 mb-3 group-hover:text-primary transition-colors">
+              <div className="h-8 mb-4 flex items-center">
+                {article.logo ? (
+                  <img
+                    src={article.logo}
+                    alt={article.publication}
+                    className="h-full w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-[15px] font-bold text-grey-700">{article.publication}</span>
+                )}
+              </div>
+              <p className="text-[13px] text-grey-400 mb-2">{article.date}</p>
+              <h3 className="text-[15px] font-semibold text-grey-900 leading-snug line-clamp-3 group-hover:text-primary transition-colors">
                 {article.title}
               </h3>
-              <p className="text-[16px] text-grey-600 leading-relaxed">{article.excerpt}</p>
-            </div>
+            </a>
           ))}
         </div>
       </section>
