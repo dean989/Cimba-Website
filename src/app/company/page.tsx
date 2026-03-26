@@ -27,7 +27,7 @@ export default function CompanyPage() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="about-us" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-6">
@@ -47,7 +47,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="team" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
             Our Leadership Team
@@ -95,7 +95,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Careers Section */}
-      <section className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="careers" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="bg-gradient-to-br from-grey-50 to-grey-100 rounded-2xl h-80 flex items-center justify-center border border-grey-200 order-2 lg:order-1">
             <p className="text-grey-400 font-medium">Careers Visual</p>
@@ -123,7 +123,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Newsroom Section */}
-      <section className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="newsroom" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
             Newsroom
@@ -139,18 +139,12 @@ export default function CompanyPage() {
             { date: "Feb 6, 2024", title: "Ex-Amazon and Airbnb engineers raise $1.25M for enterprise AI agent developer Cimba.ai", publication: "GeekWire", url: "https://www.geekwire.com/2024/ex-amazon-and-airbnb-engineers-raise-1-25m-for-enterprise-ai-agent-developer-cimba-ai/" },
             { date: "Feb 6, 2024", title: "AI customization startup Cimba launches with $1.25M in funding", publication: "SiliconANGLE", url: "https://siliconangle.com/2024/02/06/ai-customization-startup-cimba-launches-1-25m-funding/" },
             { date: "Feb 6, 2024", title: "Cimba.AI: Adaptive Gen AI Company Emerges From Stealth Mode", publication: "Pulse 2.0", url: "https://pulse2.com/cimba-ai-adaptive-gen-ai-company-emerges-from-stealth-mode-with-pre-seed-funding/" },
-            { date: "Feb 7, 2024", title: "Cimba looks to raise cash, grow Seattle team after launching from stealth", publication: "Puget Sound Business Journal", url: "https://www.bizjournals.com/seattle/news/2024/02/07/cimba-ai-seattle-stealth-funding.html" },
             { date: "Feb 6, 2024", title: "Cimba.AI Launches From Stealth With $1.25M in Seed Funding", publication: "Built In Seattle", url: "https://www.builtinseattle.com/articles/cimba-launches-1m-seed-funding-20240206?utm_source=linkedin" },
-            { date: "Feb 6, 2024", title: "Cimba.AI Raises $1.25M in Pre-Seed Funding", publication: "citybiz", url: "https://www.citybiz.co/article/518101/cimba-ai-raises-1-25m-in-pre-seed-funding/" },
             { date: "Feb 6, 2024", title: "Cimba.AI Emerges from Stealth with Pre-Seed Funding to Optimize Data-Driven Business Operations", publication: "CIO Influence", url: "https://cioinfluence.com/machine-learning/cimba-ai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations/" },
             { date: "Feb 8, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges from Stealth with Pre-Seed Funding", publication: "Radical Data Science", url: "https://radicaldatascience.wordpress.com/2024/02/08/adaptive-gen-ai-startup-cimba-ai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations/" },
             { date: "Feb 6, 2024", title: "Cimba.AI Raises $1.25 Million in Pre-Seed Funding", publication: "The SaaS News", url: "https://www.thesaasnews.com/news/cimba-ai-raises-1-25-million-in-pre-seed-funding" },
             { date: "Feb 6, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges from Stealth with Pre-Seed Funding", publication: "PR Newswire", url: "https://www.prnewswire.com/news-releases/adaptive-gen-ai-startup-cimbaai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations-302054648.html" },
             { date: "Feb 7, 2024", title: "Cimba.AI Raises $1.25M in Pre-Seed Funding", publication: "FinSMEs", url: "https://www.finsmes.com/2024/02/cimba-ai-raises-1-25m-in-pre-seed-funding.html?utm_source=dlvr.it&utm_medium=twitter" },
-            { date: "Feb 6, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges from Stealth with Pre-Seed Funding", publication: "TMCnet", url: "https://www.tmcnet.com/usubmit/-adaptive-gen-ai-startup-cimbaai-emerges-from-stealth-/2024/02/06/9957774.htm" },
-            { date: "Feb 6, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges From Stealth With Pre-Seed Funding", publication: "MENAFN", url: "https://menafn.com/1107816064/Adaptive-Gen-AI-Startup-CimbaAI-Emerges-From-Stealth-With-Pre-Seed-Funding-To-Optimize-Data-Driven-Business-Operations" },
-            { date: "Feb 6, 2024", title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents", publication: "NewsBreak", url: "https://www.newsbreak.com/news/3324725037641-cimba-ai-emerges-from-stealth-with-1-25m-pre-seed-to-help-enterprises-build-ai-agents" },
-            { date: "Feb 6, 2024", title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents", publication: "Tech News Tube", url: "https://technewstube.com/venturebeat/1617067/cimba-ai-emerges-stealth-1-25m-pre-seed-to-help/" },
             { date: "Feb 6, 2024", title: "Cimba.AI Emerges from Stealth with Pre-Seed Funding to Optimize Data-Driven Business Operations", publication: "AI Authority", url: "https://aithority.com/machine-learning/cimba-ai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations/" },
             { date: "Feb 6, 2024", title: "Cimba.AI Emerges from Stealth with $1.25M Pre-Seed Funding to Empower Enterprises with Custom AI Agents", publication: "Venture Capital", url: "https://venturecapital.com/news/startupsfounders/cimbaai-emerges-from-stealth-with-125m-preseed-funding-to-empower-enterprises-with-custom-ai-agents-v1" },
           ].map((article, idx) => (
