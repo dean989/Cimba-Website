@@ -138,41 +138,24 @@ export default function CompanyPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            {
-              date: "Feb 6, 2024",
-              title: "Cimba.AI Emerges from Stealth with Pre-Seed Funding to Optimize Data-Driven Business Operations",
-              publication: "PR Newswire",
-              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/PR_Newswire_logo.svg/320px-PR_Newswire_logo.svg.png",
-              url: "https://www.prnewswire.com/news-releases/adaptive-gen-ai-startup-cimbaai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations-302054648.html",
-            },
-            {
-              date: "Feb 6, 2024",
-              title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents",
-              publication: "VentureBeat",
-              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/VentureBeat_logo.svg/320px-VentureBeat_logo.svg.png",
-              url: "https://venturebeat.com/ai/cimba-ai-emerges-from-stealth-with-1-25m-pre-seed-to-help-enterprises-build-ai-agents",
-            },
-            {
-              date: "Feb 6, 2024",
-              title: "AI customization startup Cimba launches with $1.25M in funding",
-              publication: "SiliconANGLE",
-              logo: "https://siliconangle.com/wp-content/uploads/2022/10/siliconangle-logo.png",
-              url: "https://siliconangle.com/2024/02/06/ai-customization-startup-cimba-launches-1-25m-funding",
-            },
-            {
-              date: "Feb 6, 2024",
-              title: "Cimba.AI Launches From Stealth With $1.25M in Seed Funding",
-              publication: "Built In",
-              logo: "https://builtin.com/sites/www.builtin.com/files/2021-07/builtin-logo_0.png",
-              url: "https://builtin.com/articles/cimba-launches-1m-seed-funding-20240206",
-            },
-            {
-              date: "Feb 6, 2024",
-              title: "Cimba.AI Emerges from Stealth with $1.25M Pre-Seed Funding to Empower Enterprises with Custom AI Agents",
-              publication: "VentureCapital.com",
-              logo: "",
-              url: "https://venturecapital.com/news/startupsfounders/cimbaai-emerges-from-stealth-with-125m-preseed-funding-to-empower-enterprises-with-custom-ai-agents-v1",
-            },
+            { date: "Feb 6, 2024", title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents", publication: "VentureBeat", url: "https://venturebeat.com/ai/cimba-ai-emerges-from-stealth-with-1-25m-pre-seed-to-help-enterprises-build-ai-agents" },
+            { date: "Feb 6, 2024", title: "Ex-Amazon and Airbnb engineers raise $1.25M for enterprise AI agent developer Cimba.ai", publication: "GeekWire", url: "https://www.geekwire.com/2024/ex-amazon-and-airbnb-engineers-raise-1-25m-for-enterprise-ai-agent-developer-cimba-ai/" },
+            { date: "Feb 6, 2024", title: "AI customization startup Cimba launches with $1.25M in funding", publication: "SiliconANGLE", url: "https://siliconangle.com/2024/02/06/ai-customization-startup-cimba-launches-1-25m-funding/" },
+            { date: "Feb 6, 2024", title: "Cimba.AI: Adaptive Gen AI Company Emerges From Stealth Mode", publication: "Pulse 2.0", url: "https://pulse2.com/cimba-ai-adaptive-gen-ai-company-emerges-from-stealth-mode-with-pre-seed-funding/" },
+            { date: "Feb 7, 2024", title: "Cimba looks to raise cash, grow Seattle team after launching from stealth", publication: "Puget Sound Business Journal", url: "https://www.bizjournals.com/seattle/news/2024/02/07/cimba-ai-seattle-stealth-funding.html" },
+            { date: "Feb 6, 2024", title: "Cimba.AI Launches From Stealth With $1.25M in Seed Funding", publication: "Built In Seattle", url: "https://www.builtinseattle.com/articles/cimba-launches-1m-seed-funding-20240206?utm_source=linkedin" },
+            { date: "Feb 6, 2024", title: "Cimba.AI Raises $1.25M in Pre-Seed Funding", publication: "citybiz", url: "https://www.citybiz.co/article/518101/cimba-ai-raises-1-25m-in-pre-seed-funding/" },
+            { date: "Feb 6, 2024", title: "Cimba.AI Emerges from Stealth with Pre-Seed Funding to Optimize Data-Driven Business Operations", publication: "CIO Influence", url: "https://cioinfluence.com/machine-learning/cimba-ai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations/" },
+            { date: "Feb 8, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges from Stealth with Pre-Seed Funding", publication: "Radical Data Science", url: "https://radicaldatascience.wordpress.com/2024/02/08/adaptive-gen-ai-startup-cimba-ai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations/" },
+            { date: "Feb 6, 2024", title: "Cimba.AI Raises $1.25 Million in Pre-Seed Funding", publication: "The SaaS News", url: "https://www.thesaasnews.com/news/cimba-ai-raises-1-25-million-in-pre-seed-funding" },
+            { date: "Feb 6, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges from Stealth with Pre-Seed Funding", publication: "PR Newswire", url: "https://www.prnewswire.com/news-releases/adaptive-gen-ai-startup-cimbaai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations-302054648.html" },
+            { date: "Feb 7, 2024", title: "Cimba.AI Raises $1.25M in Pre-Seed Funding", publication: "FinSMEs", url: "https://www.finsmes.com/2024/02/cimba-ai-raises-1-25m-in-pre-seed-funding.html?utm_source=dlvr.it&utm_medium=twitter" },
+            { date: "Feb 6, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges from Stealth with Pre-Seed Funding", publication: "TMCnet", url: "https://www.tmcnet.com/usubmit/-adaptive-gen-ai-startup-cimbaai-emerges-from-stealth-/2024/02/06/9957774.htm" },
+            { date: "Feb 6, 2024", title: "Adaptive Gen AI Startup Cimba.AI Emerges From Stealth With Pre-Seed Funding", publication: "MENAFN", url: "https://menafn.com/1107816064/Adaptive-Gen-AI-Startup-CimbaAI-Emerges-From-Stealth-With-Pre-Seed-Funding-To-Optimize-Data-Driven-Business-Operations" },
+            { date: "Feb 6, 2024", title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents", publication: "NewsBreak", url: "https://www.newsbreak.com/news/3324725037641-cimba-ai-emerges-from-stealth-with-1-25m-pre-seed-to-help-enterprises-build-ai-agents" },
+            { date: "Feb 6, 2024", title: "Cimba.AI emerges from stealth with $1.25M pre-seed to help enterprises build AI agents", publication: "Tech News Tube", url: "https://technewstube.com/venturebeat/1617067/cimba-ai-emerges-stealth-1-25m-pre-seed-to-help/" },
+            { date: "Feb 6, 2024", title: "Cimba.AI Emerges from Stealth with Pre-Seed Funding to Optimize Data-Driven Business Operations", publication: "AI Authority", url: "https://aithority.com/machine-learning/cimba-ai-emerges-from-stealth-with-pre-seed-funding-to-optimize-data-driven-business-operations/" },
+            { date: "Feb 6, 2024", title: "Cimba.AI Emerges from Stealth with $1.25M Pre-Seed Funding to Empower Enterprises with Custom AI Agents", publication: "Venture Capital", url: "https://venturecapital.com/news/startupsfounders/cimbaai-emerges-from-stealth-with-125m-preseed-funding-to-empower-enterprises-with-custom-ai-agents-v1" },
           ].map((article, idx) => (
             <a
               key={idx}
@@ -181,19 +164,9 @@ export default function CompanyPage() {
               rel="noopener noreferrer"
               className="flex flex-col p-6 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white group"
             >
-              <div className="h-8 mb-4 flex items-center">
-                {article.logo ? (
-                  <img
-                    src={article.logo}
-                    alt={article.publication}
-                    className="h-full w-auto object-contain"
-                  />
-                ) : (
-                  <span className="text-[15px] font-bold text-grey-700">{article.publication}</span>
-                )}
-              </div>
-              <p className="text-[13px] text-grey-400 mb-2">{article.date}</p>
-              <h3 className="text-[15px] font-semibold text-grey-900 leading-snug line-clamp-3 group-hover:text-primary transition-colors">
+              <p className="text-[13px] font-semibold text-primary uppercase tracking-widest mb-3">{article.publication}</p>
+              <p className="text-[12px] text-grey-400 mb-2">{article.date}</p>
+              <h3 className="text-[14px] font-semibold text-grey-900 leading-snug line-clamp-3 group-hover:text-primary transition-colors">
                 {article.title}
               </h3>
             </a>
