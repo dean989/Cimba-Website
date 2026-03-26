@@ -66,12 +66,12 @@ export default function CompanyPage() {
               key={member.name}
               className="flex flex-col items-center text-center p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white"
             >
-              <div className={`w-24 h-24 rounded-full overflow-hidden mb-6 flex-shrink-0 ${member.bgColor}`}>
+              <div className={`w-32 h-32 rounded-full overflow-hidden mb-6 flex-shrink-0 ${member.bgColor}`}>
                 <Image
                   src={member.image}
                   alt={member.name}
-                  width={96}
-                  height={96}
+                  width={128}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -113,12 +113,14 @@ export default function CompanyPage() {
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-8">
               We offer competitive compensation, meaningful equity, and the opportunity to work on problems that matter to enterprises around the world.
             </p>
-            <Link
-              href="/demo"
+            <a
+              href="https://www.linkedin.com/company/cimba-ai/jobs/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary px-8 py-0 text-[16px] font-semibold rounded-full transition-all inline-flex items-center gap-2"
             >
               View Open Positions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
