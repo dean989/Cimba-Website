@@ -6,10 +6,10 @@ import CTASection from "@/components/CTASection";
 
 export default function CompanyPage() {
   const team = [
-    { name: "Subu", role: "Co-Founder & CEO", initials: "S" },
-    { name: "Vishal", role: "Co-Founder & CTO", initials: "V" },
-    { name: "Parshav", role: "Co-Founder & COO", initials: "P" },
-    { name: "Dean Yao", role: "Co-Founder", initials: "DY" },
+    { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/", bgColor: "" },
+    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/", bgColor: "bg-[#e8d5b7]" },
+    { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/", bgColor: "" },
+    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/", bgColor: "" },
   ];
 
   return (
@@ -37,13 +37,10 @@ export default function CompanyPage() {
               Our Story
             </h2>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              Cimba was founded on the belief that enterprises need AI that they can understand, trust, and audit. We saw organizations struggle to deploy AI at scale because existing solutions treated AI as a black box.
+              Cimba AI is the agentic command center for business operations – an AI platform designed to proactively run and optimize how organizations operate through governed, repeatable workflows.
             </p>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              We built Cimba to change that. Our platform enables teams to create governed, repeatable AI workflows that integrate seamlessly with enterprise systems while maintaining complete transparency and control.
-            </p>
-            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed">
-              Today, leading enterprises use Cimba to automate complex decisions, scale expertise, and drive business impact — all with the auditability they demand.
+              Trusted by Fortune 500 companies including Airbnb, KPMG, and Swiggy, Cimba AI goes beyond answering questions with dashboards, chatbots, and copilots. The platform autonomously identifies, prioritizes, and resolves complex operational challenges – delivering consistent, auditable, and trusted decisions even before anyone asks for them.
             </p>
           </div>
           <div className="bg-gradient-to-br from-grey-50 to-grey-100 rounded-2xl h-80 flex items-center justify-center border border-grey-200">
@@ -69,11 +66,32 @@ export default function CompanyPage() {
               key={member.name}
               className="flex flex-col items-center text-center p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white"
             >
-              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-6 flex-shrink-0">
-                <span className="text-2xl font-semibold text-primary">{member.initials}</span>
+              <div className={`w-32 h-32 rounded-full overflow-hidden mb-6 flex-shrink-0 ${member.bgColor}`}>
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-semibold text-grey-900 mb-2">{member.name}</h3>
-              <p className="text-[16px] text-primary font-medium">{member.role}</p>
+              <p className="text-[16px] text-primary font-medium mb-4">{member.role}</p>
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-70 hover:opacity-100 transition-opacity"
+                aria-label={`${member.name} on LinkedIn`}
+              >
+                <Image
+                  src="/linkedin-icon.png"
+                  alt="LinkedIn"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 rounded"
+                />
+              </a>
             </div>
           ))}
         </div>
@@ -95,12 +113,14 @@ export default function CompanyPage() {
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-8">
               We offer competitive compensation, meaningful equity, and the opportunity to work on problems that matter to enterprises around the world.
             </p>
-            <Link
-              href="/demo"
+            <a
+              href="https://www.linkedin.com/company/cimba-ai/jobs/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary px-8 py-0 text-[16px] font-semibold rounded-full transition-all inline-flex items-center gap-2"
             >
               View Open Positions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
