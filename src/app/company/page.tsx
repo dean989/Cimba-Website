@@ -37,13 +37,10 @@ export default function CompanyPage() {
               Our Story
             </h2>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              Cimba was founded on the belief that enterprises need AI that they can understand, trust, and audit. We saw organizations struggle to deploy AI at scale because existing solutions treated AI as a black box.
+              Cimba AI is the agentic command center for business operations – an AI platform designed to proactively run and optimize how organizations operate through governed, repeatable workflows.
             </p>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              We built Cimba to change that. Our platform enables teams to create governed, repeatable AI workflows that integrate seamlessly with enterprise systems while maintaining complete transparency and control.
-            </p>
-            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed">
-              Today, leading enterprises use Cimba to automate complex decisions, scale expertise, and drive business impact — all with the auditability they demand.
+              Trusted by Fortune 500 companies including Airbnb, KPMG, and Swiggy, Cimba AI goes beyond answering questions with dashboards, chatbots, and copilots. The platform autonomously identifies, prioritizes, and resolves complex operational challenges – delivering consistent, auditable, and trusted decisions even before anyone asks for them.
             </p>
           </div>
           <div className="bg-gradient-to-br from-grey-50 to-grey-100 rounded-2xl h-80 flex items-center justify-center border border-grey-200">
