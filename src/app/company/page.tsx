@@ -9,7 +9,7 @@ export default function CompanyPage() {
     { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/", bgColor: "" },
     { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/", bgColor: "bg-[#e8d5b7]" },
     { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/", bgColor: "" },
-    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean-yao.jpg", linkedin: "https://www.linkedin.com/in/deanyao/", bgColor: "" },
+    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/", bgColor: "" },
   ];
 
   return (
