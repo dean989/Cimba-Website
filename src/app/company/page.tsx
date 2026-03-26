@@ -6,10 +6,10 @@ import CTASection from "@/components/CTASection";
 
 export default function CompanyPage() {
   const team = [
-    { name: "Subu", role: "Co-Founder & CEO", initials: "S" },
-    { name: "Vishal", role: "Co-Founder & CTO", initials: "V" },
-    { name: "Parshav", role: "Co-Founder & COO", initials: "P" },
-    { name: "Dean Yao", role: "Co-Founder", initials: "DY" },
+    { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.webp" },
+    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpeg" },
+    { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.png" },
+    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean-yao.jpg" },
   ];
 
   return (
@@ -66,8 +66,14 @@ export default function CompanyPage() {
               key={member.name}
               className="flex flex-col items-center text-center p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white"
             >
-              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-6 flex-shrink-0">
-                <span className="text-2xl font-semibold text-primary">{member.initials}</span>
+              <div className="w-24 h-24 rounded-full overflow-hidden mb-6 flex-shrink-0">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-semibold text-grey-900 mb-2">{member.name}</h3>
               <p className="text-[16px] text-primary font-medium">{member.role}</p>
