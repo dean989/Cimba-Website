@@ -15,11 +15,8 @@ export default function CompanyPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section className="pt-20 pb-12 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
-          <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
-            About Us
-          </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-grey-900 leading-tight mb-6 max-w-3xl">
             Building AI that enterprises can trust
           </h1>
@@ -30,11 +27,11 @@ export default function CompanyPage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 lg:py-28 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-6">
-              Our Story
+              About Us
             </h2>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
               Cimba AI is the agentic command center for business operations – an AI platform designed to proactively run and optimize how organizations operate through governed, repeatable workflows.

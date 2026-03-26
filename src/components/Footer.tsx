@@ -10,14 +10,16 @@ const footerColumns: {
   {
     category: "Home",
     links: [
-      { label: "Product demo", href: "/#home-video" },
-      { label: "Trusted by", href: "/#trusted-by" },
-      { label: "The problem", href: "/#the-problem" },
-      { label: "The Cimba solution", href: "/#cimba-solution" },
-      { label: "Who uses Cimba", href: "/#who-uses-cimba" },
-      { label: "Use cases", href: "/#use-cases" },
-      { label: "Testimonials", href: "/#testimonials" },
       { label: "Contact", href: "/#cta" },
+    ],
+  },
+  {
+    category: "Company",
+    links: [
+      { label: "About Us", href: "/company#about-us" },
+      { label: "Team", href: "/company#team" },
+      { label: "Careers", href: "/company#careers" },
+      { label: "Newsroom", href: "/company#newsroom" },
     ],
   },
   {
