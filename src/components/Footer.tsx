@@ -35,7 +35,7 @@ const footerColumns: {
     links: [
       { label: "About Us", href: "/company#about-us" },
       { label: "Team", href: "/company#team" },
-      { label: "Careers", href: "/company#careers" },
+      { label: "Careers", href: "https://www.linkedin.com/company/cimba-ai/jobs/" },
       { label: "Newsroom", href: "/company#newsroom" },
     ],
   },
@@ -68,7 +68,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0d1b2a]">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 pt-10 pb-12">
-        {/* Top row: brand + prominent LinkedIn */}
+        {/* Top row: brand */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Link href="/" className="inline-block">
             <Image
@@ -79,22 +79,6 @@ export default function Footer() {
               className="w-full max-w-[320px] h-auto"
             />
           </Link>
-          <a
-            href="https://www.linkedin.com/company/cimba-ai/posts/?feedView=all"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-fit items-center opacity-80 hover:opacity-100 transition-opacity"
-            aria-label="Cimba on LinkedIn"
-          >
-            <Image
-              src="/linkedin-inbug-white.png"
-              alt="LinkedIn"
-              width={36}
-              height={36}
-              className="w-9 h-auto"
-              unoptimized
-            />
-          </a>
         </div>
 
         {/* Links grid — Home | Product | Use Cases */}
@@ -115,6 +99,26 @@ export default function Footer() {
                     </FooterLink>
                   </li>
                 ))}
+                {category === "Home" && (
+                  <li className="pt-2">
+                    <a
+                      href="https://www.linkedin.com/company/cimba-ai/posts/?feedView=all"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity"
+                      aria-label="Cimba on LinkedIn"
+                    >
+                      <Image
+                        src="/linkedin-inbug-white.png"
+                        alt="LinkedIn"
+                        width={24}
+                        height={24}
+                        className="w-6 h-auto"
+                        unoptimized
+                      />
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
           ))}
