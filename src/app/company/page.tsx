@@ -1,0 +1,157 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import CTASection from "@/components/CTASection";
+
+export default function CompanyPage() {
+  const team = [
+    { name: "Subu", role: "Co-Founder & CEO", initials: "S" },
+    { name: "Vishal", role: "Co-Founder & CTO", initials: "V" },
+    { name: "Parshav", role: "Co-Founder & COO", initials: "P" },
+    { name: "Dean Yao", role: "Co-Founder", initials: "DY" },
+  ];
+
+  return (
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+        <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
+          <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+            About Us
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-grey-900 leading-tight mb-6 max-w-3xl">
+            Building AI that enterprises can trust
+          </h1>
+          <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl">
+            We&apos;re on a mission to enable organizations to unlock the power of AI while maintaining complete control and auditability.
+          </p>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-6">
+              Our Story
+            </h2>
+            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
+              Cimba was founded on the belief that enterprises need AI that they can understand, trust, and audit. We saw organizations struggle to deploy AI at scale because existing solutions treated AI as a black box.
+            </p>
+            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
+              We built Cimba to change that. Our platform enables teams to create governed, repeatable AI workflows that integrate seamlessly with enterprise systems while maintaining complete transparency and control.
+            </p>
+            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed">
+              Today, leading enterprises use Cimba to automate complex decisions, scale expertise, and drive business impact — all with the auditability they demand.
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-grey-50 to-grey-100 rounded-2xl h-80 flex items-center justify-center border border-grey-200">
+            <p className="text-grey-400 font-medium">Company Story Visual</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+        <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
+            Our Leadership Team
+          </h2>
+          <p className="text-lg text-grey-600 leading-relaxed max-w-2xl">
+            Experienced operators and technologists building the future of enterprise AI.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {team.map((member) => (
+            <div
+              key={member.name}
+              className="flex flex-col items-center text-center p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white"
+            >
+              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-6 flex-shrink-0">
+                <span className="text-2xl font-semibold text-primary">{member.initials}</span>
+              </div>
+              <h3 className="text-xl font-semibold text-grey-900 mb-2">{member.name}</h3>
+              <p className="text-[16px] text-primary font-medium">{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="bg-gradient-to-br from-grey-50 to-grey-100 rounded-2xl h-80 flex items-center justify-center border border-grey-200 order-2 lg:order-1">
+            <p className="text-grey-400 font-medium">Careers Visual</p>
+          </div>
+          <div className="order-1 lg:order-2">
+            <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-6">
+              Join Our Team
+            </h2>
+            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
+              We&apos;re building the next generation of enterprise AI infrastructure. If you&apos;re passionate about creating governed, auditable AI systems, we&apos;d love to hear from you.
+            </p>
+            <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-8">
+              We offer competitive compensation, meaningful equity, and the opportunity to work on problems that matter to enterprises around the world.
+            </p>
+            <Link
+              href="/demo"
+              className="btn-primary px-8 py-0 text-[16px] font-semibold rounded-full transition-all inline-flex items-center gap-2"
+            >
+              View Open Positions
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsroom Section */}
+      <section className="py-16 lg:py-20 px-6 lg:px-8 max-w-[1280px] mx-auto">
+        <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
+            Newsroom
+          </h2>
+          <p className="text-lg text-grey-600 leading-relaxed max-w-2xl">
+            Latest updates and announcements from Cimba.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              date: "March 2026",
+              title: "Cimba Secures Series B Funding",
+              excerpt: "We&apos;re thrilled to announce $X million in Series B funding to accelerate our mission.",
+            },
+            {
+              date: "February 2026",
+              title: "New Integrations Available",
+              excerpt: "We&apos;ve launched integrations with additional enterprise data platforms.",
+            },
+            {
+              date: "January 2026",
+              title: "Enterprise Customers Scale to 10x Usage",
+              excerpt: "Our customers are seeing remarkable growth in workflow adoption and business impact.",
+            },
+          ].map((article, idx) => (
+            <div
+              key={idx}
+              className="p-8 rounded-xl border border-grey-200 hover:shadow-md transition-shadow duration-300 bg-white group cursor-pointer"
+            >
+              <p className="text-[14px] font-semibold text-primary uppercase tracking-[0.15em] mb-3">
+                {article.date}
+              </p>
+              <h3 className="text-xl font-semibold text-grey-900 mb-3 group-hover:text-primary transition-colors">
+                {article.title}
+              </h3>
+              <p className="text-[16px] text-grey-600 leading-relaxed">{article.excerpt}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <CTASection />
+    </main>
+  );
+}
