@@ -18,7 +18,7 @@ export default function CompanyPage() {
       <section className="pt-20 pb-12 px-6 lg:px-8 max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-grey-900 leading-tight mb-6 max-w-3xl">
-            Building AI that enterprises can trust
+            Building AI that <span className="text-primary">enterprises can trust</span>
           </h1>
           <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl">
             We&apos;re on a mission to enable organizations to take immediate business-critical actions rather than being bogged down by what questions to ask.
