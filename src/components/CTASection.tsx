@@ -68,11 +68,11 @@ export default function CTASection({ id = "cta" }: CTASectionProps) {
       {/* Content */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-[44px] font-normal text-white leading-tight mb-5">
-          Ready to operationalize intelligence?
+          Ready for less asking and more doing?
         </h2>
         <p className="text-lg text-white/90 max-w-xl mx-auto mb-10">
           See how Cimba can transform your team&apos;s decision-making with
-          auditable, repeatable AI workflows.
+          consistent, trusted operational intelligence.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
