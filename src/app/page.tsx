@@ -70,7 +70,8 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
-              Cimba is the AI command center that proactively delivers consistent, trusted outcomes.
+              Cimba is the AI command center that proactively delivers<br />
+              consistent, trusted outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
