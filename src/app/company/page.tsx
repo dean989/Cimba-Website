@@ -15,14 +15,28 @@ export default function CompanyPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-20 pb-12 px-6 lg:px-8 max-w-[1280px] mx-auto">
-        <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-grey-900 leading-tight mb-6 max-w-3xl">
-            Building AI that <span className="text-primary">enterprises can trust</span>
-          </h1>
-          <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl">
-            We&apos;re on a mission to enable organizations to take immediate business-critical actions rather than being bogged down by what questions to ask.
-          </p>
+      <section className="relative overflow-hidden bg-white">
+        <Image
+          src="/company-hero.jpg"
+          alt=""
+          aria-hidden
+          fill
+          priority
+          className="object-cover object-center pointer-events-none"
+        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
+        <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
+          <div className="max-w-3xl">
+            <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+              Company
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-normal text-grey-900 leading-tight mb-6">
+              Building AI that <span className="text-primary">enterprises can trust</span>
+            </h1>
+            <p className="text-lg md:text-xl text-grey-500 leading-relaxed max-w-2xl">
+              We&apos;re on a mission to enable organizations to take immediate business-critical actions rather than being bogged down by what questions to ask.
+            </p>
+          </div>
         </div>
       </section>
 
