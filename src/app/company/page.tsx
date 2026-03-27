@@ -21,7 +21,7 @@ export default function CompanyPage() {
             Building AI that enterprises can trust
           </h1>
           <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl">
-            We&apos;re on a mission to enable organizations to unlock the power of AI while maintaining complete control and auditability.
+            We&apos;re on a mission to enable organizations to take more immediate actions rather than being bogged down by formulating what questions to ask.
           </p>
         </div>
       </section>
