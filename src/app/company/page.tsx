@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 export default function CompanyPage() {
   const team = [
     { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/" },
-    { name: "Vishal Das", role: "Co-Founder & Head of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/" },
+    { name: "Vishal Das", role: "Co-Founder &\nHead of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/" },
     { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/" },
     { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/" },
   ];
@@ -15,14 +15,28 @@ export default function CompanyPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-20 pb-12 px-6 lg:px-8 max-w-[1280px] mx-auto">
-        <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-grey-900 leading-tight mb-6 max-w-3xl">
-            Building AI that enterprises can trust
-          </h1>
-          <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl">
-            We&apos;re on a mission to enable organizations to unlock the power of AI while maintaining complete control and auditability.
-          </p>
+      <section className="relative overflow-hidden bg-white">
+        <Image
+          src="/company-hero.jpg"
+          alt=""
+          aria-hidden
+          fill
+          priority
+          className="object-cover object-center pointer-events-none"
+        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
+        <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
+          <div className="max-w-3xl">
+            <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+              Company
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-normal text-grey-900 leading-tight mb-6">
+              Building AI that <span className="text-primary">enterprises can trust</span>
+            </h1>
+            <p className="text-lg md:text-xl text-grey-500 leading-relaxed max-w-2xl">
+              We&apos;re on a mission to enable organizations to take immediate business-critical actions rather than being bogged down by what questions to ask.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -73,7 +87,7 @@ export default function CompanyPage() {
                 />
               </div>
               <h3 className="text-xl font-semibold text-grey-900 mb-2">{member.name}</h3>
-              <p className="text-[16px] text-primary font-medium mb-4">{member.role}</p>
+              <p className="text-[16px] text-primary font-medium mb-4 whitespace-pre-line">{member.role}</p>
               <a
                 href={member.linkedin}
                 target="_blank"
@@ -105,7 +119,7 @@ export default function CompanyPage() {
               Join Our Team
             </h2>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              We&apos;re building the next generation of enterprise AI infrastructure. If you&apos;re passionate about creating governed, auditable AI systems, we&apos;d love to hear from you.
+              We&apos;re building products that maximize trustful business outcomes. If you&apos;re passionate about creating new ways to accelerate how businesses operate, we&apos;d love to hear from you.
             </p>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-8">
               We offer competitive compensation, meaningful equity, and the opportunity to work on problems that matter to enterprises around the world.

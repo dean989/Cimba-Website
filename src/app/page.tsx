@@ -66,7 +66,7 @@ export default function Home() {
                 <span className="text-primary inline-block">
                   Operational intelligence
                 </span>{" "}
-                for real business decisions
+                for critical business decisions
               </span>
             </h1>
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
@@ -78,7 +78,7 @@ export default function Home() {
                 href="/demo"
                 className="btn-primary px-10 py-0 text-[16px] font-semibold rounded-full transition-all shadow-md inline-flex items-center gap-2"
               >
-                See Demo
+                See a Demo
                 <ArrowRight size={16} />
               </Link>
             </div>
