@@ -7,9 +7,9 @@ import CTASection from "@/components/CTASection";
 export default function CompanyPage() {
   const team = [
     { name: "Subrata (Subu) Biswas", role: "Co-Founder & CEO", image: "/team/subrata.jpg", linkedin: "https://www.linkedin.com/in/subrata-subu-biswas-5114251b/" },
-    { name: "Vishal Das", role: "Co-Founder\nHead of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/" },
+    { name: "Vishal Das", role: "Co-Founder &\nHead of AI", image: "/team/vishal.jpg", linkedin: "https://www.linkedin.com/in/vdas2/" },
     { name: "Parshav Bansal", role: "VP of Revenue & Customer Success", image: "/team/parshav.jpg", linkedin: "https://www.linkedin.com/in/parshavbansal/" },
-    { name: "Dean Yao", role: "Head of Marketing", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/" },
+    { name: "Dean Yao", role: "Head of Marketing\n", image: "/team/dean.jpg", linkedin: "https://www.linkedin.com/in/deanyao/" },
   ];
 
   return (
