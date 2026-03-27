@@ -66,7 +66,7 @@ export default function Home() {
                 <span className="text-primary inline-block">
                   Operational intelligence
                 </span>{" "}
-                for real business decisions
+                for critical business decisions
               </span>
             </h1>
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
