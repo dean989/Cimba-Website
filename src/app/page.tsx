@@ -63,14 +63,14 @@ export default function Home() {
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-grey-900 leading-[1.05] mb-8">
               <span className="block min-h-[2.4em] sm:min-h-[1.2em]">
-                Reign in your{" "}
+                Automate your{" "}
                 <span className="text-primary inline-block">
                   operational workflows
                 </span>
               </span>
             </h1>
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
-              Cimba is the AI command center that proactively delivers<br />
+              Cimba is the AI operations engine that proactively delivers<br />
               consistent, trusted outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
