@@ -119,7 +119,7 @@ export default function CompanyPage() {
               Join Our Team
             </h2>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              We&apos;re building the next generation of enterprise AI infrastructure. If you&apos;re passionate about creating governed, auditable AI systems, we&apos;d love to hear from you.
+              We&apos;re building products that maximize trustful business outcomes. If you&apos;re passionate about creating new ways to accelerate how businesses operate, we&apos;d love to hear from you.
             </p>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-8">
               We offer competitive compensation, meaningful equity, and the opportunity to work on problems that matter to enterprises around the world.
