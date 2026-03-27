@@ -79,7 +79,7 @@ export default function CTASection({ id = "cta" }: CTASectionProps) {
             href="/demo"
             className="btn-primary px-8 py-0 text-[16px] font-semibold rounded-full transition-all shadow-lg"
           >
-            See a Demo
+            See Demo
             <ArrowRight size={16} className="ml-2" />
           </Link>
           <Link
