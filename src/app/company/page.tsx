@@ -21,7 +21,7 @@ export default function CompanyPage() {
             Building AI that enterprises can trust
           </h1>
           <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl">
-            We&apos;re on a mission to enable organizations to take immediate business-critical actions rather than being bogged down about what questions to ask.
+            We&apos;re on a mission to enable organizations to take immediate business-critical actions rather than being bogged down by what questions to ask.
           </p>
         </div>
       </section>
