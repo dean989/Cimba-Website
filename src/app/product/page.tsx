@@ -114,7 +114,7 @@ export default function ProductPage() {
               href="/demo"
               className="btn-primary px-10 py-0 text-[16px] font-semibold rounded-full transition-all shadow-md inline-flex items-center gap-2"
             >
-              See Demo
+              See a Demo
               <ArrowRight size={16} />
             </Link>
           </div>
