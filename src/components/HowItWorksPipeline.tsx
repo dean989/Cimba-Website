@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 const pipelineSteps = [
   {
@@ -102,14 +103,17 @@ export default function HowItWorksPipeline() {
                   key={s.id}
                   type="button"
                   onClick={() => goTo(i)}
-                  className={`flex-none w-[150px] flex items-center justify-center py-3 text-center transition-colors min-w-0 border-0 ${
+                  className={`flex-none w-[150px] flex items-center justify-center py-3 text-center min-w-0 border-0 transition-all duration-150 ease-in-out group relative ${
                     i === selectedIndex
                       ? "bg-primary text-white font-bold"
-                      : "bg-white text-primary hover:bg-grey-50"
+                      : "bg-white text-primary hover:text-[#0770E3]"
                   }`}
                 >
-                  <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
+                  <span className="text-[12px] font-semibold uppercase tracking-wide truncate relative">
                     {s.id === "connect" ? "CONNECT" : s.title}
+                    {i !== selectedIndex && (
+                      <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#0770E3] transition-all duration-150 ease-in-out group-hover:w-full rounded-full" />
+                    )}
                   </span>
                 </button>
               ))}
@@ -118,76 +122,83 @@ export default function HowItWorksPipeline() {
         </div>
 
         {/* Card — title, hero image, description */}
-        <div
-          className="bg-white border border-grey-200 rounded-2xl overflow-hidden shadow-sm"
-        >
-          <div className="flex flex-col lg:flex-row h-auto lg:h-[270px]">
-            <div className="w-full lg:w-[600px] lg:h-[270px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-grey-200 overflow-hidden bg-white">
-              <Image
-                src={step.imageSrc}
-                alt={step.title}
-                width={600}
-                height={270}
-                className="block w-full h-auto lg:h-full object-cover"
-                unoptimized
-              />
-            </div>
-            <div className="min-w-0 flex flex-col justify-center p-8 sm:p-10 lg:p-12">
-              <div className="mb-4">
-                <h3 className="text-2xl font-normal text-grey-900 leading-tight">
-                  {step.title}
-                </h3>
+        <div className="bg-white border border-grey-200 rounded-2xl overflow-hidden shadow-sm">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={step.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="flex flex-col lg:flex-row h-auto lg:h-[270px]"
+            >
+              <div className="w-full lg:w-[600px] lg:h-[270px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-grey-200 overflow-hidden bg-white">
+                <Image
+                  src={step.imageSrc}
+                  alt={step.title}
+                  width={600}
+                  height={270}
+                  className="block w-full h-auto lg:h-full object-cover rounded-xl shadow-md"
+                  unoptimized
+                />
               </div>
-              <p className="text-[16px] text-grey-700 leading-relaxed">
-                {step.description}
-                {step.id === "connect" && (
-                  <>
-                    {" "}
-                    <a
-                      href="#integrations"
-                      className="underline underline-offset-2 hover:text-primary transition-colors"
-                    >
-                      View All
-                    </a>
-                  </>
-                )}
-              </p>
-              <div className="mt-6 flex items-center justify-between sm:hidden">
-                <button
-                  type="button"
-                  onClick={goPrev}
-                  aria-label="Previous step"
-                  className="inline-flex items-center justify-center rounded-lg border border-grey-200/80 bg-white px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-primary/70 transition-colors hover:bg-grey-50/60"
-                >
-                  Prev
-                </button>
-                <div className="flex items-center gap-2">
-                  {pipelineSteps.map((s, i) => (
-                    <button
-                      key={s.id}
-                      type="button"
-                      onClick={() => goTo(i)}
-                      aria-label={`Go to ${s.title}`}
-                      aria-current={i === selectedIndex ? "step" : undefined}
-                      className={`h-2.5 rounded-full transition-all ${
-                        i === selectedIndex
-                          ? "w-6 bg-primary"
-                          : "w-2.5 bg-grey-300 hover:bg-grey-400"
-                      }`}
-                    />
-                  ))}
+              <div className="min-w-0 flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-normal text-grey-900 leading-tight">
+                    {step.title}
+                  </h3>
                 </div>
-                <button
-                  type="button"
-                  onClick={goNext}
-                  aria-label="Next step"
-                  className="inline-flex items-center justify-center rounded-lg border border-grey-200/80 bg-white px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-primary/70 transition-colors hover:bg-grey-50/60"
-                >
-                  Next
-                </button>
+                <p className="text-[16px] text-grey-700 leading-relaxed">
+                  {step.description}
+                  {step.id === "connect" && (
+                    <>
+                      {" "}
+                      <a
+                        href="#integrations"
+                        className="underline underline-offset-2 hover:text-primary transition-colors"
+                      >
+                        View All
+                      </a>
+                    </>
+                  )}
+                </p>
+                <div className="mt-6 flex items-center justify-between sm:hidden">
+                  <button
+                    type="button"
+                    onClick={goPrev}
+                    aria-label="Previous step"
+                    className="inline-flex items-center justify-center rounded-lg border border-grey-200/80 bg-white px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-primary/70 transition-colors hover:bg-grey-50/60"
+                  >
+                    Prev
+                  </button>
+                  <div className="flex items-center gap-2">
+                    {pipelineSteps.map((s, i) => (
+                      <button
+                        key={s.id}
+                        type="button"
+                        onClick={() => goTo(i)}
+                        aria-label={`Go to ${s.title}`}
+                        aria-current={i === selectedIndex ? "step" : undefined}
+                        className={`h-2.5 rounded-full transition-all ${
+                          i === selectedIndex
+                            ? "w-6 bg-primary"
+                            : "w-2.5 bg-grey-300 hover:bg-grey-400"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={goNext}
+                    aria-label="Next step"
+                    className="inline-flex items-center justify-center rounded-lg border border-grey-200/80 bg-white px-3 py-2 text-[12px] font-semibold uppercase tracking-wide text-primary/70 transition-colors hover:bg-grey-50/60"
+                  >
+                    Next
+                  </button>
+                </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
