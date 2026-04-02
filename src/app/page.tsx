@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import HeroContent from "@/components/HeroContent";
 import {
   CheckCircle,
 
@@ -60,44 +61,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-grey-50 z-10" />
 
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-grey-900 leading-[1.05] mb-8">
-              <span className="block min-h-[2.4em] sm:min-h-[1.2em]">
-                Less asking, more doing
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
-              Cimba is the agentic command center for finance and business ops that proactively delivers consistent, auditable, trusted outcomes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link
-                href="/demo"
-                className="btn-primary px-10 py-0 text-[16px] font-semibold rounded-full transition-all shadow-md inline-flex items-center gap-2"
-              >
-                See a Demo
-              </Link>
-              <Link
-                href="/product#how-it-works"
-                className="h-[42px] px-10 text-[16px] font-semibold rounded-full inline-flex items-center gap-2 border-2 border-[#0770E3] text-[#0770E3] bg-transparent hover:bg-[#0770E3]/5 transition-all"
-              >
-                How It Works
-              </Link>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between max-w-2xl gap-4">
-              {[
-                "Trusted answers grounded in your data",
-                "Repeatable decision workflows",
-                "Governed agents that scale across teams",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                    <path d="M3 8L6.5 11.5L13 4.5" stroke="#0770E3" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span className="text-sm text-gray-500">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <HeroContent />
         </div>
       </section>
 
