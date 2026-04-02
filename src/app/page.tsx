@@ -92,10 +92,10 @@ export default function Home() {
           <p className="text-center text-[16px] font-medium text-grey-400 uppercase tracking-[0.15em] mb-8">
             Trusted by industry leaders
           </p>
-          <div className="overflow-hidden w-full">
-            <div className="flex logo-ticker items-center md:justify-center">
+          <div className="w-full">
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
               {customerLogos.map((logo, i) => (
-                <div key={`${logo.name}-${i}`} className="flex-shrink-0 mx-12">
+                <div key={`${logo.name}-${i}`} className="flex-shrink-0">
                   <Image
                     src={logo.src}
                     alt={logo.name}
@@ -105,24 +105,6 @@ export default function Home() {
                   />
                 </div>
               ))}
-
-              {/* Duplicate set only on mobile so the translate loop has continuity */}
-              <div className="flex md:hidden">
-                {customerLogos.map((logo, i) => (
-                  <div
-                    key={`${logo.name}-${i}-dup`}
-                    className="flex-shrink-0 mx-12"
-                  >
-                    <Image
-                      src={logo.src}
-                      alt={logo.name}
-                      width={280}
-                      height={120}
-                      className="h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>

@@ -273,7 +273,7 @@ h1, h2, h3 {
 
 .who-uses-rise.in-view .who-uses-rise-header .who-uses-rise-item:nth-child(1) { transition-delay: 0s; }
 .who-uses-rise.in-view .who-uses-rise-header .who-uses-rise-item:nth-child(2) { transition-delay: 0.08s; }
-.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(1) { transition-delay: 0.16s; }
-.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(2) { transition-delay: 0.24s; }
-.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(3) { transition-delay: 0.32s; }
-.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(4) { transition-delay: 0.4s; }
+.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(1) { transition-delay: 0s; }
+.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(2) { transition-delay: 0.1s; }
+.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(3) { transition-delay: 0.2s; }
+.who-uses-rise.in-view .grid .who-uses-rise-item:nth-child(4) { transition-delay: 0.3s; }

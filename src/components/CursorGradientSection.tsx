@@ -10,8 +10,8 @@ type Props = {
 };
 
 const riseObserverOptions: IntersectionObserverInit = {
-  rootMargin: "0px 0px -12% 0px",
-  threshold: 0.2,
+  rootMargin: "-80px 0px -80px 0px",
+  threshold: 0.1,
 };
 
 export default function CursorGradientSection({
