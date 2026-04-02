@@ -106,7 +106,7 @@ export default function HowItWorksPipeline() {
                   className={`flex items-center justify-center py-3 text-center border-b-[3px] transition-all duration-150 ease-in-out relative ${
                     i === selectedIndex
                       ? "text-[#0770E3] border-b-[#0770E3]"
-                      : "text-grey-500 border-b-transparent hover:text-grey-700"
+                      : "text-grey-500 border-b-transparent hover:text-[#0770E3] hover:border-b-[#0770E3]/30"
                   }`}
                 >
                   <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
