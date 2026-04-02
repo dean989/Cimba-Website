@@ -71,7 +71,15 @@ export default function Home() {
         className="bg-grey-50 pb-10 lg:pb-16 scroll-mt-24"
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <HomeHeroVideo />
+          <div
+            className="rounded-2xl shadow-2xl"
+            style={{
+              boxShadow: "0 0 0 1px rgba(7,112,227,0.08), 0 24px 48px rgba(7,112,227,0.10)",
+              animation: "videoFloat 5s ease-in-out infinite",
+            }}
+          >
+            <HomeHeroVideo />
+          </div>
         </div>
       </section>
 

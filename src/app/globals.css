@@ -65,6 +65,12 @@ nextjs-portal {
   display: none !important;
 }
 
+/* Video float */
+@keyframes videoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 /* Logo ticker */
 @keyframes scroll {
   0% { transform: translateX(0); }
