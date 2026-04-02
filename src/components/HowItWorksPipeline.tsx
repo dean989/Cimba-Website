@@ -97,23 +97,20 @@ export default function HowItWorksPipeline() {
 
           {/* Desktop: single segmented pill with rounded ends */}
           <div className="hidden sm:flex justify-center">
-            <div className="inline-flex flex-shrink-0 rounded-full overflow-hidden border border-grey-200 divide-x divide-grey-200">
+            <div className="inline-flex flex-shrink-0 gap-8">
               {pipelineSteps.map((s, i) => (
                 <button
                   key={s.id}
                   type="button"
                   onClick={() => goTo(i)}
-                  className={`flex-none w-[150px] flex items-center justify-center py-3 text-center min-w-0 border-0 transition-all duration-150 ease-in-out group relative ${
+                  className={`flex items-center justify-center py-3 text-center border-b-[3px] transition-all duration-150 ease-in-out relative ${
                     i === selectedIndex
-                      ? "bg-primary text-white font-bold"
-                      : "bg-white text-primary hover:text-[#0770E3]"
+                      ? "text-[#0770E3] border-b-[#0770E3]"
+                      : "text-grey-500 border-b-transparent hover:text-grey-700"
                   }`}
                 >
-                  <span className="text-[12px] font-semibold uppercase tracking-wide truncate relative">
+                  <span className="text-[12px] font-semibold uppercase tracking-wide truncate">
                     {s.id === "connect" ? "CONNECT" : s.title}
-                    {i !== selectedIndex && (
-                      <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#0770E3] transition-all duration-150 ease-in-out group-hover:w-full rounded-full" />
-                    )}
                   </span>
                 </button>
               ))}
