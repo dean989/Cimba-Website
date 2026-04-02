@@ -56,7 +56,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/demo"
-              className="btn-primary px-6 py-0 text-[16px] font-semibold rounded-full transition-transform duration-200 ease-out"
+              className="btn-nav-demo px-6 py-0 text-[16px] font-semibold rounded-full transition-transform duration-200 ease-out"
             >
               Book a Demo
             </Link>
@@ -88,7 +88,7 @@ export default function Navigation() {
             <div className="pt-4">
               <Link
                 href="/demo"
-                className="block w-full text-center btn-primary px-6 py-0 text-[16px] font-semibold rounded-full transition-transform duration-200 ease-out"
+                className="block w-full text-center btn-nav-demo px-6 py-0 text-[16px] font-semibold rounded-full transition-transform duration-200 ease-out"
                 onClick={() => setMobileOpen(false)}
               >
                 Book a Demo
