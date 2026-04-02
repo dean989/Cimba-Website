@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   CheckCircle,
-  ArrowRight,
+
   GitBranch,
   Users,
   Database,
@@ -75,23 +75,24 @@ export default function Home() {
                 className="btn-primary px-10 py-0 text-[16px] font-semibold rounded-full transition-all shadow-md inline-flex items-center gap-2"
               >
                 See a Demo
-                <ArrowRight size={16} />
               </Link>
               <Link
                 href="/product#how-it-works"
                 className="h-[42px] px-10 text-[16px] font-semibold rounded-full inline-flex items-center gap-2 border-2 border-[#0770E3] text-[#0770E3] bg-transparent hover:bg-[#0770E3]/5 transition-all"
               >
-                See How It Works
+                How It Works
               </Link>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between max-w-2xl gap-4">
               {[
                 "Trusted answers grounded in your data",
                 "Repeatable decision workflows",
                 "Governed agents that scale across teams",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <span className="text-[#0770E3] font-semibold text-sm">✓</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                    <path d="M3 8L6.5 11.5L13 4.5" stroke="#0770E3" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                   <span className="text-sm text-gray-500">{item}</span>
                 </div>
               ))}
