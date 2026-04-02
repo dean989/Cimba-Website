@@ -69,7 +69,7 @@ export default function Home() {
             <p className="text-lg md:text-xl text-grey-600 leading-relaxed max-w-2xl mb-12">
               Cimba is the agentic command center for finance and business ops that proactively delivers consistent, auditable, trusted outcomes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
                 href="/demo"
                 className="btn-primary px-10 py-0 text-[16px] font-semibold rounded-full transition-all shadow-md inline-flex items-center gap-2"
@@ -77,6 +77,24 @@ export default function Home() {
                 See a Demo
                 <ArrowRight size={16} />
               </Link>
+              <Link
+                href="/product#how-it-works"
+                className="h-[42px] px-10 text-[16px] font-semibold rounded-full inline-flex items-center gap-2 border-2 border-[#0770E3] text-[#0770E3] bg-transparent hover:bg-[#0770E3]/5 transition-all"
+              >
+                See How It Works
+              </Link>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+              {[
+                "Trusted answers grounded in your data",
+                "Repeatable decision workflows",
+                "Governed agents that scale across teams",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <span className="text-[#0770E3] font-semibold text-sm">✓</span>
+                  <span className="text-sm text-gray-500">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
