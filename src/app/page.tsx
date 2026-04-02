@@ -93,7 +93,7 @@ export default function Home() {
             Trusted by industry leaders
           </p>
           <div className="w-full">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mb-6">
               {customerLogos.map((logo, i) => (
                 <div key={`${logo.name}-${i}`} className="flex-shrink-0">
                   <Image
@@ -106,6 +106,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="text-center text-sm text-grey-500">
+              (Partnering soon: Big 4 Consulting Firm, and Fortune 500 Vacation Rental Co.)
+            </p>
           </div>
         </div>
       </section>
