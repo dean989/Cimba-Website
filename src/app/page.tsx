@@ -3,14 +3,18 @@ import Image from "next/image";
 import HeroContent from "@/components/HeroContent";
 import {
   CheckCircle,
-
   GitBranch,
   Users,
   Database,
   TrendingUp,
   HeartHandshake,
   Wrench,
+  BarChart3,
+  RefreshCw,
+  Building2,
+  Zap,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
@@ -174,16 +178,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/cimba-solution-3.png"
-                    alt="AI Enablement, Not Dashboards"
-                    width={912}
-                    height={768}
-                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
-                    priority
-                  />
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full max-w-[480px] mx-auto lg:mx-0 h-52 rounded-xl bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 flex items-center justify-center"
+                >
+                  <motion.div
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+                  >
+                    <BarChart3 size={64} className="text-[#0770E3] opacity-80" />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
 
@@ -200,15 +206,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/cimba-solution-1.png"
-                    alt="Repeatable Workflows"
-                    width={912}
-                    height={768}
-                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
-                  />
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 h-52 rounded-xl bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-100 flex items-center justify-center"
+                >
+                  <motion.div
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                  >
+                    <RefreshCw size={64} className="text-[#0770E3] opacity-80" />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
 
@@ -223,15 +232,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/cimba-solution-2.png"
-                    alt="Business Context Built In"
-                    width={912}
-                    height={768}
-                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
-                  />
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full max-w-[480px] mx-auto lg:mx-0 h-52 rounded-xl bg-gradient-to-br from-indigo-50 via-blue-50 to-violet-100 flex items-center justify-center"
+                >
+                  <motion.div
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                  >
+                    <Building2 size={64} className="text-[#0770E3] opacity-80" />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
 
@@ -246,15 +258,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/cimba-solution-4.png"
-                    alt="Operational Delivery"
-                    width={912}
-                    height={768}
-                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
-                  />
-                </div>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 h-52 rounded-xl bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 flex items-center justify-center"
+                >
+                  <motion.div
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+                  >
+                    <Zap size={64} className="text-[#0770E3] opacity-80" />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
           </div>
