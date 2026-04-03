@@ -19,7 +19,8 @@ export default function HeroContent() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
       >
         <span className="block min-h-[2.4em] sm:min-h-[1.2em]">
-          Less asking, more doing
+          Less asking,{" "}
+          <span className="text-primary">more doing</span>
         </span>
       </motion.h1>
       <motion.p
