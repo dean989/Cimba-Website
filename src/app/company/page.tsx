@@ -171,7 +171,7 @@ export default function CompanyPage() {
             >
               <p className="text-[13px] font-semibold text-primary uppercase tracking-widest mb-3">{article.publication}</p>
               <p className="text-[12px] text-grey-400 mb-2">{article.date}</p>
-              <h3 className="text-[14px] font-semibold text-grey-900 leading-snug line-clamp-3 group-hover:text-primary transition-colors">
+              <h3 className="text-[14px] font-semibold text-grey-900 leading-snug line-clamp-3 group-hover:text-primary transition-all duration-150 ease-out group-hover:translate-x-1">
                 {article.title}
               </h3>
             </a>

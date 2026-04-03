@@ -81,7 +81,7 @@ export default function UseCasesCarousel() {
                     className={`text-left rounded-2xl p-5 transition-all duration-300 ease-out overflow-hidden bg-white ${
                       isActive
                         ? "shadow-md"
-                        : "hover:bg-grey-50 hover:border-grey-300"
+                        : "hover:bg-grey-50 hover:border-grey-300 group"
                     }`}
                     style={{
                       border: isActive
@@ -90,10 +90,10 @@ export default function UseCasesCarousel() {
                     }}
                   >
                     <span
-                      className={`block transition-all duration-300 ease-out ${
+                      className={`block transition-all duration-[150ms] ease-out ${
                         isActive
                           ? "font-medium text-[19px]"
-                          : "font-normal text-grey-600 text-[17px]"
+                          : "font-normal text-grey-600 text-[17px] group-hover:text-[#0770E3]"
                       }`}
                       style={isActive ? { color: "#0770E3" } : undefined}
                     >
