@@ -9,12 +9,8 @@ import {
   TrendingUp,
   HeartHandshake,
   Wrench,
-  BarChart3,
-  RefreshCw,
-  Building2,
-  Zap,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import SolutionIconPanel from "@/components/SolutionIconPanel";
 import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
@@ -178,18 +174,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-full max-w-[480px] mx-auto lg:mx-0 h-52 rounded-xl bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 flex items-center justify-center"
-                >
-                  <motion.div
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0 }}
-                  >
-                    <BarChart3 size={64} className="text-[#0770E3] opacity-80" />
-                  </motion.div>
-                </motion.div>
+                <SolutionIconPanel
+                  icon="BarChart3"
+                  gradient="from-blue-50 via-indigo-50 to-blue-100"
+                  delay={0}
+                  alignment="left"
+                />
               </div>
             </div>
 
@@ -206,18 +196,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 h-52 rounded-xl bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-100 flex items-center justify-center"
-                >
-                  <motion.div
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-                  >
-                    <RefreshCw size={64} className="text-[#0770E3] opacity-80" />
-                  </motion.div>
-                </motion.div>
+                <SolutionIconPanel
+                  icon="RefreshCw"
+                  gradient="from-sky-50 via-blue-50 to-cyan-100"
+                  delay={0.4}
+                  alignment="right"
+                />
               </div>
             </div>
 
@@ -232,18 +216,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-full max-w-[480px] mx-auto lg:mx-0 h-52 rounded-xl bg-gradient-to-br from-indigo-50 via-blue-50 to-violet-100 flex items-center justify-center"
-                >
-                  <motion.div
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-                  >
-                    <Building2 size={64} className="text-[#0770E3] opacity-80" />
-                  </motion.div>
-                </motion.div>
+                <SolutionIconPanel
+                  icon="Building2"
+                  gradient="from-indigo-50 via-blue-50 to-violet-100"
+                  delay={0.8}
+                  alignment="left"
+                />
               </div>
             </div>
 
@@ -258,18 +236,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 h-52 rounded-xl bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 flex items-center justify-center"
-                >
-                  <motion.div
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-                  >
-                    <Zap size={64} className="text-[#0770E3] opacity-80" />
-                  </motion.div>
-                </motion.div>
+                <SolutionIconPanel
+                  icon="Zap"
+                  gradient="from-blue-50 via-cyan-50 to-blue-100"
+                  delay={1.2}
+                  alignment="right"
+                />
               </div>
             </div>
           </div>
