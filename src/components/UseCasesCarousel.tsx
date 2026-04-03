@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 export type UseCaseSlide = {
   id: string;
@@ -60,7 +61,7 @@ export default function UseCasesCarousel() {
   return (
     <section
       id="use-cases"
-      className="bg-white py-20 lg:py-28 scroll-mt-24"
+      className="bg-white py-12 scroll-mt-24"
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
@@ -77,27 +78,24 @@ export default function UseCasesCarousel() {
                     key={u.id}
                     type="button"
                     onClick={() => setActiveId(u.id)}
-                    className={`text-left rounded-2xl border-2 p-5 transition-all duration-300 ease-out overflow-hidden ${
+                    className={`text-left rounded-2xl p-5 transition-all duration-300 ease-out overflow-hidden bg-white ${
                       isActive
-                        ? "border-transparent bg-white shadow-md"
-                        : "border-grey-200 bg-white hover:border-grey-300 hover:bg-grey-50"
+                        ? "shadow-md"
+                        : "hover:bg-grey-50 hover:border-grey-300 group"
                     }`}
-                    style={
-                      isActive
-                        ? {
-                            background:
-                              "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.4), rgba(116, 20, 218, 0.4) 47%, rgba(7, 112, 227, 0.4)) border-box",
-                            backgroundClip: "padding-box, border-box",
-                          }
-                        : undefined
-                    }
+                    style={{
+                      border: isActive
+                        ? "2px solid #0770E3"
+                        : "1px solid #D1D5DB",
+                    }}
                   >
                     <span
-                      className={`block transition-all duration-300 ease-out ${
+                      className={`block transition-all duration-[150ms] ease-out ${
                         isActive
-                          ? "font-medium text-primary text-[19px]"
-                          : "font-normal text-grey-600 text-[17px]"
+                          ? "font-medium text-[19px]"
+                          : "font-normal text-grey-600 text-[17px] group-hover:text-[#0770E3]"
                       }`}
+                      style={isActive ? { color: "#0770E3" } : undefined}
                     >
                       {u.eyebrow}
                     </span>
@@ -109,50 +107,57 @@ export default function UseCasesCarousel() {
 
           {/* Right: Content + image */}
           <div
-            className="flex-1 min-w-0 rounded-2xl border-2 border-transparent bg-white shadow-sm overflow-hidden flex flex-col lg:flex-row"
-            style={{
-              background:
-                "linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(31, 151, 211, 0.4), rgba(116, 20, 218, 0.4) 47%, rgba(7, 112, 227, 0.4)) border-box",
-              backgroundClip: "padding-box, border-box",
-            }}
+            className="flex-1 min-w-0 rounded-2xl border-2 bg-white shadow-sm overflow-hidden"
+            style={{ borderColor: "#0770E3" }}
           >
-            <div className="order-2 lg:order-1 flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col">
-              <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
-                {active.title}
-              </h2>
-              <p className="text-[16px] text-grey-600 leading-relaxed mb-4">
-                {active.paragraphs[0]}
-              </p>
-              {active.paragraphs[1] &&
-                active.paragraphs[1].trim().length > 0 && (
-                  <p className="text-[16px] text-grey-600 leading-relaxed mb-8">
-                    {active.paragraphs[1]}
-                  </p>
-                )}
-              <ul className="space-y-2.5 text-[16px] text-grey-700">
-                {active.bullets.map((b, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={`/use-cases#${active.id}`}
-                className="mt-auto inline-flex w-fit text-[16px] font-medium text-primary transition-colors hover:text-primary-dark"
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeId}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }}
+                className="flex flex-col lg:flex-row h-full"
               >
-                See more
-              </Link>
-            </div>
-            <div className="order-1 lg:order-2 relative w-full aspect-square bg-grey-100 lg:flex-[0_0_285px] overflow-hidden group">
-              <Image
-                src={active.imageSrc}
-                alt=""
-                fill
-                className="object-cover object-top object-right origin-left transition-transform duration-500 ease-out group-hover:scale-[1.12] transform-gpu will-change-[transform]"
-                sizes="(max-width: 1024px) 100vw, 468px"
-              />
-            </div>
+                <div className="order-2 lg:order-1 flex-1 w-full min-w-[302px] h-[220px] sm:h-[260px] lg:h-[285px] p-8 sm:p-10 lg:p-12 flex flex-col">
+                  <h2 className="text-2xl sm:text-3xl font-normal text-grey-900 leading-tight mb-5">
+                    {active.title}
+                  </h2>
+                  <p className="text-[16px] text-grey-600 leading-relaxed mb-4">
+                    {active.paragraphs[0]}
+                  </p>
+                  {active.paragraphs[1] &&
+                    active.paragraphs[1].trim().length > 0 && (
+                      <p className="text-[16px] text-grey-600 leading-relaxed mb-8">
+                        {active.paragraphs[1]}
+                      </p>
+                    )}
+                  <ul className="space-y-2.5 text-[16px] text-grey-700">
+                    {active.bullets.map((b, i) => (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <span className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={`/use-cases#${active.id}`}
+                    className="mt-auto inline-flex w-fit text-[16px] font-medium text-primary transition-colors hover:text-primary-dark"
+                  >
+                    See more
+                  </Link>
+                </div>
+                <div className="order-1 lg:order-2 relative w-full aspect-square bg-grey-100 lg:flex-[0_0_285px] overflow-hidden group">
+                  <Image
+                    src={active.imageSrc}
+                    alt=""
+                    fill
+                    className="object-cover object-top object-right origin-left transition-transform duration-500 ease-out group-hover:scale-[1.12] transform-gpu will-change-[transform]"
+                    sizes="(max-width: 1024px) 100vw, 468px"
+                  />
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>

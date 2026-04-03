@@ -226,7 +226,7 @@ export default function ProductPage() {
             {securityPillars.map((pillar) => (
               <div
                 key={pillar.title}
-                className={`bg-grey-50 rounded-2xl border border-grey-200 p-8 ${
+                className={`bg-grey-50 rounded-2xl border border-grey-200 p-8 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg ${
                   "image" in pillar && pillar.image ? "flex flex-col sm:flex-row gap-6" : ""
                 }`}
               >
