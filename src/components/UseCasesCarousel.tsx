@@ -61,7 +61,7 @@ export default function UseCasesCarousel() {
   return (
     <section
       id="use-cases"
-      className="bg-white py-12 scroll-mt-24"
+      className="bg-gray-50 py-16 scroll-mt-24"
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
@@ -92,10 +92,9 @@ export default function UseCasesCarousel() {
                     <span
                       className={`block transition-all duration-[150ms] ease-out ${
                         isActive
-                          ? "font-medium text-[19px]"
+                          ? "font-semibold text-[19px] text-[#0770E3]"
                           : "font-normal text-grey-600 text-[17px] group-hover:text-[#0770E3]"
                       }`}
-                      style={isActive ? { color: "#0770E3" } : undefined}
                     >
                       {u.eyebrow}
                     </span>
