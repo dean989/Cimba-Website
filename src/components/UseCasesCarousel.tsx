@@ -32,7 +32,7 @@ const useCases: UseCaseSlide[] = [
     id: "finops",
     label: "Accounting Automation",
     eyebrow: "Financial Operations",
-    title: "Financial Operations",
+    title: "Automated Flux Analysis & Reconciliation",
     paragraphs: [
       "Finance teams operate across fragmented systems while managing highly repetitive, time-sensitive workflows. Cimba automates these with full transparency.",
       "",
@@ -44,7 +44,7 @@ const useCases: UseCaseSlide[] = [
     id: "risk-monitoring",
     label: "Risk Monitoring",
     eyebrow: "Risk & Underwriting",
-    title: "Risk Monitoring",
+    title: "Risk Monitoring & Write-Off Analysis",
     paragraphs: [
       "Risk teams operate in data-rich environments yet remain constrained by slow analysis cycles and inconsistent outputs. Cimba makes risk analysis governed and repeatable.",
       "",
