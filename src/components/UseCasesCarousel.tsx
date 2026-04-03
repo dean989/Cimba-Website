@@ -67,6 +67,7 @@ export default function UseCasesCarousel() {
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
           {/* Left: stepper (Core Primitives style) */}
           <div className="flex-shrink-0 lg:w-[380px]">
+            <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-3">USE CASES</p>
             <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-8 max-w-xl">
               How Teams Use Cimba
             </h2>

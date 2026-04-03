@@ -16,7 +16,6 @@ import RotatingSpotlight from "@/components/RotatingSpotlight";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
-import StrokeSectionTitle from "@/components/StrokeSectionTitle";
 import LakeOfDataBackground from "@/components/LakeOfDataBackground";
 import HomeHeroVideo from "@/components/HomeHeroVideo";
 
@@ -121,7 +120,8 @@ export default function Home() {
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 relative">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
-            <div className="problem-rise-item lg:w-1/2 group cursor-default">
+              <div className="problem-rise-item lg:w-1/2 group cursor-default">
+              <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">WHY CIMBA</p>
               <div className="relative">
                 <h2 className="text-5xl md:text-6xl lg:text-[60px] font-normal text-grey-900 leading-tight mb-4 transition-opacity duration-1000 group-hover:opacity-0">
                   Cimba helps you operationalize data instead of only analyzing it.
@@ -155,10 +155,7 @@ export default function Home() {
         className="bg-grey-50 py-20 lg:py-28 scroll-mt-24"
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <StrokeSectionTitle
-            title="The Cimba Solution"
-            titleClassName="text-4xl sm:text-5xl font-normal text-primary leading-tight"
-          />
+          <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-12">The Cimba Solution</p>
 
           <div className="space-y-16">
             {/* Row 1: AI Enablement, Not Dashboards */}
@@ -268,6 +265,7 @@ export default function Home() {
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 overflow-x-hidden">
           <div className="who-uses-rise-header">
+            <p className="who-uses-rise-item text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-3">WHO IS IT FOR</p>
             <h2 className="who-uses-rise-item text-3xl sm:text-4xl font-normal text-grey-900 leading-tight max-w-2xl mb-6">
               Built for Your Team
             </h2>
