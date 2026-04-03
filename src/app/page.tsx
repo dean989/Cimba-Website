@@ -174,7 +174,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg bg-[#F0F4FF]">
+                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg bg-[#EDF6FF]">
                   <Image
                     src="/cimba-solution-3.png"
                     alt="AI Enablement, Not Dashboards"
@@ -200,7 +200,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg bg-[#F0F4FF]">
+                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg bg-[#EDF6FF]">
                   <Image
                     src="/cimba-solution-1.png"
                     alt="Repeatable Workflows"
@@ -223,7 +223,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg bg-[#F0F4FF]">
+                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg bg-[#EDF6FF]">
                   <Image
                     src="/cimba-solution-2.png"
                     alt="Business Context Built In"
@@ -246,7 +246,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg bg-[#F0F4FF]">
+                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg bg-[#EDF6FF]">
                   <Image
                     src="/cimba-solution-4.png"
                     alt="Operational Delivery"
