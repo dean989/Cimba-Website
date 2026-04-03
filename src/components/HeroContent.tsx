@@ -53,7 +53,7 @@ export default function HeroContent() {
         </Link>
       </motion.div>
       <motion.div
-        className="flex flex-col sm:flex-row sm:items-center justify-between max-w-2xl gap-4"
+        className="flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-12 max-w-3xl"
         variants={fadeUp}
         initial="initial"
         animate="animate"
@@ -63,7 +63,7 @@ export default function HeroContent() {
           "Trusted answers grounded in your data",
           "Repeatable decision workflows",
           "Governed agents that scale across teams",
-        ].map((item) => (
+        ].map((item, index) => (
           <div key={item} className="flex items-center gap-2">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
               <path d="M3 8L6.5 11.5L13 4.5" stroke="#0770E3" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
