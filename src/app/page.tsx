@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroContent from "@/components/HeroContent";
 import {
   CheckCircle,
+
   GitBranch,
   Users,
   Database,
@@ -10,7 +11,6 @@ import {
   HeartHandshake,
   Wrench,
 } from "lucide-react";
-import SolutionIconPanel from "@/components/SolutionIconPanel";
 import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
@@ -174,12 +174,16 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <SolutionIconPanel
-                  icon="BarChart3"
-                  gradient="from-blue-50 via-indigo-50 to-blue-100"
-                  delay={0}
-                  alignment="left"
-                />
+                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-3.png"
+                    alt="AI Enablement, Not Dashboards"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                    priority
+                  />
+                </div>
               </div>
             </div>
 
@@ -196,12 +200,15 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <SolutionIconPanel
-                  icon="RefreshCw"
-                  gradient="from-sky-50 via-blue-50 to-cyan-100"
-                  delay={0.4}
-                  alignment="right"
-                />
+                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-1.png"
+                    alt="Repeatable Workflows"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                  />
+                </div>
               </div>
             </div>
 
@@ -216,12 +223,15 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <SolutionIconPanel
-                  icon="Building2"
-                  gradient="from-indigo-50 via-blue-50 to-violet-100"
-                  delay={0.8}
-                  alignment="left"
-                />
+                <div className="group relative w-full max-w-[480px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-2.png"
+                    alt="Business Context Built In"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                  />
+                </div>
               </div>
             </div>
 
@@ -236,12 +246,15 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 min-w-[260px]">
-                <SolutionIconPanel
-                  icon="Zap"
-                  gradient="from-blue-50 via-cyan-50 to-blue-100"
-                  delay={1.2}
-                  alignment="right"
-                />
+                <div className="group relative w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/cimba-solution-4.png"
+                    alt="Operational Delivery"
+                    width={912}
+                    height={768}
+                    className="w-full h-auto transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-[1.04] will-change-[transform]"
+                  />
+                </div>
               </div>
             </div>
           </div>
