@@ -275,7 +275,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Data & Analytics */}
-            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row">
               <div className="flex-shrink-0 h-[190px] w-full md:w-[45%] md:min-w-[140px] md:max-w-[220px] md:h-full">
                 <div className="relative w-full h-full">
                   <Image
@@ -304,7 +304,7 @@ export default function Home() {
             </div>
 
             {/* Finance & FP&A */}
-            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row">
               <div className="flex-shrink-0 h-[190px] w-full md:w-[45%] md:min-w-[140px] md:max-w-[220px] md:h-full">
                 <div className="relative w-full h-full">
                   <Image
@@ -334,7 +334,7 @@ export default function Home() {
             </div>
 
             {/* Customer Success */}
-            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row">
               <div className="flex-shrink-0 h-[190px] w-full md:w-[45%] md:min-w-[140px] md:max-w-[220px] md:h-full">
                 <div className="relative w-full h-full">
                   <Image
@@ -364,7 +364,7 @@ export default function Home() {
             </div>
 
             {/* Operations */}
-            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div className="who-uses-rise-item group rounded-2xl border border-grey-200 bg-white overflow-hidden flex flex-col md:flex-row">
               <div className="flex-shrink-0 h-[190px] w-full md:w-[45%] md:min-w-[140px] md:max-w-[220px] md:h-full">
                 <div className="relative w-full h-full">
                   <Image
