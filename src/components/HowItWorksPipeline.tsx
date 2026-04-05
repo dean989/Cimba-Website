@@ -25,9 +25,9 @@ const pipelineSteps = [
     id: "automate",
     title: "Turn Analysis Into Repeatable Playbooks",
     description:
-      "Complex, recurring analyses – flux analysis, reconciliations, scenario modeling – can be codified into governed playbooks that run the same way every time. Agents execute structured workflows that break problems into sequential steps: querying data, applying business logic, performing calculations, and producing traceable outputs. Define the process once and rely on it to run accurately at scale, eliminating manual effort across every cycle.",
+      "Complex, recurring analyses – flux analysis, reconciliations, scenario modeling – can be codified into governed playbooks that run consistently, every time. Agents execute structured workflows that break problems into sequential steps: querying data, applying business logic, performing calculations, and producing traceable outputs. Define the process once and rely on it to run accurately at scale, eliminating manual effort at every cycle.",
     imageSrc: "/how-it-works/workflows.png",
-    imagePosition: "right center",
+    imagePosition: "left center",
   },
   {
     id: "distribute",
