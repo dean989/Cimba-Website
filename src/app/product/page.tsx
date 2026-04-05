@@ -141,9 +141,7 @@ export default function ProductPage() {
                deliver consistent insights and decisions.
              </p>
               <p className="text-[16px] text-grey-600 leading-relaxed">
-                Using agents, playbooks, and business context, Cimba allows
-                organizations to answer complex questions, automate analysis,
-                and operationalize intelligence across teams.
+                Using governed agents, structured playbooks, and business context, Cimba moves organizations from answering questions to running operations – delivering consistent, auditable outcomes at the scale enterprise workflows demand.
               </p>
             </div>
             <div className="w-full lg:w-1/2">
