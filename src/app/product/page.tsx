@@ -103,7 +103,7 @@ export default function ProductPage() {
             <h1 className="text-4xl md:text-5xl lg:text-[56px] font-normal text-grey-900 leading-tight mb-6">
               The platform for
               <br />
-              <span className="text-primary block">operational intelligence</span>
+              <span className="text-primary block">agentic operations</span>
             </h1>
             <p className="text-lg md:text-xl text-grey-500 leading-relaxed max-w-2xl mb-10">
               Governed agents. Repeatable workflows. Auditable execution. Cimba
@@ -133,7 +133,7 @@ export default function ProductPage() {
                 What is Cimba
               </p>
              <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-6">
-               Cimba helps teams turn data and AI into operational intelligence.
+               Cimba is the agentic command center for finance and business ops
              </h2>
              <p className="text-[16px] text-grey-600 leading-relaxed mb-4">
                Instead of relying on dashboards, manual analysis, or one-off AI
