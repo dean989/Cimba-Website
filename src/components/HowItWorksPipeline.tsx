@@ -18,15 +18,15 @@ const pipelineSteps = [
     id: "actions",
     title: "Actions",
     description:
-      "Inputs that guide how an agent should think about a problem and respond to questions. Intents are the information provided during agent creation that help shape how the agent operates. They can include table metadata, documentation, business contexts, common questions, or default instructions. Because intents are flexible and unstructured, builders can combine multiple types of inputs to guide how the agent interprets requests and generates answers.",
-    imageSrc: "/how-it-works/intent.png",
+      "Cimba agents combine data sources, business context, and analytical logic to answer questions and perform structured analysis. They can investigate issues, generate insights, and run on-the-fly or pre-defined workflows while remaining context-aware and governed. Because agents operate within workflows and controls, teams can rely on them to produce consistent and repeatable results.",
+    imageSrc: "/how-it-works/agents.png",
   },
   {
     id: "automate",
     title: "Automate",
     description:
-      "Cimba agents combine data sources, business context, and analytical logic to answer questions and perform structured analysis. They can investigate issues, generate insights, and run on-the-fly or pre-defined workflows while remaining context-aware and governed. Because agents operate within workflows and controls, teams can rely on them to produce consistent and repeatable results.",
-    imageSrc: "/how-it-works/agents.png",
+      "Inputs that guide how an agent should think about a problem and respond to questions. Intents are the information provided during agent creation that help shape how the agent operates. They can include table metadata, documentation, business contexts, common questions, or default instructions. Because intents are flexible and unstructured, builders can combine multiple types of inputs to guide how the agent interprets requests and generates answers.",
+    imageSrc: "/how-it-works/intent.png",
   },
   {
     id: "distribute",
