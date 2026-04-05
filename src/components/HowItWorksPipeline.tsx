@@ -69,8 +69,7 @@ export default function HowItWorksPipeline() {
           From data to decisions
         </h2>
         <p className="text-[16px] text-grey-600 leading-relaxed max-w-2xl mb-10">
-          Connect your data, add business context, build agents and playbooks,
-          then run workflows that deliver governed, repeatable intelligence.
+          Build context, deploy intelligent agents, automate recurring analysis, and distribute trusted insights – proactively, at scale.
         </p>
 
         {/* Pipeline tabs */}
