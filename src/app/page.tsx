@@ -100,7 +100,7 @@ export default function Home() {
               {customerLogos.map((logo, i) => (
                 <div 
                   key={`${logo.name}-${i}`} 
-                  className={`flex-shrink-0 ${i === 0 ? 'transform translate-y-1 -translate-x-2' : ''}`}
+                  className={`flex-shrink-0 ${i === 0 ? 'transform translate-y-1 -translate-x-4' : ''}`}
                 >
                   <Image
                     src={logo.src}
