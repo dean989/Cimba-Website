@@ -1,8 +1,14 @@
 "use client";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "Cimba — AI Agentic Command Center | Company",
+  description: "Meet the Cimba team building the future of AI-powered operational intelligence.",
+};
 
 export default function CompanyPage() {
   const team = [
@@ -119,7 +125,7 @@ export default function CompanyPage() {
               Join Our Team
             </h2>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-4">
-              We&apos;re building products that maximize trustful business outcomes. If you&apos;re passionate about creating new ways to accelerate how businesses operate, we&apos;d love to hear from you.
+              We&apos;re building products that maximize trusted business outcomes. If you&apos;re passionate about creating new ways to accelerate how businesses operate, we&apos;d love to hear from you.
             </p>
             <p className="text-[16px] md:text-[18px] text-grey-600 leading-relaxed mb-8">
               We offer competitive compensation, meaningful equity, and the opportunity to work on problems that matter to enterprises around the world.

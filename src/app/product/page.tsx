@@ -13,7 +13,7 @@ import IntegrationsSection from "@/components/IntegrationsSection";
 import NetBackground from "@/components/NetBackground";
 
 export const metadata: Metadata = {
-  title: "Product — Cimba",
+  title: "Cimba — AI Agentic Command Center | Product",
   description:
     "Discover how Cimba delivers AI-powered operational intelligence through governed agents, playbooks, and repeatable workflows.",
 };
