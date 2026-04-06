@@ -102,9 +102,9 @@ export default function Home() {
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    width={100}
-                    height={50}
-                    className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    width={240}
+                    height={120}
+                    className="h-12 w-auto max-w-[70px] object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
