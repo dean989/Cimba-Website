@@ -10,7 +10,7 @@ const footerColumns: {
   {
     category: "Home",
     links: [
-      { label: "Contact", href: "/#cta" },
+      { label: "Contact", href: "/demo" },
     ],
   },
   {

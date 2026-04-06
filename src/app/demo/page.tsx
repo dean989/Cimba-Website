@@ -78,7 +78,7 @@ export default function DemoPage() {
       {/* Demo Request Form */}
       <CursorGradientSection className="py-20 lg:py-28">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-normal text-grey-900 tracking-tight mb-4">
                 Book a personalized demo
