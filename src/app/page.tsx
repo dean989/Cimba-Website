@@ -14,6 +14,7 @@ import {
 import CTASection from "@/components/CTASection";
 import RotatingSpotlight from "@/components/RotatingSpotlight";
 import UseCasesCarousel from "@/components/UseCasesCarousel";
+import OutcomeCards from "@/components/OutcomeCards";
 import CursorGradientSection from "@/components/CursorGradientSection";
 import WhoUsesRiseSection from "@/components/WhoUsesRiseSection";
 import LakeOfDataBackground from "@/components/LakeOfDataBackground";
@@ -62,6 +63,7 @@ export default function Home() {
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
           <HeroContent />
         </div>
+        <OutcomeCards />
       </section>
 
       {/* ── Video ── */}

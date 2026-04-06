@@ -80,7 +80,7 @@ export default function OutcomeCards() {
   if (!isMounted || !cardLayout) return null;
 
   return (
-    <>
+    <div className="hidden lg:block absolute inset-0 pointer-events-none z-20">
       <style jsx>{`
         ${cardLayout.map((item) => `
           @keyframes ${item.animationName} {
@@ -92,12 +92,11 @@ export default function OutcomeCards() {
       {cardLayout.map((item) => (
         <div
           key={item.card.id}
-          className="hidden md:block absolute"
+          className="absolute pointer-events-auto"
           style={{
             top: `${item.top}px`,
             right: `${item.right}px`,
             width: "272px",
-            zIndex: 50,
             animation: `${item.animationName} ${item.duration}s ease-in-out ${item.delay}s infinite`,
           }}
         >
@@ -178,6 +177,6 @@ export default function OutcomeCards() {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }
