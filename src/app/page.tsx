@@ -102,8 +102,8 @@ export default function Home() {
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    width={280}
-                    height={120}
+                    width={120}
+                    height={56}
                     className="h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
