@@ -98,7 +98,10 @@ export default function Home() {
           <div className="w-full overflow-x-auto">
             <div className="flex items-center justify-center gap-3 mb-6 min-w-max px-4">
               {customerLogos.map((logo, i) => (
-                <div key={`${logo.name}-${i}`} className="flex-shrink-0">
+                <div 
+                  key={`${logo.name}-${i}`} 
+                  className={`flex-shrink-0 ${i === 0 ? 'transform translate-y-1 -translate-x-2' : ''}`}
+                >
                   <Image
                     src={logo.src}
                     alt={logo.name}
@@ -150,7 +153,7 @@ export default function Home() {
         </div>
       </CursorGradientSection>
 
-      {/* ── The Cimba Solution ── */}
+      {/* ── The Cimba Solution ���─ */}
       <section
         id="cimba-solution"
         className="bg-grey-50 py-20 lg:py-28 scroll-mt-24"
