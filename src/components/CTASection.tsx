@@ -72,7 +72,7 @@ export default function CTASection({ id = "cta" }: CTASectionProps) {
         </h2>
         <p className="text-lg text-white/90 max-w-xl mx-auto mb-10">
           See how Cimba can transform your team&apos;s decision-making with
-          consistent, trusted operational intelligence.
+          consistent, auditable, trusted outcomes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
