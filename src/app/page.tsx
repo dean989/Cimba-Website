@@ -96,7 +96,7 @@ export default function Home() {
             Trusted by industry leaders
           </p>
           <div className="w-full overflow-x-auto">
-            <div className="flex items-center justify-center gap-6 md:gap-10 mb-6 min-w-max px-4">
+            <div className="flex items-center justify-center gap-3 mb-6 min-w-max px-4">
               {customerLogos.map((logo, i) => (
                 <div key={`${logo.name}-${i}`} className="flex-shrink-0">
                   <Image
@@ -104,7 +104,7 @@ export default function Home() {
                     alt={logo.name}
                     width={240}
                     height={120}
-                    className="h-12 w-auto max-w-[70px] object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    className="h-20 w-auto max-w-[130px] object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
