@@ -21,10 +21,12 @@ import LakeOfDataBackground from "@/components/LakeOfDataBackground";
 import HomeHeroVideo from "@/components/HomeHeroVideo";
 
 const customerLogos = [
+  { name: "Big 4 Consulting Firm", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Big%204-eSgnaekrwDuQSIcuoghOzNSzP4S9iO.png" },
   { name: "SoundHound AI", src: "/logos/soundhound.png" },
   { name: "Swiggy", src: "/logos/swiggy.png" },
   { name: "iCreditWorks", src: "/logos/icreditworks.png" },
   { name: "Skan AI", src: "/logos/skanai.png" },
+  { name: "Fortune 500 Vacation Rental Co.", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Vacation%20Rental-YbUzfWip4bhffM95ZglyofDvn0gKpq.png" },
 ];
 
 const testimonials = [
@@ -93,16 +95,19 @@ export default function Home() {
           <p className="text-center text-[16px] font-medium text-grey-400 uppercase tracking-[0.15em] mb-8">
             Trusted by industry leaders
           </p>
-          <div className="w-full">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mb-6">
+          <div className="w-full overflow-x-auto">
+            <div className="flex items-center justify-center gap-3 mb-6 min-w-max px-4">
               {customerLogos.map((logo, i) => (
-                <div key={`${logo.name}-${i}`} className="flex-shrink-0">
+                <div 
+                  key={`${logo.name}-${i}`} 
+                  className={`flex-shrink-0 ${i === 0 ? 'transform translate-y-1 -translate-x-4' : ''}`}
+                >
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    width={280}
+                    width={240}
                     height={120}
-                    className="h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    className="h-20 w-auto max-w-[130px] object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
@@ -148,7 +153,7 @@ export default function Home() {
         </div>
       </CursorGradientSection>
 
-      {/* ── The Cimba Solution ── */}
+      {/* ── The Cimba Solution ���─ */}
       <section
         id="cimba-solution"
         className="bg-grey-50 py-20 lg:py-28 scroll-mt-24"
