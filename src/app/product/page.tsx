@@ -147,8 +147,8 @@ export default function ProductPage() {
             <div className="w-full lg:w-1/2">
               <div className="relative w-full min-h-[320px] rounded-2xl border border-grey-200 overflow-hidden">
                 <Image
-                  src="/product-diagram.png"
-                  alt="Product diagram"
+                  src="/Markitecture.png"
+                  alt="Cimba architecture diagram"
                   fill
                   className="object-cover"
                   unoptimized
