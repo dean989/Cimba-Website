@@ -127,13 +127,13 @@ export default function ProductPage() {
         className="bg-white pt-0 pb-16 lg:pb-20 scroll-mt-24"
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-            <div className="lg:w-1/2">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            <div className="lg:w-1/2 flex-shrink-0">
               <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-5">
                 What is Cimba
               </p>
              <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-6">
-               Cimba is the agentic command center for finance and business ops
+               Agentic command center for finance and business ops
              </h2>
              <p className="text-[16px] text-grey-600 leading-relaxed mb-4">
                Instead of relying on dashboards, manual analysis, or one-off AI
@@ -145,12 +145,13 @@ export default function ProductPage() {
               </p>
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="relative w-full min-h-[320px] rounded-2xl border border-grey-200 overflow-hidden">
+              <div className="w-full overflow-hidden">
                 <Image
-                  src="/product-diagram.png"
-                  alt="Product diagram"
-                  fill
-                  className="object-cover"
+                  src="/Markitecture.png"
+                  alt="Cimba architecture diagram"
+                  width={700}
+                  height={467}
+                  className="w-full h-auto"
                   unoptimized
                 />
               </div>
