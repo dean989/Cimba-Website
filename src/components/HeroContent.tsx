@@ -47,7 +47,7 @@ export default function HeroContent() {
         </Link>
         <Link
           href="/product#how-it-works"
-          className="h-[42px] px-10 text-[16px] font-semibold rounded-full inline-flex items-center gap-2 border-2 border-[#0770E3] text-[#0770E3] bg-transparent hover:bg-[#0770E3]/5 transition-all"
+          className="h-[42px] px-10 text-[16px] font-semibold rounded-full inline-flex items-center justify-center gap-2 border-2 border-[#0770E3] text-[#0770E3] bg-transparent hover:bg-[#0770E3]/5 transition-all"
         >
           How It Works
         </Link>

@@ -95,8 +95,8 @@ export default function Home() {
           <p className="text-center text-[16px] font-medium text-grey-400 uppercase tracking-[0.15em] mb-8">
             Trusted by industry leaders
           </p>
-          <div className="w-full overflow-x-auto">
-            <div className="flex items-center justify-center gap-5 mb-6 min-w-max px-4">
+          <div className="w-full">
+            <div className="flex flex-wrap items-center justify-center gap-5 mb-6 px-4">
               {customerLogos.map((logo, i) => (
                 <div 
                   key={`${logo.name}-${i}`} 
