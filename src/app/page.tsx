@@ -21,10 +21,12 @@ import LakeOfDataBackground from "@/components/LakeOfDataBackground";
 import HomeHeroVideo from "@/components/HomeHeroVideo";
 
 const customerLogos = [
+  { name: "Big 4 Consulting Firm", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Big%204-eSgnaekrwDuQSIcuoghOzNSzP4S9iO.png" },
   { name: "SoundHound AI", src: "/logos/soundhound.png" },
   { name: "Swiggy", src: "/logos/swiggy.png" },
   { name: "iCreditWorks", src: "/logos/icreditworks.png" },
   { name: "Skan AI", src: "/logos/skanai.png" },
+  { name: "Fortune 500 Vacation Rental Co.", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Vacation%20Rental-YbUzfWip4bhffM95ZglyofDvn0gKpq.png" },
 ];
 
 const testimonials = [
