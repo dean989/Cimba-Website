@@ -95,16 +95,16 @@ export default function Home() {
           <p className="text-center text-[16px] font-medium text-grey-400 uppercase tracking-[0.15em] mb-8">
             Trusted by industry leaders
           </p>
-          <div className="w-full">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mb-6">
+          <div className="w-full overflow-x-auto">
+            <div className="flex items-center justify-center gap-6 md:gap-10 mb-6 min-w-max px-4">
               {customerLogos.map((logo, i) => (
                 <div key={`${logo.name}-${i}`} className="flex-shrink-0">
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    width={120}
-                    height={56}
-                    className="h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    width={100}
+                    height={50}
+                    className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
