@@ -33,8 +33,11 @@ function getRandomInRange(min, max) {
 
 export default function OutcomeCards() {
   const [cardLayout, setCardLayout] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+    
     // Shuffle cards and take first 3
     const shuffledCards = shuffle(OUTCOME_CARDS).slice(0, 3);
 
@@ -74,7 +77,7 @@ export default function OutcomeCards() {
     setCardLayout(layout);
   }, []);
 
-  if (!cardLayout) return null;
+  if (!isMounted || !cardLayout) return null;
 
   return (
     <>
