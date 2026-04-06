@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import LakeOfDataBackground from "@/components/LakeOfDataBackground";
 
 export const metadata: Metadata = {
   title: "Cimba — AI Agentic Command Center | Company",
@@ -21,17 +22,10 @@ export default function CompanyPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white">
-        <Image
-          src="/company-hero.jpg"
-          alt=""
-          aria-hidden
-          fill
-          priority
-          className="object-cover object-center pointer-events-none"
-        />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
-        <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
+      <section className="relative bg-grey-50">
+        <LakeOfDataBackground />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-grey-50 z-10" />
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8 pt-32 pb-10 lg:pt-44 lg:pb-14">
           <div className="max-w-3xl">
             <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-4">
               Company
