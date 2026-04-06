@@ -54,7 +54,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section
         id="hero"
-        className="relative overflow-hidden bg-grey-50 scroll-mt-24"
+        className="relative bg-grey-50 scroll-mt-24"
       >
         <LakeOfDataBackground />
         {/* Bottom fade-out for background image */}
