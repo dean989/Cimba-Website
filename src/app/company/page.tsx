@@ -1,15 +1,9 @@
 "use client";
 
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import LakeOfDataBackground from "@/components/LakeOfDataBackground";
-
-export const metadata: Metadata = {
-  title: "Cimba — AI Agentic Command Center | Company",
-  description: "Meet the Cimba team building the future of AI-powered operational intelligence.",
-};
 
 export default function CompanyPage() {
   const team = [
