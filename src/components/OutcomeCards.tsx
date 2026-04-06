@@ -43,16 +43,16 @@ export default function OutcomeCards() {
 
     // Shuffle vertical bands
     const verticalBands = shuffle([
-      { min: 28, max: 110 },
-      { min: 155, max: 235 },
-      { min: 295, max: 385 },
+      { min: 60, max: 120 },
+      { min: 180, max: 240 },
+      { min: 310, max: 370 },
     ]);
 
-    // Shuffle horizontal bands
+    // Shuffle horizontal bands (% from right edge)
     const horizontalBands = shuffle([
-      { min: 60, max: 100 },
-      { min: 130, max: 170 },
-      { min: 200, max: 240 },
+      { min: 2, max: 4 },
+      { min: 8, max: 12 },
+      { min: 16, max: 20 },
     ]);
 
     // Assign positions and animations
@@ -95,7 +95,7 @@ export default function OutcomeCards() {
           className="absolute pointer-events-auto"
           style={{
             top: `${item.top}px`,
-            right: `${item.right}px`,
+            right: `${item.right}%`,
             width: "272px",
             animation: `${item.animationName} ${item.duration}s ease-in-out ${item.delay}s infinite`,
           }}
