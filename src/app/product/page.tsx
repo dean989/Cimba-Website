@@ -133,7 +133,7 @@ export default function ProductPage() {
                 What is Cimba
               </p>
              <h2 className="text-3xl sm:text-4xl font-normal text-grey-900 leading-tight mb-6">
-               Cimba is the agentic command center for finance and business ops
+               Agentic command center for finance and business ops
              </h2>
              <p className="text-[16px] text-grey-600 leading-relaxed mb-4">
                Instead of relying on dashboards, manual analysis, or one-off AI
