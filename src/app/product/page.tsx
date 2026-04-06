@@ -127,8 +127,8 @@ export default function ProductPage() {
         className="bg-white pt-0 pb-16 lg:pb-20 scroll-mt-24"
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-            <div className="lg:w-1/2">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            <div className="lg:w-2/5 flex-shrink-0">
               <p className="text-[16px] font-semibold text-primary uppercase tracking-[0.15em] mb-5">
                 What is Cimba
               </p>
@@ -144,13 +144,14 @@ export default function ProductPage() {
                 Using governed agents, structured playbooks, and business context, Cimba moves organizations from answering questions to running operations – delivering consistent, auditable outcomes at the scale enterprise workflows demand.
               </p>
             </div>
-            <div className="w-full lg:w-1/2">
-              <div className="relative w-full min-h-[320px] rounded-2xl border border-grey-200 overflow-hidden">
+            <div className="w-full lg:flex-1">
+              <div className="w-full overflow-hidden">
                 <Image
                   src="/Markitecture.png"
                   alt="Cimba architecture diagram"
-                  fill
-                  className="object-cover"
+                  width={900}
+                  height={600}
+                  className="w-full h-auto"
                   unoptimized
                 />
               </div>
