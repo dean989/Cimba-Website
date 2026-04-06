@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import HashScrollHandler from "@/components/HashScrollHandler";
 
 export const metadata: Metadata = {
-  title: "Cimba — AI-Powered Operational Intelligence",
+  title: "Cimba — AI Agentic Command Center",
   description:
     "Cimba operationalizes intelligence through governed agents and repeatable workflows. Auditable, repeatable, accurate autonomous workflows for enterprise teams.",
   keywords: [
