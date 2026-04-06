@@ -37,7 +37,7 @@ export default function OutcomeCards() {
   if (!selectedCards) return null;
 
   return (
-    <div className="hidden lg:block absolute top-0 right-[5%] w-[280px] pointer-events-none z-20">
+    <div className="hidden lg:block absolute top-0 right-[12%] w-[280px] pointer-events-none z-20">
       <div className="flex flex-col gap-4 pt-20">
         {selectedCards.map((card) => (
           <div
