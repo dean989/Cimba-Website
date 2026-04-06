@@ -7,7 +7,6 @@ type FormState = {
   firstName: string;
   lastName: string;
   email: string;
-  company: string;
   role: string;
   message: string;
 };
@@ -16,7 +15,6 @@ const initialFormState: FormState = {
   firstName: "",
   lastName: "",
   email: "",
-  company: "",
   role: "",
   message: "",
 };
@@ -120,25 +118,6 @@ export default function DemoRequestForm() {
           required
           className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors"
           placeholder="jane@company.com"
-        />
-      </div>
-
-      <div>
-        <label
-          htmlFor="company"
-          className="block text-sm font-medium text-grey-700 mb-2"
-        >
-          Company
-        </label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          value={form.company}
-          onChange={onChange}
-          required
-          className="w-full px-4 py-3 rounded-lg border border-white/50 bg-white/55 backdrop-blur-md text-grey-900 placeholder-grey-500 shadow-[inset_0_1.5px_0_rgba(255,255,255,0.58)] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors"
-          placeholder="Acme Inc."
         />
       </div>
 
