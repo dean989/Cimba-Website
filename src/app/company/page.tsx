@@ -35,7 +35,7 @@ export default function CompanyPage() {
       </section>
 
       {/* About Section */}
-      <section id="about-us" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="about-us" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto scroll-mt-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-6">
@@ -55,7 +55,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="team" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto scroll-mt-24">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
             Our Leadership Team
@@ -131,7 +131,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Newsroom Section */}
-      <section id="newsroom" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto">
+      <section id="newsroom" className="py-12 lg:py-16 px-6 lg:px-8 max-w-[1280px] mx-auto scroll-mt-24">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-normal text-grey-900 leading-tight mb-4 max-w-2xl">
             Newsroom
