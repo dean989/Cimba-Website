@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const OUTCOME_CARDS = [
   { id:"a1", emoji:"📊", eBg:"#EDF6FF", accent:"#0770E3", label:"P&L Scenario Model",      value:"Ready for CFO review",              sub:"Completed in 4 min · 3 scenarios modelled" },
@@ -79,25 +80,32 @@ export default function OutcomeCards() {
 
   if (!isMounted || !cardLayout) return null;
 
+  console.log("[v0] OutcomeCards rendering with layout:", cardLayout);
+
   return (
     <div className="hidden lg:block absolute inset-0 pointer-events-none z-20">
-      <style jsx>{`
-        ${cardLayout.map((item) => `
-          @keyframes ${item.animationName} {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-${item.amplitude}px); }
-          }
-        `).join("\n")}
-      `}</style>
-      {cardLayout.map((item) => (
-        <div
+      {cardLayout.map((item, idx) => (
+        <motion.div
           key={item.card.id}
           className="absolute pointer-events-auto"
           style={{
             top: `${item.top}px`,
             right: `${item.right}%`,
             width: "272px",
-            animation: `${item.animationName} ${item.duration}s ease-in-out ${item.delay}s infinite`,
+          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            opacity: 1,
+            y: [0, -item.amplitude, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.5, delay: idx * 0.15 },
+            y: {
+              duration: item.duration,
+              delay: item.delay + idx * 0.15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
           }}
         >
           <div
@@ -175,7 +183,7 @@ export default function OutcomeCards() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
