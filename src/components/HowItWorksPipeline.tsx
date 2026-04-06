@@ -132,15 +132,19 @@ export default function HowItWorksPipeline() {
               className="flex flex-col lg:flex-row h-auto lg:h-[300px]"
             >
               <div className="w-full lg:w-[400px] lg:h-[300px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-grey-200 overflow-hidden bg-white">
-                <Image
-                  src={step.imageSrc}
-                  alt={step.title}
-                  width={400}
-                  height={300}
-                  className="block w-full h-auto lg:h-full object-cover rounded-xl shadow-md"
-                  style={"imagePosition" in step && step.imagePosition ? { objectPosition: step.imagePosition } : {}}
-                  unoptimized
-                />
+                {step.id === "distribute" ? (
+                  <DistributeIllustration />
+                ) : (
+                  <Image
+                    src={step.imageSrc}
+                    alt={step.title}
+                    width={400}
+                    height={300}
+                    className="block w-full h-auto lg:h-full object-cover rounded-xl shadow-md"
+                    style={"imagePosition" in step && step.imagePosition ? { objectPosition: step.imagePosition } : {}}
+                    unoptimized
+                  />
+                )}
               </div>
               <div className="min-w-0 flex-1 flex flex-col justify-center p-8 sm:p-10 lg:p-12">
                 <div className="mb-4">
